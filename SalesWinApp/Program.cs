@@ -1,3 +1,6 @@
+using BussinessObject.Models;
+using DataAccess.Repository;
+
 namespace SalesWinApp
 {
     internal static class Program

@@ -8,4 +8,5 @@ namespace BussinessObject;
 
 public class MemberObject
 {
+
 }

@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BussinessObject.Models;
 
 namespace DataAccess.Repository;
 
 public interface IProductRepository
 {
+    List<Product> GetAll();
+    Product GetById(int id);
+    Product GetByName(string name);
+    bool Update(Product product);
+    bool Delete(int id);
+    bool Add(Product product);
 }
