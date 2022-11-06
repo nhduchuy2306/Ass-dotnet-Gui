@@ -57,5 +57,10 @@ namespace SalesWinApp
             product.Show();
             this.Hide();
         }
+
+        private void frmProductDetails_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

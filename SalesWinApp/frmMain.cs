@@ -18,12 +18,19 @@ namespace SalesWinApp
             InitializeComponent();
         }
 
+        private void closeform() {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
+        }
         private void productManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            closeform();
             bool IsOpen = false;
             foreach (Form f in Application.OpenForms)
             {
-                if (f.Text == "frmProducts")
+                if (f.Text == "Products")
                 {
                     IsOpen = true;
                     f.Focus();
@@ -36,6 +43,37 @@ namespace SalesWinApp
                 frmProduct.MdiParent = this;
                 frmProduct.Show();
             }
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void memberManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeform();
+            bool IsOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Members")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (IsOpen == false)
+            {
+                frmMembers frmMember = new frmMembers();
+                frmMember.MdiParent = this;
+                frmMember.Show();
+            }
+
+        }
+
+        private void orderManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
         }
     }
 }

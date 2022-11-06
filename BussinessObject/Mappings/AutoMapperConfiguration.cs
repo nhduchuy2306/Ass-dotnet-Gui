@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BussinessObject.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace BussinessObject.Mappings;
 
 public class AutoMapperConfiguration
 {
-    /*public static Product ToProduct(ProductObject productObject)
+    public static Product ToProduct(ProductObject productObject)
     {
         var config = new MapperConfiguration(cfg => 
             cfg.CreateMap<ProductObject, Product>()
@@ -19,5 +20,5 @@ public class AutoMapperConfiguration
         var product = mapper.Map<Product>(productObject);
 
         return product;
-    }*/
+    }
 }
