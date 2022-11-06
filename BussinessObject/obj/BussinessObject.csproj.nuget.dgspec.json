@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj": {}
+    "D:\\FALL 2022\\prn211\\Workspace\\learnSth\\Ass02Solution\\BussinessObject\\BussinessObject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj": {
+    "D:\\FALL 2022\\prn211\\Workspace\\learnSth\\Ass02Solution\\BussinessObject\\BussinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj",
+        "projectUniqueName": "D:\\FALL 2022\\prn211\\Workspace\\learnSth\\Ass02Solution\\BussinessObject\\BussinessObject.csproj",
         "projectName": "BussinessObject",
-        "projectPath": "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj",
-        "packagesPath": "C:\\Users\\ownhi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\BussinessObject\\obj\\",
+        "projectPath": "D:\\FALL 2022\\prn211\\Workspace\\learnSth\\Ass02Solution\\BussinessObject\\BussinessObject.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "D:\\FALL 2022\\prn211\\Workspace\\learnSth\\Ass02Solution\\BussinessObject\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ownhi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -3561,24 +3561,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ownhi\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Acer\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\SalesWinApp\\SalesWinApp.csproj",
+      "projectUniqueName": "D:\\FALL 2022\\prn211\\Workspace\\learnSth\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj",
       "projectName": "SalesWinApp",
-      "projectPath": "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\SalesWinApp\\SalesWinApp.csproj",
-      "packagesPath": "C:\\Users\\ownhi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\SalesWinApp\\obj\\",
+      "projectPath": "D:\\FALL 2022\\prn211\\Workspace\\learnSth\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj",
+      "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+      "outputPath": "D:\\FALL 2022\\prn211\\Workspace\\learnSth\\Ass02Solution\\SalesWinApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ownhi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3592,11 +3587,11 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj": {
-              "projectPath": "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj"
+            "D:\\FALL 2022\\prn211\\Workspace\\learnSth\\Ass02Solution\\BussinessObject\\BussinessObject.csproj": {
+              "projectPath": "D:\\FALL 2022\\prn211\\Workspace\\learnSth\\Ass02Solution\\BussinessObject\\BussinessObject.csproj"
             },
-            "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\DataAccess\\DataAccess.csproj"
+            "D:\\FALL 2022\\prn211\\Workspace\\learnSth\\Ass02Solution\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "D:\\FALL 2022\\prn211\\Workspace\\learnSth\\Ass02Solution\\DataAccess\\DataAccess.csproj"
             }
           }
         }

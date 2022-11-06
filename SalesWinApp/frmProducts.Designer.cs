@@ -147,6 +147,7 @@
             // 
             this.txtProductID.Location = new System.Drawing.Point(827, 69);
             this.txtProductID.Name = "txtProductID";
+            this.txtProductID.ReadOnly = true;
             this.txtProductID.Size = new System.Drawing.Size(172, 23);
             this.txtProductID.TabIndex = 9;
             // 
@@ -201,6 +202,7 @@
             this.btnSearchProduct.TabIndex = 16;
             this.btnSearchProduct.Text = "Search";
             this.btnSearchProduct.UseVisualStyleBackColor = true;
+            this.btnSearchProduct.Click += new System.EventHandler(this.btnSearchProduct_Click);
             this.btnSearchProduct.MouseLeave += new System.EventHandler(this.btnSearchProduct_MouseLeave);
             this.btnSearchProduct.MouseHover += new System.EventHandler(this.btnSearchProduct_MouseHover);
             // 
@@ -286,7 +288,7 @@
             this.Controls.Add(this.dgvProductList);
             this.Name = "frmProducts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmProducts";
+            this.Text = "Products";
             this.Load += new System.EventHandler(this.frmProducts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).EndInit();
             this.statusStrip1.ResumeLayout(false);
