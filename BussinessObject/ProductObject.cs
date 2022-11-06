@@ -14,4 +14,18 @@ public class ProductObject
     public string Weight { get; set; } = null!;
     public decimal UnitPrice { get; set; }
     public int UnitsInStock { get; set; }
+
+    public ProductObject()
+    {
+    }
+
+    public ProductObject(int productId, int categoryId, string productName, string weight, decimal unitPrice, int unitsInStock)
+    {
+        ProductId = productId;
+        CategoryId = categoryId;
+        ProductName = productName;
+        Weight = weight;
+        UnitPrice = unitPrice;
+        UnitsInStock = unitsInStock;
+    }
 }

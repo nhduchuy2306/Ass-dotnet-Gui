@@ -139,3 +139,4 @@ C:\Users\ownhi\Documents\HK5\PRN211\Ass-dotnet-Gui\SalesWinApp\obj\Debug\net6.0-
 C:\Users\ownhi\Documents\HK5\PRN211\Ass-dotnet-Gui\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.genruntimeconfig.cache
 C:\Users\ownhi\Documents\HK5\PRN211\Ass-dotnet-Gui\SalesWinApp\obj\Debug\net6.0-windows\ref\SalesWinApp.dll
 C:\Users\ownhi\Documents\HK5\PRN211\Ass-dotnet-Gui\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmProductDetails.resources
+D:\FALL 2022\prn211\Workspace\learnSth\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmProductDetails.resources

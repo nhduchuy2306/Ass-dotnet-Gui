@@ -44,12 +44,12 @@ public class ProductRepository : IProductRepository
         return product;
     }
 
-    public Product GetByName(string name)
+    public List<Product> GetByName(string name)
     {
-        var product = (from p in _saleManagementContext.Products
-                       where p.ProductName.ToLower().Contains(name.ToLower())
-                       select p).FirstOrDefault();
-        return product;
+        var product = from p in _saleManagementContext.Products
+                      where p.ProductName.ToLower().Contains(name.ToLower())
+                      select p;
+        return product.ToList();
     }
 
     public bool Update(Product product)
