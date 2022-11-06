@@ -78,23 +78,24 @@ namespace BussinessObject.Models
 
             modelBuilder.Entity<OrderDetail>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => new { e.OrderId, e.ProductId })
+                    .HasName("Pk");
 
                 entity.ToTable("OrderDetail");
 
                 entity.Property(e => e.UnitPrice).HasColumnType("money");
 
                 entity.HasOne(d => d.Order)
-                    .WithMany()
+                    .WithMany(p => p.OrderDetails)
                     .HasForeignKey(d => d.OrderId)
-                    .OnDelete(DeleteBehavior.SetNull)
-                    .HasConstraintName("FK__OrderDeta__Order__2A4B4B5E");
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__OrderDeta__Order__2B3F6F97");
 
                 entity.HasOne(d => d.Product)
-                    .WithMany()
+                    .WithMany(p => p.OrderDetails)
                     .HasForeignKey(d => d.ProductId)
-                    .OnDelete(DeleteBehavior.SetNull)
-                    .HasConstraintName("FK__OrderDeta__Produ__2B3F6F97");
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__OrderDeta__Produ__2C3393D0");
             });
 
             modelBuilder.Entity<Product>(entity =>
@@ -123,7 +124,7 @@ namespace BussinessObject.Models
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", true, true)
                 .Build();
-            var strConn = config["ConnectionStrings:SaleManagement"];
+            var strConn = config["ConnectionStrings:CustomerAccountsDB"];
             return strConn;
         }
     }
