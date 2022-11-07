@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\DataAccess\\DataAccess.csproj": {}
+    "C:\\VMinh\\Studying\\FPT_Studying\\Fall22\\PRN211\\WorkSpace\\ASM\\Ass-dotnet-Gui\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj": {
+    "C:\\VMinh\\Studying\\FPT_Studying\\Fall22\\PRN211\\WorkSpace\\ASM\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj",
+        "projectUniqueName": "C:\\VMinh\\Studying\\FPT_Studying\\Fall22\\PRN211\\WorkSpace\\ASM\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj",
         "projectName": "BussinessObject",
-        "projectPath": "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj",
-        "packagesPath": "C:\\Users\\ownhi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\BussinessObject\\obj\\",
+        "projectPath": "C:\\VMinh\\Studying\\FPT_Studying\\Fall22\\PRN211\\WorkSpace\\ASM\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj",
+        "packagesPath": "C:\\Users\\buile\\.nuget\\packages\\",
+        "outputPath": "C:\\VMinh\\Studying\\FPT_Studying\\Fall22\\PRN211\\WorkSpace\\ASM\\Ass-dotnet-Gui\\BussinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ownhi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\buile\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -97,20 +98,20 @@
         }
       }
     },
-    "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\DataAccess\\DataAccess.csproj": {
+    "C:\\VMinh\\Studying\\FPT_Studying\\Fall22\\PRN211\\WorkSpace\\ASM\\Ass-dotnet-Gui\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\VMinh\\Studying\\FPT_Studying\\Fall22\\PRN211\\WorkSpace\\ASM\\Ass-dotnet-Gui\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\ownhi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\DataAccess\\obj\\",
+        "projectPath": "C:\\VMinh\\Studying\\FPT_Studying\\Fall22\\PRN211\\WorkSpace\\ASM\\Ass-dotnet-Gui\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\buile\\.nuget\\packages\\",
+        "outputPath": "C:\\VMinh\\Studying\\FPT_Studying\\Fall22\\PRN211\\WorkSpace\\ASM\\Ass-dotnet-Gui\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ownhi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\buile\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -119,14 +120,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj": {
-                "projectPath": "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj"
+              "C:\\VMinh\\Studying\\FPT_Studying\\Fall22\\PRN211\\WorkSpace\\ASM\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj": {
+                "projectPath": "C:\\VMinh\\Studying\\FPT_Studying\\Fall22\\PRN211\\WorkSpace\\ASM\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj"
               }
             }
           }

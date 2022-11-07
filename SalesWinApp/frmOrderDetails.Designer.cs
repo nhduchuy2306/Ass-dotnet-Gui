@@ -120,6 +120,7 @@
             // 
             this.txtOrderID.Location = new System.Drawing.Point(195, 34);
             this.txtOrderID.Name = "txtOrderID";
+            this.txtOrderID.ReadOnly = true;
             this.txtOrderID.Size = new System.Drawing.Size(149, 23);
             this.txtOrderID.TabIndex = 24;
             // 
@@ -133,8 +134,8 @@
             // txtUnitPrice
             // 
             this.txtUnitPrice.Location = new System.Drawing.Point(195, 114);
-            this.txtUnitPrice.Mask = "000000000";
             this.txtUnitPrice.Name = "txtUnitPrice";
+            this.txtUnitPrice.ReadOnly = true;
             this.txtUnitPrice.Size = new System.Drawing.Size(149, 23);
             this.txtUnitPrice.TabIndex = 25;
             this.txtUnitPrice.Text = "0";
@@ -142,7 +143,6 @@
             // txtQuantity
             // 
             this.txtQuantity.Location = new System.Drawing.Point(195, 159);
-            this.txtQuantity.Mask = "000000";
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(149, 23);
             this.txtQuantity.TabIndex = 26;
@@ -151,8 +151,8 @@
             // maskedTextBox3
             // 
             this.maskedTextBox3.Location = new System.Drawing.Point(195, 202);
-            this.maskedTextBox3.Mask = "000000000";
             this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.ResetOnSpace = false;
             this.maskedTextBox3.Size = new System.Drawing.Size(149, 23);
             this.maskedTextBox3.TabIndex = 27;
             this.maskedTextBox3.Text = "0";

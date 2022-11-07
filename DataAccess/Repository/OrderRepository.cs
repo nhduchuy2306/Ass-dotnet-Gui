@@ -13,12 +13,13 @@ public class OrderRepository : IOrderRepository
 
     public OrderRepository()
     {
-        this._context = new SaleManagementContext();
+        this._context =new SaleManagementContext();
     }
 
     public bool Add(Order order)
     {
-        _context.Orders.Add(order);
+         _context.Orders.Add(order);
+  
         return _context.SaveChanges() > 0;
     }
 
@@ -40,9 +41,15 @@ public class OrderRepository : IOrderRepository
         return o.ToList();
     }
 
+    public Order GetById(int id)
+    {
+        return _context.Orders.Find(id);
+    }
+
     public bool Update(Order order)
     {
-        _context.Orders.Update(order);
-        return _context.SaveChanges() > 0; 
+        using var c = new SaleManagementContext();
+        c.Orders.Update(order);
+        return c.SaveChanges() > 0; 
     }
 }

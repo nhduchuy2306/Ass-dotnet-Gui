@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BussinessObject.Models;
+using DataAccess.Repository;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,20 @@ namespace SalesWinApp
 {
     public partial class frmOrderDetails : Form
     {
-        public frmOrderDetails()
+        private IOrderDetailRepository repo;
+        BindingSource source;
+        int oId;
+
+        public frmOrderDetails(int id)
         {
             InitializeComponent();
+            oId = id;
         }
 
         private void frmOrderDetails_Load(object sender, EventArgs e)
         {
-
+            txtOrderID.Text = oId.ToString();
+            txtUnitPrice.DataBindings.Add();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

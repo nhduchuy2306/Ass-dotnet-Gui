@@ -42,6 +42,7 @@
             this.txtMemberID = new System.Windows.Forms.TextBox();
             this.txtOrderDate = new System.Windows.Forms.TextBox();
             this.txtFreight = new System.Windows.Forms.MaskedTextBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbOrderID
@@ -108,18 +109,19 @@
             // 
             this.btnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSave.Location = new System.Drawing.Point(104, 299);
+            this.btnSave.Location = new System.Drawing.Point(53, 299);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(83, 33);
             this.btnSave.TabIndex = 39;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCancel.Location = new System.Drawing.Point(226, 299);
+            this.btnCancel.Location = new System.Drawing.Point(276, 299);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(83, 33);
             this.btnCancel.TabIndex = 40;
@@ -130,6 +132,7 @@
             // 
             this.txtOrderID.Location = new System.Drawing.Point(181, 34);
             this.txtOrderID.Name = "txtOrderID";
+            this.txtOrderID.ReadOnly = true;
             this.txtOrderID.Size = new System.Drawing.Size(162, 23);
             this.txtOrderID.TabIndex = 43;
             // 
@@ -137,7 +140,7 @@
             // 
             this.txtRequiredDate.Location = new System.Drawing.Point(181, 170);
             this.txtRequiredDate.Name = "txtRequiredDate";
-            this.txtRequiredDate.PlaceholderText = "yyyy/mm/dd";
+            this.txtRequiredDate.PlaceholderText = "dd/mm/yyy";
             this.txtRequiredDate.Size = new System.Drawing.Size(162, 23);
             this.txtRequiredDate.TabIndex = 43;
             // 
@@ -145,7 +148,7 @@
             // 
             this.txtShippedDate.Location = new System.Drawing.Point(181, 217);
             this.txtShippedDate.Name = "txtShippedDate";
-            this.txtShippedDate.PlaceholderText = "yyyy/mm/dd";
+            this.txtShippedDate.PlaceholderText = "dd/mm/yyy";
             this.txtShippedDate.Size = new System.Drawing.Size(162, 23);
             this.txtShippedDate.TabIndex = 44;
             // 
@@ -160,24 +163,36 @@
             // 
             this.txtOrderDate.Location = new System.Drawing.Point(181, 126);
             this.txtOrderDate.Name = "txtOrderDate";
-            this.txtOrderDate.PlaceholderText = "yyyy/mm/dd";
+            this.txtOrderDate.PlaceholderText = "dd/mm/yyy";
+            this.txtOrderDate.ReadOnly = true;
             this.txtOrderDate.Size = new System.Drawing.Size(162, 23);
             this.txtOrderDate.TabIndex = 47;
             // 
             // txtFreight
             // 
             this.txtFreight.Location = new System.Drawing.Point(181, 259);
-            this.txtFreight.Mask = "000000000";
             this.txtFreight.Name = "txtFreight";
             this.txtFreight.Size = new System.Drawing.Size(162, 23);
             this.txtFreight.TabIndex = 48;
-            this.txtFreight.Text = "0";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdate.Location = new System.Drawing.Point(167, 298);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(83, 33);
+            this.btnUpdate.TabIndex = 49;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // frmOder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 343);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtFreight);
             this.Controls.Add(this.txtOrderDate);
             this.Controls.Add(this.txtMemberID);
@@ -217,5 +232,6 @@
         private TextBox txtMemberID;
         private TextBox txtOrderDate;
         private MaskedTextBox txtFreight;
+        private Button btnUpdate;
     }
 }
