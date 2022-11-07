@@ -20,7 +20,7 @@ namespace SalesWinApp
 
         BindingSource source = null;
 
-        Product product = null;
+        ProductObject productObject = null;
 
         public frmProducts()
         {
@@ -38,7 +38,7 @@ namespace SalesWinApp
             txtUnitsInStock.Text = string.Empty;
         }
 
-        private void LoadProduct(List<Product> list)
+        private void LoadProduct(List<ProductObject> list)
         {
             source = new BindingSource();
 
@@ -64,20 +64,24 @@ namespace SalesWinApp
 
         private void frmProducts_Load(object sender, EventArgs e)
         {
+            List<ProductObject> listP = new List<ProductObject>();
             List<Product> list = repo.GetAll();
-            LoadProduct(list);
+            list.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
+            LoadProduct(listP);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (product != null)
+            if (productObject != null)
             {
-                frmProductDetails frmProductDetails = new frmProductDetails(product, true);
+                frmProductDetails frmProductDetails = new frmProductDetails(productObject, true);
 
                 if (frmProductDetails.ShowDialog() == DialogResult.OK)
                 {
+                    List<ProductObject> listP = new List<ProductObject>();
                     List<Product> list = repo.GetAll();
-                    LoadProduct(list);
+                    list.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
+                    LoadProduct(listP);
                 }
             }
             else
@@ -92,8 +96,10 @@ namespace SalesWinApp
             bool check = repo.Delete(Convert.ToInt32(productId));
             if (check)
             {
+                List<ProductObject> listP = new List<ProductObject>();
                 List<Product> list = repo.GetAll();
-                LoadProduct(list);
+                list.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
+                LoadProduct(listP);
                 MessageBox.Show("Delete product successfully");
             }
         }
@@ -104,8 +110,10 @@ namespace SalesWinApp
             
             if(frmProductDetails.ShowDialog() == DialogResult.OK)
             {
+                List<ProductObject> listP = new List<ProductObject>();
                 List<Product> list = repo.GetAll();
-                LoadProduct(list);
+                list.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
+                LoadProduct(listP);
             }
         }
 
@@ -113,18 +121,22 @@ namespace SalesWinApp
         {
             string productName = txtSearchProduct.Text;
 
-            List<Product> listAllProduct = repo.GetAll();
-
             if (productName.Equals(""))
             {
-                LoadProduct(listAllProduct);
+                List<ProductObject> listP = new List<ProductObject>();
+                List<Product> list = repo.GetAll();
+                list.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
+                LoadProduct(listP);
             }
             else
             {
                 List<Product> pro = repo.GetByName(productName);
+                List<ProductObject> listP = new List<ProductObject>();
+                pro.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
+                
                 if (pro != null)
                 {
-                    LoadProduct(pro);
+                    LoadProduct(listP);
                 }
                 else MessageBox.Show($"Not cantain {productName}");
             }
@@ -138,7 +150,8 @@ namespace SalesWinApp
             {
                 string id = dgvProductList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
 
-                product = repo.GetById(Convert.ToInt32(id));
+                Product product = repo.GetById(Convert.ToInt32(id));
+                productObject = AutoMapperConfiguration.ToProductObject(product);
             }
         }
 

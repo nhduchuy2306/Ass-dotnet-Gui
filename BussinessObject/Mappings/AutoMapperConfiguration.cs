@@ -22,6 +22,18 @@ public class AutoMapperConfiguration
         return product;
     }
 
+    public static ProductObject ToProductObject(Product product)
+    {
+        var config = new MapperConfiguration(cfg =>
+            cfg.CreateMap<Product, ProductObject>()
+        );
+
+        var mapper = new Mapper(config);
+        var productObject = mapper.Map<ProductObject>(product);
+
+        return productObject;
+    }
+
     public static Member ToMember(MemberObject memberObject)
     {
         var config = new MapperConfiguration(c =>

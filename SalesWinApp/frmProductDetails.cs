@@ -20,7 +20,7 @@ namespace SalesWinApp
 
         private bool UpdateOrCreate = false;
 
-        private Product _product = null;
+        private ProductObject _productObject = null;
 
         public frmProductDetails()
         {
@@ -35,11 +35,11 @@ namespace SalesWinApp
             UpdateOrCreate = updateOrCreate;
         }
 
-        public frmProductDetails(Product p, bool updateOrCreate)
+        public frmProductDetails(ProductObject p, bool updateOrCreate)
         {
             InitializeComponent();
             repo = new ProductRepository();
-            _product = p;
+            _productObject = p;
             UpdateOrCreate = updateOrCreate;
         }
 
@@ -116,14 +116,14 @@ namespace SalesWinApp
         {
             if (UpdateOrCreate == true)
             {
-                if (_product != null)
+                if (_productObject != null)
                 {
-                    txtProductID.Text = Convert.ToString(_product.ProductId);
-                    txtCategoryID.Text = Convert.ToString(_product.CategoryId);
-                    txtProductName.Text = _product.ProductName;
-                    txtUnitPrice.Text = Convert.ToString(_product.UnitPrice);
-                    txtUnitsInStock.Text = Convert.ToString(_product.UnitsInStock);
-                    txtWeight.Text = Convert.ToString(_product.Weight);
+                    txtProductID.Text = Convert.ToString(_productObject.ProductId);
+                    txtCategoryID.Text = Convert.ToString(_productObject.CategoryId);
+                    txtProductName.Text = _productObject.ProductName;
+                    txtUnitPrice.Text = Convert.ToString(_productObject.UnitPrice);
+                    txtUnitsInStock.Text = Convert.ToString(_productObject.UnitsInStock);
+                    txtWeight.Text = Convert.ToString(_productObject.Weight);
                 }
             }
         }
