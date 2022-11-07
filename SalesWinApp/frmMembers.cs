@@ -91,6 +91,7 @@ namespace SalesWinApp
             {
                 List<Member> list = repo.GetAll();
                 LoadMemberList(list);
+                //src.Position = src.Count - 1;
                 MessageBox.Show("Update member info completed");
             }
         }
@@ -125,6 +126,7 @@ namespace SalesWinApp
             {
                 List<Member> list = repo.GetAll();
                 LoadMemberList(list);
+                src.Position = src.Count - 1;
                 MessageBox.Show("Create new member completed");
             }
         }
