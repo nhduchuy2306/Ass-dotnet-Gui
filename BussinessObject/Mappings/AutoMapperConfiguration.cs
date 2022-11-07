@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using BussinessObject.Models;
 using System;
 using System.Collections.Generic;
