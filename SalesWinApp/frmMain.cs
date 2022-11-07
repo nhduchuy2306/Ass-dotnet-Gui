@@ -105,5 +105,26 @@ namespace SalesWinApp
         {
 
         }
+
+        private void profileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeform();
+            bool IsOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Profile")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (IsOpen == false)
+            {
+                frmProfile frmPro = new frmProfile();
+                frmPro.MdiParent = this;
+                frmPro.Show();
+            }
+        }
     }
 }
