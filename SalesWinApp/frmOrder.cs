@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SalesWinApp
 {
-    public partial class frmOder : Form
+    public partial class frmOrder : Form
     {
-        public frmOder()
+        public frmOrder()
         {
             InitializeComponent();
         }

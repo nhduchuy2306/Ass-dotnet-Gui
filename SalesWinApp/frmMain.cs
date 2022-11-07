@@ -47,7 +47,15 @@ namespace SalesWinApp
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            frmLogin frmLogin = new frmLogin();
+            if (frmLogin.isAdmin)
+            {
+                menuStrip2.Hide();
+            }
+            else
+            {
+                menuStrip1.Hide();
+            }
         }
 
         private void memberManagementToolStripMenuItem_Click(object sender, EventArgs e)
@@ -91,6 +99,11 @@ namespace SalesWinApp
                 frmOrder.MdiParent = this;
                 frmOrder.Show();
             }
+        }
+
+        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

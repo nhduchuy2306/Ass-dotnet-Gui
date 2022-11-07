@@ -108,6 +108,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(162, 136);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(159, 23);
             this.txtPassword.TabIndex = 6;
             this.txtPassword.MouseLeave += new System.EventHandler(this.txtPassword_MouseLeave);
@@ -138,6 +139,7 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGIN ";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);

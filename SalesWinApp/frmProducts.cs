@@ -119,7 +119,7 @@ namespace SalesWinApp
 
         private void btnSearchProduct_Click(object sender, EventArgs e)
         {
-            string productName = txtSearchProduct.Text;
+            string productName = txtSearchProductID.Text;
 
             List<Product> listAllProduct = repo.GetAll();
 

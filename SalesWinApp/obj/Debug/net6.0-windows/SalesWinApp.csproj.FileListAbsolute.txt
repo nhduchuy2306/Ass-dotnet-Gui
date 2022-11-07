@@ -215,3 +215,4 @@ C:\VMinh\Studying\FPT_Studying\Fall22\PRN211\WorkSpace\ASM\Ass-dotnet-Gui\SalesW
 C:\VMinh\Studying\FPT_Studying\Fall22\PRN211\WorkSpace\ASM\Ass-dotnet-Gui\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmOrderDetails.resources
 C:\Users\ownhi\Documents\HK5\PRN211\Ass-dotnet-Gui\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmMemberDetails.resources
 C:\Users\ownhi\Documents\HK5\PRN211\Ass-dotnet-Gui\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmOrderDetails.resources
+C:\Users\ownhi\Documents\HK5\PRN211\Ass-dotnet-Gui\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmOder.resources

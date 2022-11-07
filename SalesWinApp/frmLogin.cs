@@ -28,13 +28,24 @@ namespace SalesWinApp
             if(txtEmail.Text.Equals(email) && txtPassword.Text.Equals(pass))
             {
                 frmMain main = new frmMain();
+                isAdmin = true;
                 this.Hide();
                 main.Show();
-                isAdmin = true;
             }
             else
             {
-                MessageBox.Show("bye bye");
+                var member = this._memberRepository.GetMembers().Where(m => m.Email == txtEmail.Text && m.Password == txtPassword.Text).FirstOrDefault();
+                if(member != null)
+                {
+                    frmMain main = new frmMain();
+                    isAdmin = false;
+                    this.Hide();
+                    main.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Email and Password!");
+                }
             }
         }
 
@@ -75,6 +86,11 @@ namespace SalesWinApp
         private void btnExit_MouseLeave(object sender, EventArgs e)
         {
             toolStripStatusLabel1.Text = "";
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
