@@ -44,10 +44,10 @@ namespace SalesWinApp
 
             bool completed = repo.Add(mem);
 
-            if (completed)
-            {
-                MessageBox.Show("Update member info completed");
-            }
+            //if (completed)
+            //{
+            //    MessageBox.Show("Create new member completed");
+            //}
         }
 
         private void btnCancel_Click(object sender, EventArgs e) => Close();
