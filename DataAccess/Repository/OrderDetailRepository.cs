@@ -18,10 +18,10 @@ public class OrderDetailRepository : IOrderDetailRepository
 
     public bool Add(OrderDetail o)
     {
-        var c = (from order in _context.Orders
-                where order.OrderId == o.OrderId
-                select order).FirstOrDefault();
-        var a = c.OrderDetails.Where(p => p.ProductId == o.ProductId).FirstOrDefault();
+        var c = from orderdetail in _context.OrderDetails
+                where orderdetail.OrderId == o.OrderId
+                select orderdetail;
+        var a = c.Where(p => p.ProductId == o.ProductId).FirstOrDefault();
         if(a == null)
         {
             _context.OrderDetails.Add(o);
