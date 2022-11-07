@@ -34,7 +34,7 @@
             this.orderManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.orderHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historyOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -75,24 +75,26 @@
             // 
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.profileToolStripMenuItem,
-            this.orderHistoryToolStripMenuItem});
+            this.historyOrderToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(1117, 24);
             this.menuStrip2.TabIndex = 2;
             this.menuStrip2.Text = "menuStrip2";
+            this.menuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip2_ItemClicked);
             // 
             // profileToolStripMenuItem
             // 
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
             this.profileToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.profileToolStripMenuItem.Text = "Profile";
+            this.profileToolStripMenuItem.Click += new System.EventHandler(this.profileToolStripMenuItem_Click);
             // 
-            // orderHistoryToolStripMenuItem
+            // historyOrderToolStripMenuItem
             // 
-            this.orderHistoryToolStripMenuItem.Name = "orderHistoryToolStripMenuItem";
-            this.orderHistoryToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
-            this.orderHistoryToolStripMenuItem.Text = "Order History";
+            this.historyOrderToolStripMenuItem.Name = "historyOrderToolStripMenuItem";
+            this.historyOrderToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.historyOrderToolStripMenuItem.Text = "History Order";
             // 
             // frmMain
             // 
@@ -124,6 +126,6 @@
         private ToolStripMenuItem orderManagementToolStripMenuItem;
         private MenuStrip menuStrip2;
         private ToolStripMenuItem profileToolStripMenuItem;
-        private ToolStripMenuItem orderHistoryToolStripMenuItem;
+        private ToolStripMenuItem historyOrderToolStripMenuItem;
     }
 }

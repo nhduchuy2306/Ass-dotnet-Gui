@@ -47,7 +47,15 @@ namespace SalesWinApp
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            frmLogin frmLogin = new frmLogin();
+            if (frmLogin.isAdmin)
+            {
+                menuStrip2.Hide();
+            }
+            else
+            {
+                menuStrip1.Hide();
+            }
         }
 
         private void memberManagementToolStripMenuItem_Click(object sender, EventArgs e)
@@ -90,6 +98,32 @@ namespace SalesWinApp
                 frmOrders frmOrder = new frmOrders();
                 frmOrder.MdiParent = this;
                 frmOrder.Show();
+            }
+        }
+
+        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void profileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeform();
+            bool IsOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Profile")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (IsOpen == false)
+            {
+                frmProfile frmPro = new frmProfile();
+                frmPro.MdiParent = this;
+                frmPro.Show();
             }
         }
     }

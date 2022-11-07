@@ -14,7 +14,7 @@ using BussinessObject.Models;
 
 namespace SalesWinApp
 {
-    public partial class frmOder : Form
+    public partial class frmOrder : Form
     {
         IOrderRepository repo;
         int oId = 0;

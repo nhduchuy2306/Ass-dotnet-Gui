@@ -11,8 +11,8 @@ namespace SalesWinApp
         {
 
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmMain());
-            
+            Application.Run(new frmLogin());
+
         }
     }
 }
