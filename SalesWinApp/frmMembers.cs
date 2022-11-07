@@ -35,6 +35,7 @@ namespace SalesWinApp
             txtPwd.Text = string.Empty;
         }
 
+        // Load members 
         private void LoadMemberList(List<Member> list)
         {
             src = new BindingSource();
@@ -161,5 +162,8 @@ namespace SalesWinApp
                 }
             }
         }
+
+        // return frmMain
+        private void btnBack_Click(object sender, EventArgs e) => Close();
     }
 }

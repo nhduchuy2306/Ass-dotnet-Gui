@@ -10,6 +10,7 @@ namespace BussinessObject.Mappings;
 
 public class AutoMapperConfiguration
 {
+    // product
     public static Product ToProduct(ProductObject productObject)
     {
         var config = new MapperConfiguration(cfg =>
@@ -22,6 +23,7 @@ public class AutoMapperConfiguration
         return product;
     }
 
+    // member
     public static Member ToMember(MemberObject memberObject)
     {
         var config = new MapperConfiguration(c =>
