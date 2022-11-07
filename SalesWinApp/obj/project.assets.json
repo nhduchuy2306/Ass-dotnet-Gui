@@ -3561,23 +3561,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\buile\\.nuget\\packages\\": {},
+    "C:\\Users\\ownhi\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\VMinh\\Studying\\FPT_Studying\\Fall22\\PRN211\\WorkSpace\\ASM\\Ass-dotnet-Gui\\SalesWinApp\\SalesWinApp.csproj",
+      "projectUniqueName": "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\SalesWinApp\\SalesWinApp.csproj",
       "projectName": "SalesWinApp",
-      "projectPath": "C:\\VMinh\\Studying\\FPT_Studying\\Fall22\\PRN211\\WorkSpace\\ASM\\Ass-dotnet-Gui\\SalesWinApp\\SalesWinApp.csproj",
-      "packagesPath": "C:\\Users\\buile\\.nuget\\packages\\",
-      "outputPath": "C:\\VMinh\\Studying\\FPT_Studying\\Fall22\\PRN211\\WorkSpace\\ASM\\Ass-dotnet-Gui\\SalesWinApp\\obj\\",
+      "projectPath": "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\SalesWinApp\\SalesWinApp.csproj",
+      "packagesPath": "C:\\Users\\ownhi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\SalesWinApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\buile\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ownhi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3586,18 +3586,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\VMinh\\Studying\\FPT_Studying\\Fall22\\PRN211\\WorkSpace\\ASM\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj": {
-              "projectPath": "C:\\VMinh\\Studying\\FPT_Studying\\Fall22\\PRN211\\WorkSpace\\ASM\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj"
+            "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj": {
+              "projectPath": "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj"
             },
-            "C:\\VMinh\\Studying\\FPT_Studying\\Fall22\\PRN211\\WorkSpace\\ASM\\Ass-dotnet-Gui\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\VMinh\\Studying\\FPT_Studying\\Fall22\\PRN211\\WorkSpace\\ASM\\Ass-dotnet-Gui\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\ownhi\\Documents\\HK5\\PRN211\\Ass-dotnet-Gui\\DataAccess\\DataAccess.csproj"
             }
           }
         }
@@ -3633,13 +3632,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\VMinh\\Studying\\FPT_Studying\\Fall22\\PRN211\\WorkSpace\\ASM\\Ass-dotnet-Gui\\SalesWinApp\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

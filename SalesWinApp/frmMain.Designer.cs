@@ -32,7 +32,11 @@
             this.memberManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orderManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.orderHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -41,7 +45,7 @@
             this.memberManagementToolStripMenuItem,
             this.productManagementToolStripMenuItem,
             this.orderManagementToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1117, 24);
             this.menuStrip1.TabIndex = 0;
@@ -69,12 +73,36 @@
             this.orderManagementToolStripMenuItem.Text = "Order Management";
             this.orderManagementToolStripMenuItem.Click += new System.EventHandler(this.orderManagementToolStripMenuItem_Click);
             // 
+            // menuStrip2
+            // 
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.profileToolStripMenuItem,
+            this.orderHistoryToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(1117, 24);
+            this.menuStrip2.TabIndex = 2;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // profileToolStripMenuItem
+            // 
+            this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
+            this.profileToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.profileToolStripMenuItem.Text = "Profile";
+            // 
+            // orderHistoryToolStripMenuItem
+            // 
+            this.orderHistoryToolStripMenuItem.Name = "orderHistoryToolStripMenuItem";
+            this.orderHistoryToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.orderHistoryToolStripMenuItem.Text = "Order History";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1117, 589);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.menuStrip2);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
@@ -83,6 +111,8 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,5 +124,8 @@
         private ToolStripMenuItem memberManagementToolStripMenuItem;
         private ToolStripMenuItem productManagementToolStripMenuItem;
         private ToolStripMenuItem orderManagementToolStripMenuItem;
+        private MenuStrip menuStrip2;
+        private ToolStripMenuItem profileToolStripMenuItem;
+        private ToolStripMenuItem orderHistoryToolStripMenuItem;
     }
 }
