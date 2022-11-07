@@ -35,6 +35,18 @@ public class AutoMapperConfiguration
         return order;
     }
 
+    public static OrderObject ToOrderObject(Order order)
+    {
+        var config = new MapperConfiguration(cfg =>
+            cfg.CreateMap<Order, OrderObject>()
+        );
+
+        var mapper = new Mapper(config);
+        var orderobject = mapper.Map<OrderObject>(order);
+
+        return orderobject;
+    }
+
     public static OrderDetail ToOrderDetail(OrderDetailObject orderdetailObject)
     {
         var config = new MapperConfiguration(cfg =>

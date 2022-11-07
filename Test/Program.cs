@@ -10,9 +10,10 @@ public static class Program
     static void Main()
     {
         IOrderRepository i = new OrderRepository();
-        i.Delete(7);
+        List<Order> list = i.GetAll();
+        List<OrderObject> listO = new List<OrderObject>();
+        list.ForEach(p => listO.Add(AutoMapperConfiguration.ToOrderObject(p)));
 
-        var list = i.GetAll();
-        foreach (var item in list) { Console.WriteLine(item.MemberId); }
+        foreach (var item in listO) { Console.WriteLine(item.MemberId); }
     }
 }
