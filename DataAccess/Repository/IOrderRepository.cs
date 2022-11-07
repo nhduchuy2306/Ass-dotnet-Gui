@@ -15,6 +15,8 @@ public interface IOrderRepository
 
     bool Update(Order order);
 
+    Order GetById(int id);
+
     bool Delete(int id);
 
 }

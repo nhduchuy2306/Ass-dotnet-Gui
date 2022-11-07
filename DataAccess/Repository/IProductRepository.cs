@@ -10,4 +10,6 @@ public interface IProductRepository
     bool Update(Product product);
     bool Delete(int id);
     bool Add(Product product);
+    List<Product> GetByUnitPrice(decimal unitPrice);
+    List<Product> GetByUnitsInStock(int unitInStock);
 }

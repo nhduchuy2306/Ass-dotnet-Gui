@@ -17,7 +17,10 @@ namespace SalesWinApp
     public partial class frmProducts : Form
     {
         private IProductRepository repo = null;
+
         BindingSource source = null;
+
+        ProductObject productObject = null;
 
         public frmProducts()
         {
@@ -35,7 +38,7 @@ namespace SalesWinApp
             txtUnitsInStock.Text = string.Empty;
         }
 
-        private void LoadProduct(List<Product> list)
+        private void LoadProduct(List<ProductObject> list)
         {
             source = new BindingSource();
 
@@ -61,36 +64,29 @@ namespace SalesWinApp
 
         private void frmProducts_Load(object sender, EventArgs e)
         {
+            List<ProductObject> listP = new List<ProductObject>();
             List<Product> list = repo.GetAll();
-            LoadProduct(list);
+            list.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
+            LoadProduct(listP);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string productId = txtProductID.Text;
-            string categoryId = txtCategoryID.Text;
-            string productName = txtProductName.Text;
-            string weight = txtWeight.Text;
-            string unitPrice = txtUnitPrice.Text;
-            string unitInStock = txtUnitsInStock.Text;
-
-            ProductObject productObject = new ProductObject
+            if (productObject != null)
             {
-                ProductId = Convert.ToInt32(productId),
-                CategoryId = Convert.ToInt32(categoryId),
-                ProductName = productName,
-                Weight = weight,
-                UnitPrice = Convert.ToDecimal(unitPrice),
-                UnitsInStock = Convert.ToInt32(unitInStock)
-            };
+                frmProductDetails frmProductDetails = new frmProductDetails(productObject, true);
 
-            Product product = AutoMapperConfiguration.ToProduct(productObject);
-
-            bool check = repo.Update(product);
-
-            if (check)
+                if (frmProductDetails.ShowDialog() == DialogResult.OK)
+                {
+                    List<ProductObject> listP = new List<ProductObject>();
+                    List<Product> list = repo.GetAll();
+                    list.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
+                    LoadProduct(listP);
+                }
+            }
+            else
             {
-                MessageBox.Show("Update product successfully");
+                MessageBox.Show("You must choose 1 row");
             }
         }
 
@@ -100,20 +96,24 @@ namespace SalesWinApp
             bool check = repo.Delete(Convert.ToInt32(productId));
             if (check)
             {
+                List<ProductObject> listP = new List<ProductObject>();
                 List<Product> list = repo.GetAll();
-                LoadProduct(list);
+                list.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
+                LoadProduct(listP);
                 MessageBox.Show("Delete product successfully");
             }
         }
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            frmProductDetails frmProductDetails = new frmProductDetails();
+            frmProductDetails frmProductDetails = new frmProductDetails(false);
             
             if(frmProductDetails.ShowDialog() == DialogResult.OK)
             {
+                List<ProductObject> listP = new List<ProductObject>();
                 List<Product> list = repo.GetAll();
-                LoadProduct(list);
+                list.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
+                LoadProduct(listP);
             }
         }
 
@@ -121,20 +121,37 @@ namespace SalesWinApp
         {
             string productName = txtSearchProductID.Text;
 
-            List<Product> listAllProduct = repo.GetAll();
-
             if (productName.Equals(""))
             {
-                LoadProduct(listAllProduct);
+                List<ProductObject> listP = new List<ProductObject>();
+                List<Product> list = repo.GetAll();
+                list.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
+                LoadProduct(listP);
             }
             else
             {
                 List<Product> pro = repo.GetByName(productName);
+                List<ProductObject> listP = new List<ProductObject>();
+                pro.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
+                
                 if (pro != null)
                 {
-                    LoadProduct(pro);
+                    LoadProduct(listP);
                 }
                 else MessageBox.Show($"Not cantain {productName}");
+            }
+        }
+
+        private void dgvProductList_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            List<Product> listAllProduct = repo.GetAll();
+
+            if (e.RowIndex >= 0 && e.ColumnIndex < listAllProduct.Count)
+            {
+                string id = dgvProductList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+
+                Product product = repo.GetById(Convert.ToInt32(id));
+                productObject = AutoMapperConfiguration.ToProductObject(product);
             }
         }
 
@@ -180,6 +197,5 @@ namespace SalesWinApp
             toolStripStatusLabel1.Text = "";
         }
 
-        
     }
 }

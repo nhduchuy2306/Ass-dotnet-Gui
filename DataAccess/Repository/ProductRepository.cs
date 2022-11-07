@@ -52,6 +52,22 @@ public class ProductRepository : IProductRepository
         return product.ToList();
     }
 
+    public List<Product> GetByUnitPrice(decimal unitPrice)
+    {
+        var product = from p in _saleManagementContext.Products
+                      where p.UnitPrice == unitPrice
+                      select p;
+        return product.ToList();
+    }
+
+    public List<Product> GetByUnitsInStock(int unitInStock)
+    {
+        var product = from p in _saleManagementContext.Products
+                      where p.UnitsInStock == unitInStock
+                      select p;
+        return product.ToList();
+    }
+
     public bool Update(Product product)
     {
         Product productTmp = GetById(product.ProductId);

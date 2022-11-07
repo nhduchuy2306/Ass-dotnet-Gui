@@ -68,47 +68,36 @@ namespace SalesWinApp
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            
-            int memberId = Convert.ToInt32(txtMemberID.Text);
-            DateTime orderDate = DateTime.Now;
-            DateTime? requiredDate = null;
-            DateTime? shippedDate = null;
-            try
+            frmOder form = new frmOder();
+            if(form.ShowDialog() == DialogResult.OK)
             {
-                orderDate = DateTime.Parse(txtOrderDate.Text);
-                if (txtRequiredDate.Text != "")
-                {
-                    requiredDate = DateTime.Parse(txtRequiredDate.Text);
-                }
-                if (txtShippedDate.Text != "")
-                {
-                    shippedDate = DateTime.Parse(txtShippedDate.Text);
-                }
+                LoadOrder(repo.GetAll());
             }
-            catch
-            {
-                Console.WriteLine("Invalid Date!!!");
-                MessageBox.Show("Invalid Date!!!");
-            }
-            decimal? freight = Convert.ToDecimal(txtFreight.Text);
-            OrderObject orderObject = new OrderObject(0, memberId, orderDate, requiredDate, shippedDate, freight);
-            if (repo.Add(AutoMapperConfiguration.ToOrder(orderObject)))
-            {
-                MessageBox.Show("Add Successfully!!!");
-            }else MessageBox.Show("Add Fail!!!");
-            
-            LoadOrder(repo.GetAll());
 
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            frmOder form = new frmOder(Convert.ToInt32(txtOrderID.Text));
+            if(form.ShowDialog() == DialogResult.OK)
+            {
+                LoadOrder(repo.GetAll());
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            repo.Delete(Convert.ToInt32(txtOrderID.Text));
+            LoadOrder(repo.GetAll());
+        }
 
+        private void btnAddDetail_Click(object sender, EventArgs e)
+        {
+            frmOrderDetails form = new frmOrderDetails(Convert.ToInt32(txtOrderID.Text));
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                LoadOrder(repo.GetAll());
+            }
         }
 
         //dưới này là statusstrip
@@ -137,5 +126,7 @@ namespace SalesWinApp
         {
             toolStripStatusLabel1.Text = "";
         }
+
+        
     }
 }

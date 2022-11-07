@@ -28,247 +28,265 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbMemberList = new System.Windows.Forms.Label();
-            this.dgvMemberList = new System.Windows.Forms.DataGridView();
-            this.lbManageMember = new System.Windows.Forms.Label();
-            this.lbMemberID = new System.Windows.Forms.Label();
-            this.lbEmail = new System.Windows.Forms.Label();
-            this.lbCompanyName = new System.Windows.Forms.Label();
-            this.lbCity = new System.Windows.Forms.Label();
-            this.lbCountry = new System.Windows.Forms.Label();
-            this.lbPassword = new System.Windows.Forms.Label();
-            this.txtMemberID = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtCompanyName = new System.Windows.Forms.TextBox();
-            this.txtCity = new System.Windows.Forms.TextBox();
-            this.txtCountry = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.dgvMember = new System.Windows.Forms.DataGridView();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.lbMember = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).BeginInit();
-            this.statusStrip1.SuspendLayout();
+            this.lbMemID = new System.Windows.Forms.Label();
+            this.lbEmail = new System.Windows.Forms.Label();
+            this.lbCompany = new System.Windows.Forms.Label();
+            this.lbCountry = new System.Windows.Forms.Label();
+            this.lbPwd = new System.Windows.Forms.Label();
+            this.txtMemID = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtCompany = new System.Windows.Forms.TextBox();
+            this.txtCountry = new System.Windows.Forms.TextBox();
+            this.txtPwd = new System.Windows.Forms.TextBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.lbCity = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbMemberList
+            // dgvMember
             // 
-            this.lbMemberList.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbMemberList.Location = new System.Drawing.Point(224, 19);
-            this.lbMemberList.Name = "lbMemberList";
-            this.lbMemberList.Size = new System.Drawing.Size(139, 33);
-            this.lbMemberList.TabIndex = 2;
-            this.lbMemberList.Text = "Member List";
+            this.dgvMember.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMember.Location = new System.Drawing.Point(27, 161);
+            this.dgvMember.Name = "dgvMember";
+            this.dgvMember.ReadOnly = true;
+            this.dgvMember.RowHeadersWidth = 62;
+            this.dgvMember.RowTemplate.Height = 33;
+            this.dgvMember.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMember.Size = new System.Drawing.Size(799, 465);
+            this.dgvMember.TabIndex = 0;
             // 
-            // dgvMemberList
+            // txtSearch
             // 
-            this.dgvMemberList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMemberList.Location = new System.Drawing.Point(36, 69);
-            this.dgvMemberList.Name = "dgvMemberList";
-            this.dgvMemberList.ReadOnly = true;
-            this.dgvMemberList.RowTemplate.Height = 25;
-            this.dgvMemberList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMemberList.Size = new System.Drawing.Size(560, 328);
-            this.dgvMemberList.TabIndex = 3;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSearch.Location = new System.Drawing.Point(141, 100);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(458, 39);
+            this.txtSearch.TabIndex = 1;
             // 
-            // lbManageMember
+            // btnSearch
             // 
-            this.lbManageMember.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbManageMember.Location = new System.Drawing.Point(746, 19);
-            this.lbManageMember.Name = "lbManageMember";
-            this.lbManageMember.Size = new System.Drawing.Size(181, 33);
-            this.lbManageMember.TabIndex = 4;
-            this.lbManageMember.Text = "Manage Member";
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSearch.Location = new System.Drawing.Point(618, 99);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(117, 42);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // lbMemberID
+            // btnNew
             // 
-            this.lbMemberID.AutoSize = true;
-            this.lbMemberID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbMemberID.Location = new System.Drawing.Point(693, 68);
-            this.lbMemberID.Name = "lbMemberID";
-            this.lbMemberID.Size = new System.Drawing.Size(84, 20);
-            this.lbMemberID.TabIndex = 22;
-            this.lbMemberID.Text = "&Member ID";
+            this.btnNew.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnNew.Location = new System.Drawing.Point(359, 656);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(125, 42);
+            this.btnNew.TabIndex = 3;
+            this.btnNew.Text = "Create";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // lbMember
+            // 
+            this.lbMember.AutoSize = true;
+            this.lbMember.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbMember.Location = new System.Drawing.Point(277, 29);
+            this.lbMember.Name = "lbMember";
+            this.lbMember.Size = new System.Drawing.Size(207, 45);
+            this.lbMember.TabIndex = 6;
+            this.lbMember.Text = "Member List";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(1093, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(217, 45);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Member Info";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdate.Location = new System.Drawing.Point(1065, 656);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(125, 42);
+            this.btnUpdate.TabIndex = 8;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDelete.Location = new System.Drawing.Point(1261, 656);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(125, 42);
+            this.btnDelete.TabIndex = 9;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // lbMemID
+            // 
+            this.lbMemID.AutoSize = true;
+            this.lbMemID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbMemID.Location = new System.Drawing.Point(942, 128);
+            this.lbMemID.Name = "lbMemID";
+            this.lbMemID.Size = new System.Drawing.Size(124, 30);
+            this.lbMemID.TabIndex = 10;
+            this.lbMemID.Text = "Member ID";
             // 
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
             this.lbEmail.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbEmail.Location = new System.Drawing.Point(693, 120);
+            this.lbEmail.Location = new System.Drawing.Point(942, 213);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(46, 20);
-            this.lbEmail.TabIndex = 23;
-            this.lbEmail.Text = "&Email";
+            this.lbEmail.Size = new System.Drawing.Size(64, 30);
+            this.lbEmail.TabIndex = 11;
+            this.lbEmail.Text = "Email";
             // 
-            // lbCompanyName
+            // lbCompany
             // 
-            this.lbCompanyName.AutoSize = true;
-            this.lbCompanyName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbCompanyName.Location = new System.Drawing.Point(693, 178);
-            this.lbCompanyName.Name = "lbCompanyName";
-            this.lbCompanyName.Size = new System.Drawing.Size(116, 20);
-            this.lbCompanyName.TabIndex = 22;
-            this.lbCompanyName.Text = "&Company Name";
-            // 
-            // lbCity
-            // 
-            this.lbCity.AutoSize = true;
-            this.lbCity.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbCity.Location = new System.Drawing.Point(693, 237);
-            this.lbCity.Name = "lbCity";
-            this.lbCity.Size = new System.Drawing.Size(34, 20);
-            this.lbCity.TabIndex = 24;
-            this.lbCity.Text = "&City";
+            this.lbCompany.AutoSize = true;
+            this.lbCompany.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbCompany.Location = new System.Drawing.Point(942, 297);
+            this.lbCompany.Name = "lbCompany";
+            this.lbCompany.Size = new System.Drawing.Size(106, 30);
+            this.lbCompany.TabIndex = 12;
+            this.lbCompany.Text = "Company";
             // 
             // lbCountry
             // 
             this.lbCountry.AutoSize = true;
             this.lbCountry.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbCountry.Location = new System.Drawing.Point(693, 301);
+            this.lbCountry.Location = new System.Drawing.Point(942, 380);
             this.lbCountry.Name = "lbCountry";
-            this.lbCountry.Size = new System.Drawing.Size(60, 20);
-            this.lbCountry.TabIndex = 25;
-            this.lbCountry.Text = "&Country";
+            this.lbCountry.Size = new System.Drawing.Size(90, 30);
+            this.lbCountry.TabIndex = 13;
+            this.lbCountry.Text = "Country";
             // 
-            // lbPassword
+            // lbPwd
             // 
-            this.lbPassword.AutoSize = true;
-            this.lbPassword.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbPassword.Location = new System.Drawing.Point(693, 364);
-            this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(70, 20);
-            this.lbPassword.TabIndex = 26;
-            this.lbPassword.Text = "&Password";
+            this.lbPwd.AutoSize = true;
+            this.lbPwd.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbPwd.Location = new System.Drawing.Point(942, 553);
+            this.lbPwd.Name = "lbPwd";
+            this.lbPwd.Size = new System.Drawing.Size(103, 30);
+            this.lbPwd.TabIndex = 14;
+            this.lbPwd.Text = "Password";
             // 
-            // txtMemberID
+            // txtMemID
             // 
-            this.txtMemberID.Location = new System.Drawing.Point(827, 69);
-            this.txtMemberID.Name = "txtMemberID";
-            this.txtMemberID.ReadOnly = true;
-            this.txtMemberID.Size = new System.Drawing.Size(172, 23);
-            this.txtMemberID.TabIndex = 27;
+            this.txtMemID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtMemID.Location = new System.Drawing.Point(1093, 125);
+            this.txtMemID.Name = "txtMemID";
+            this.txtMemID.ReadOnly = true;
+            this.txtMemID.Size = new System.Drawing.Size(293, 37);
+            this.txtMemID.TabIndex = 15;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(827, 117);
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtEmail.Location = new System.Drawing.Point(1093, 210);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(172, 23);
-            this.txtEmail.TabIndex = 22;
+            this.txtEmail.Size = new System.Drawing.Size(293, 37);
+            this.txtEmail.TabIndex = 16;
             // 
-            // txtCompanyName
+            // txtCompany
             // 
-            this.txtCompanyName.Location = new System.Drawing.Point(827, 179);
-            this.txtCompanyName.Name = "txtCompanyName";
-            this.txtCompanyName.Size = new System.Drawing.Size(172, 23);
-            this.txtCompanyName.TabIndex = 22;
-            // 
-            // txtCity
-            // 
-            this.txtCity.Location = new System.Drawing.Point(827, 238);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(172, 23);
-            this.txtCity.TabIndex = 22;
+            this.txtCompany.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCompany.Location = new System.Drawing.Point(1093, 294);
+            this.txtCompany.Name = "txtCompany";
+            this.txtCompany.Size = new System.Drawing.Size(293, 37);
+            this.txtCompany.TabIndex = 17;
             // 
             // txtCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(827, 302);
+            this.txtCountry.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCountry.Location = new System.Drawing.Point(1093, 377);
             this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(172, 23);
-            this.txtCountry.TabIndex = 28;
+            this.txtCountry.Size = new System.Drawing.Size(293, 37);
+            this.txtCountry.TabIndex = 18;
             // 
-            // txtPassword
+            // txtPwd
             // 
-            this.txtPassword.Location = new System.Drawing.Point(827, 365);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(172, 23);
-            this.txtPassword.TabIndex = 29;
+            this.txtPwd.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPwd.Location = new System.Drawing.Point(1093, 550);
+            this.txtPwd.Name = "txtPwd";
+            this.txtPwd.Size = new System.Drawing.Size(293, 37);
+            this.txtPwd.TabIndex = 19;
             // 
-            // btnUpdate
+            // txtCity
             // 
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdate.Location = new System.Drawing.Point(702, 412);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(140, 33);
-            this.btnUpdate.TabIndex = 30;
-            this.btnUpdate.Text = "Update Member";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            this.btnUpdate.MouseLeave += new System.EventHandler(this.btnUpdate_MouseLeave);
-            this.btnUpdate.MouseHover += new System.EventHandler(this.btnUpdate_MouseHover);
+            this.txtCity.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCity.Location = new System.Drawing.Point(1093, 463);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(293, 37);
+            this.txtCity.TabIndex = 21;
             // 
-            // btnDelete
+            // lbCity
             // 
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDelete.Location = new System.Drawing.Point(859, 412);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(140, 33);
-            this.btnDelete.TabIndex = 31;
-            this.btnDelete.Text = "Delete Member";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            this.btnDelete.MouseLeave += new System.EventHandler(this.btnDelete_MouseLeave);
-            this.btnDelete.MouseHover += new System.EventHandler(this.btnDelete_MouseHover);
+            this.lbCity.AutoSize = true;
+            this.lbCity.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbCity.Location = new System.Drawing.Point(942, 466);
+            this.lbCity.Name = "lbCity";
+            this.lbCity.Size = new System.Drawing.Size(50, 30);
+            this.lbCity.TabIndex = 20;
+            this.lbCity.Text = "City";
             // 
-            // btnNew
+            // btnBack
             // 
-            this.btnNew.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnNew.Location = new System.Drawing.Point(224, 412);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(152, 33);
-            this.btnNew.TabIndex = 32;
-            this.btnNew.Text = "New Member";
-            this.btnNew.UseVisualStyleBackColor = true;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            this.btnNew.MouseLeave += new System.EventHandler(this.btnNew_MouseLeave);
-            this.btnNew.MouseHover += new System.EventHandler(this.btnNew_MouseHover);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 462);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1054, 22);
-            this.statusStrip1.TabIndex = 33;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBack.Location = new System.Drawing.Point(12, 12);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(79, 42);
+            this.btnBack.TabIndex = 22;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // frmMembers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1054, 484);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.btnNew);
+            this.ClientSize = new System.Drawing.Size(1478, 729);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.txtCity);
+            this.Controls.Add(this.lbCity);
+            this.Controls.Add(this.txtPwd);
+            this.Controls.Add(this.txtCountry);
+            this.Controls.Add(this.txtCompany);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtMemID);
+            this.Controls.Add(this.lbPwd);
+            this.Controls.Add(this.lbCountry);
+            this.Controls.Add(this.lbCompany);
+            this.Controls.Add(this.lbEmail);
+            this.Controls.Add(this.lbMemID);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtCountry);
-            this.Controls.Add(this.txtCity);
-            this.Controls.Add(this.txtCompanyName);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtMemberID);
-            this.Controls.Add(this.lbPassword);
-            this.Controls.Add(this.lbCountry);
-            this.Controls.Add(this.lbCity);
-            this.Controls.Add(this.lbCompanyName);
-            this.Controls.Add(this.lbEmail);
-            this.Controls.Add(this.lbMemberID);
-            this.Controls.Add(this.lbManageMember);
-            this.Controls.Add(this.dgvMemberList);
-            this.Controls.Add(this.lbMemberList);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbMember);
+            this.Controls.Add(this.btnNew);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.dgvMember);
             this.Name = "frmMembers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Members";
+            this.Text = "Member Management";
             this.Load += new System.EventHandler(this.frmMembers_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).EndInit();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,25 +294,26 @@
 
         #endregion
 
-        private Label lbMemberList;
-        private DataGridView dgvMemberList;
-        private Label lbManageMember;
-        private Label lbMemberID;
-        private Label lbEmail;
-        private Label lbCompanyName;
-        private Label lbCity;
-        private Label lbCountry;
-        private Label lbPassword;
-        private TextBox txtMemberID;
-        private TextBox txtEmail;
-        private TextBox txtCompanyName;
-        private TextBox txtCity;
-        private TextBox txtCountry;
-        private TextBox txtPassword;
+        private DataGridView dgvMember;
+        private TextBox txtSearch;
+        private Button btnSearch;
+        private Button btnNew;
+        private Label lbMember;
+        private Label label2;
         private Button btnUpdate;
         private Button btnDelete;
-        private Button btnNew;
-        private StatusStrip statusStrip1;
-        private ToolStripStatusLabel toolStripStatusLabel1;
+        private Label lbMemID;
+        private Label lbEmail;
+        private Label lbCompany;
+        private Label lbCountry;
+        private Label lbPwd;
+        private TextBox txtMemID;
+        private TextBox txtEmail;
+        private TextBox txtCompany;
+        private TextBox txtCountry;
+        private TextBox txtPwd;
+        private TextBox txtCity;
+        private Label lbCity;
+        private Button btnBack;
     }
 }

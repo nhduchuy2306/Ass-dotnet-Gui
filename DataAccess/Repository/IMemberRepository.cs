@@ -9,7 +9,10 @@ namespace DataAccess.Repository;
 
 public interface IMemberRepository
 {
-    List<Member> GetMembers();
-    string GetEmailAdmin();
-    string GetPassAdmin();
+    List<Member> GetAll();
+    Member GetById(int id);
+    List<Member> GetByEmail(string email);
+    bool Add(Member member);
+    bool Update(Member member);
+    bool Delete(int id);
 }

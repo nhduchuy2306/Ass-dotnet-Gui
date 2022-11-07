@@ -155,6 +155,7 @@
             // 
             this.txtMemberID.Location = new System.Drawing.Point(795, 117);
             this.txtMemberID.Name = "txtMemberID";
+            this.txtMemberID.ReadOnly = true;
             this.txtMemberID.Size = new System.Drawing.Size(204, 23);
             this.txtMemberID.TabIndex = 22;
             // 
@@ -162,6 +163,7 @@
             // 
             this.txtFreight.Location = new System.Drawing.Point(795, 356);
             this.txtFreight.Name = "txtFreight";
+            this.txtFreight.ReadOnly = true;
             this.txtFreight.Size = new System.Drawing.Size(204, 23);
             this.txtFreight.TabIndex = 29;
             // 
@@ -238,11 +240,13 @@
             this.btnAddDetail.TabIndex = 36;
             this.btnAddDetail.Text = "Add Order Detail";
             this.btnAddDetail.UseVisualStyleBackColor = true;
+            this.btnAddDetail.Click += new System.EventHandler(this.btnAddDetail_Click);
             // 
             // txtOrderDate
             // 
             this.txtOrderDate.Location = new System.Drawing.Point(795, 179);
             this.txtOrderDate.Name = "txtOrderDate";
+            this.txtOrderDate.ReadOnly = true;
             this.txtOrderDate.Size = new System.Drawing.Size(204, 23);
             this.txtOrderDate.TabIndex = 40;
             // 
@@ -250,7 +254,8 @@
             // 
             this.txtRequiredDate.Location = new System.Drawing.Point(795, 239);
             this.txtRequiredDate.Name = "txtRequiredDate";
-            this.txtRequiredDate.PlaceholderText = "yyyy/mm/dd";
+            this.txtRequiredDate.PlaceholderText = "dd/mm/yyy";
+            this.txtRequiredDate.ReadOnly = true;
             this.txtRequiredDate.Size = new System.Drawing.Size(204, 23);
             this.txtRequiredDate.TabIndex = 41;
             // 
@@ -258,7 +263,8 @@
             // 
             this.txtShippedDate.Location = new System.Drawing.Point(795, 299);
             this.txtShippedDate.Name = "txtShippedDate";
-            this.txtShippedDate.PlaceholderText = "yyyy/mm/dd";
+            this.txtShippedDate.PlaceholderText = "dd/mm/yyy";
+            this.txtShippedDate.ReadOnly = true;
             this.txtShippedDate.Size = new System.Drawing.Size(204, 23);
             this.txtShippedDate.TabIndex = 42;
             // 

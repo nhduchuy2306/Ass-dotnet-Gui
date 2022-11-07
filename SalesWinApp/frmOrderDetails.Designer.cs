@@ -39,7 +39,7 @@
             this.txtProductID = new System.Windows.Forms.TextBox();
             this.txtUnitPrice = new System.Windows.Forms.MaskedTextBox();
             this.txtQuantity = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.txtDiscount = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // lbProductID
@@ -120,6 +120,7 @@
             // 
             this.txtOrderID.Location = new System.Drawing.Point(195, 34);
             this.txtOrderID.Name = "txtOrderID";
+            this.txtOrderID.ReadOnly = true;
             this.txtOrderID.Size = new System.Drawing.Size(149, 23);
             this.txtOrderID.TabIndex = 24;
             // 
@@ -133,36 +134,36 @@
             // txtUnitPrice
             // 
             this.txtUnitPrice.Location = new System.Drawing.Point(195, 114);
-            this.txtUnitPrice.Mask = "000000000";
             this.txtUnitPrice.Name = "txtUnitPrice";
+            this.txtUnitPrice.ReadOnly = true;
             this.txtUnitPrice.Size = new System.Drawing.Size(149, 23);
             this.txtUnitPrice.TabIndex = 25;
             this.txtUnitPrice.Text = "0";
+            this.txtUnitPrice.TextChanged += new System.EventHandler(this.txtUnitPrice_TextChanged);
             // 
             // txtQuantity
             // 
             this.txtQuantity.Location = new System.Drawing.Point(195, 159);
-            this.txtQuantity.Mask = "000000";
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(149, 23);
             this.txtQuantity.TabIndex = 26;
             this.txtQuantity.Text = "0";
             // 
-            // maskedTextBox3
+            // txtDiscount
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(195, 202);
-            this.maskedTextBox3.Mask = "000000000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(149, 23);
-            this.maskedTextBox3.TabIndex = 27;
-            this.maskedTextBox3.Text = "0";
+            this.txtDiscount.Location = new System.Drawing.Point(195, 202);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.ResetOnSpace = false;
+            this.txtDiscount.Size = new System.Drawing.Size(149, 23);
+            this.txtDiscount.TabIndex = 27;
+            this.txtDiscount.Text = "0";
             // 
             // frmOrderDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 312);
-            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.txtDiscount);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.txtUnitPrice);
             this.Controls.Add(this.txtOrderID);
@@ -195,6 +196,6 @@
         private TextBox txtProductID;
         private MaskedTextBox txtUnitPrice;
         private MaskedTextBox txtQuantity;
-        private MaskedTextBox maskedTextBox3;
+        private MaskedTextBox txtDiscount;
     }
 }

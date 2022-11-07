@@ -18,49 +18,114 @@ namespace SalesWinApp
     {
         private IProductRepository repo = null;
 
+        private bool UpdateOrCreate = false;
+
+        private ProductObject _productObject = null;
+
         public frmProductDetails()
         {
             InitializeComponent();
             repo = new ProductRepository();
         }
 
+        public frmProductDetails(bool updateOrCreate)
+        {
+            InitializeComponent();
+            repo = new ProductRepository();
+            UpdateOrCreate = updateOrCreate;
+        }
+
+        public frmProductDetails(ProductObject p, bool updateOrCreate)
+        {
+            InitializeComponent();
+            repo = new ProductRepository();
+            _productObject = p;
+            UpdateOrCreate = updateOrCreate;
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string categoryId = txtCategoryID.Text;
-            string productName = txtProductName.Text;
-            string weight = txtWeight.Text;
-            string unitPrice = txtUnitPrice.Text;
-            string unitInStock = txtUnitsInStock.Text;
-
-            ProductObject productObject = new ProductObject
+            if (UpdateOrCreate == true)
             {
-                CategoryId = Convert.ToInt32(categoryId),
-                ProductName = productName,
-                Weight = weight,
-                UnitPrice = Convert.ToDecimal(unitPrice),
-                UnitsInStock = Convert.ToInt32(unitInStock)
-            };
+                string productId = txtProductID.Text;
+                string categoryId = txtCategoryID.Text;
+                string productName = txtProductName.Text;
+                string weight = txtWeight.Text;
+                string unitPrice = txtUnitPrice.Text;
+                string unitInStock = txtUnitsInStock.Text;
 
-            Product product = AutoMapperConfiguration.ToProduct(productObject);
+                ProductObject productObject = new ProductObject
+                {
+                    ProductId = Convert.ToInt32(productId),
+                    CategoryId = Convert.ToInt32(categoryId),
+                    ProductName = productName,
+                    Weight = weight,
+                    UnitPrice = Convert.ToDecimal(unitPrice),
+                    UnitsInStock = Convert.ToInt32(unitInStock)
+                };
 
-            bool check = repo.Add(product);
+                Product product = AutoMapperConfiguration.ToProduct(productObject);
 
-            if (check)
+                bool check = repo.Update(product);
+
+                if (check)
+                {
+                    MessageBox.Show("Update product successfully");
+                }
+            }
+            else
             {
-                MessageBox.Show("Add product successfully");
+                lbProductID.Hide();
+                txtProductID.Hide();
+                string categoryId = txtCategoryID.Text;
+                string productName = txtProductName.Text;
+                string weight = txtWeight.Text;
+                string unitPrice = txtUnitPrice.Text;
+                string unitInStock = txtUnitsInStock.Text;
+
+                ProductObject productObject = new ProductObject
+                {
+                    CategoryId = Convert.ToInt32(categoryId),
+                    ProductName = productName,
+                    Weight = weight,
+                    UnitPrice = Convert.ToDecimal(unitPrice),
+                    UnitsInStock = Convert.ToInt32(unitInStock)
+                };
+
+                Product product = AutoMapperConfiguration.ToProduct(productObject);
+
+                bool check = repo.Add(product);
+
+                if (check)
+                {
+                    MessageBox.Show("Add product successfully");
+                }
             }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             frmProducts product = new frmProducts();
+            frmMain main = new frmMain();
+            product.MdiParent = main;
             product.Show();
             this.Hide();
         }
 
         private void frmProductDetails_Load(object sender, EventArgs e)
         {
-
+            if (UpdateOrCreate == true)
+            {
+                if (_productObject != null)
+                {
+                    txtProductID.Text = Convert.ToString(_productObject.ProductId);
+                    txtCategoryID.Text = Convert.ToString(_productObject.CategoryId);
+                    txtProductName.Text = _productObject.ProductName;
+                    txtUnitPrice.Text = Convert.ToString(_productObject.UnitPrice);
+                    txtUnitsInStock.Text = Convert.ToString(_productObject.UnitsInStock);
+                    txtWeight.Text = Convert.ToString(_productObject.Weight);
+                }
+            }
         }
     }
 }
