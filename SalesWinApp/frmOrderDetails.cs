@@ -10,32 +10,30 @@ using System.Windows.Forms;
 
 namespace SalesWinApp
 {
-    public partial class frmMemberDetails : Form
+    public partial class frmOrderDetails : Form
     {
-        public frmMemberDetails()
+        public frmOrderDetails()
         {
             InitializeComponent();
         }
 
-        private void frmMemberDetails_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
+        private void frmOrderDetails_Load(object sender, EventArgs e)
         {
 
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            frmMembers frmMember = new frmMembers();
+            frmOrders frmOrder = new frmOrders();
             frmMain main = new frmMain();
-            frmMember.MdiParent = main;
-            frmMember.Show();
+            frmOrder.MdiParent = main;
+            frmOrder.Show();
             this.Hide();
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
-

@@ -74,6 +74,23 @@ namespace SalesWinApp
 
         private void orderManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            closeform();
+            bool IsOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Orders")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (IsOpen == false)
+            {
+                frmOrders frmOrder = new frmOrders();
+                frmOrder.MdiParent = this;
+                frmOrder.Show();
+            }
         }
     }
 }
