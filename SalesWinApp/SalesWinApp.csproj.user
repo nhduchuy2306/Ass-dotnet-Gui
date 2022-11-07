@@ -16,6 +16,9 @@
     <Compile Update="frmOder.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmOrderDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -26,6 +29,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmProfile.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
