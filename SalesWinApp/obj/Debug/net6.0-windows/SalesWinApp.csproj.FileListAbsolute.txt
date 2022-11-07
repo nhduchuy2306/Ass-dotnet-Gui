@@ -69,3 +69,4 @@ D:\FALL 2022\prn211\Workspace\learnSth\Ass02Solution\SalesWinApp\obj\Debug\net6.
 D:\FALL 2022\prn211\Workspace\learnSth\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.pdb
 D:\FALL 2022\prn211\Workspace\learnSth\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.genruntimeconfig.cache
 D:\FALL 2022\prn211\Workspace\learnSth\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\ref\SalesWinApp.dll
+D:\FALL 2022\prn211\Workspace\learnSth\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmMemberDetails.resources

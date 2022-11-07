@@ -51,8 +51,7 @@
             // 
             this.memberManagementToolStripMenuItem.Name = "memberManagementToolStripMenuItem";
             this.memberManagementToolStripMenuItem.Size = new System.Drawing.Size(138, 20);
-            this.memberManagementToolStripMenuItem.Text = "Member Management";
-            // 
+            this.memberManagementToolStripMenuItem.Text = "Member Management";            // 
             // productManagementToolStripMenuItem
             // 
             this.productManagementToolStripMenuItem.CheckOnClick = true;
