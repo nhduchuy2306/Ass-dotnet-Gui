@@ -52,6 +52,7 @@
             this.memberManagementToolStripMenuItem.Name = "memberManagementToolStripMenuItem";
             this.memberManagementToolStripMenuItem.Size = new System.Drawing.Size(138, 20);
             this.memberManagementToolStripMenuItem.Text = "Member Management";
+            this.memberManagementToolStripMenuItem.Click += new System.EventHandler(this.memberManagementToolStripMenuItem_Click);
             // 
             // productManagementToolStripMenuItem
             // 
@@ -66,6 +67,7 @@
             this.orderManagementToolStripMenuItem.Name = "orderManagementToolStripMenuItem";
             this.orderManagementToolStripMenuItem.Size = new System.Drawing.Size(123, 20);
             this.orderManagementToolStripMenuItem.Text = "Order Management";
+            this.orderManagementToolStripMenuItem.Click += new System.EventHandler(this.orderManagementToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -78,6 +80,7 @@
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbLogin = new System.Windows.Forms.Label();
             this.lbCategoryID = new System.Windows.Forms.Label();
             this.lbProductName = new System.Windows.Forms.Label();
             this.lbWeight = new System.Windows.Forms.Label();
@@ -41,16 +40,9 @@
             this.txtUnitsInStock = new System.Windows.Forms.MaskedTextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.lbProductID = new System.Windows.Forms.Label();
+            this.txtProductID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // lbLogin
-            // 
-            this.lbLogin.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbLogin.Location = new System.Drawing.Point(125, 25);
-            this.lbLogin.Name = "lbLogin";
-            this.lbLogin.Size = new System.Drawing.Size(164, 39);
-            this.lbLogin.TabIndex = 8;
-            this.lbLogin.Text = "NEW PRODUCT";
             // 
             // lbCategoryID
             // 
@@ -167,11 +159,30 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // lbProductID
+            // 
+            this.lbProductID.AutoSize = true;
+            this.lbProductID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbProductID.Location = new System.Drawing.Point(70, 39);
+            this.lbProductID.Name = "lbProductID";
+            this.lbProductID.Size = new System.Drawing.Size(79, 20);
+            this.lbProductID.TabIndex = 23;
+            this.lbProductID.Text = "&Product ID";
+            // 
+            // txtProductID
+            // 
+            this.txtProductID.Location = new System.Drawing.Point(195, 40);
+            this.txtProductID.Name = "txtProductID";
+            this.txtProductID.Size = new System.Drawing.Size(149, 23);
+            this.txtProductID.TabIndex = 24;
+            // 
             // frmProductDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 341);
+            this.Controls.Add(this.txtProductID);
+            this.Controls.Add(this.lbProductID);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtUnitsInStock);
@@ -184,18 +195,16 @@
             this.Controls.Add(this.lbWeight);
             this.Controls.Add(this.lbProductName);
             this.Controls.Add(this.lbCategoryID);
-            this.Controls.Add(this.lbLogin);
             this.Name = "frmProductDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "New Product";
+            this.Text = "Product Details";
+            this.Load += new System.EventHandler(this.frmProductDetails_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Label lbLogin;
         private Label lbCategoryID;
         private Label lbProductName;
         private Label lbWeight;
@@ -208,5 +217,7 @@
         private MaskedTextBox txtUnitsInStock;
         private Button btnSave;
         private Button btnCancel;
+        private Label lbProductID;
+        private TextBox txtProductID;
     }
 }

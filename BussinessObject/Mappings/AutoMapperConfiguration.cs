@@ -22,6 +22,7 @@ public class AutoMapperConfiguration
         return product;
     }
 
+
     public static Order ToOrder(OrderObject orderObject)
     {
         var config = new MapperConfiguration(cfg =>
@@ -45,6 +46,7 @@ public class AutoMapperConfiguration
 
         return orderdetail;
     }
+
 
 
 }
