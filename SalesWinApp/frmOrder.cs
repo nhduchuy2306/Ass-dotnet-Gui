@@ -20,13 +20,13 @@ namespace SalesWinApp
         int oId = 0;
         BindingSource source = null;
 
-        public frmOder()
+        public frmOrder()
         {
             InitializeComponent();
             btnUpdate.Enabled = false;
             repo = new OrderRepository();
         }
-        public frmOder(int id)
+        public frmOrder(int id)
         {
             InitializeComponent();
             btnSave.Enabled = false;

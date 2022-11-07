@@ -68,7 +68,7 @@ namespace SalesWinApp
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            frmOder form = new frmOder();
+            frmOrder form = new frmOrder();
             if(form.ShowDialog() == DialogResult.OK)
             {
                 LoadOrder(repo.GetAll());
@@ -78,7 +78,7 @@ namespace SalesWinApp
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            frmOder form = new frmOder(Convert.ToInt32(txtOrderID.Text));
+            frmOrder form = new frmOrder(Convert.ToInt32(txtOrderID.Text));
             if(form.ShowDialog() == DialogResult.OK)
             {
                 LoadOrder(repo.GetAll());
