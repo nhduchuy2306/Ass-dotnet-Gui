@@ -44,7 +44,7 @@ namespace SalesWinApp
         private void frmProfile_Load(object sender, EventArgs e)
         {
             frmLogin frmLogin = new frmLogin();
-
+            
         }
     }
 }

@@ -83,7 +83,6 @@
             this.menuStrip2.Size = new System.Drawing.Size(1117, 24);
             this.menuStrip2.TabIndex = 2;
             this.menuStrip2.Text = "menuStrip2";
-            this.menuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip2_ItemClicked);
             // 
             // profileToolStripMenuItem
             // 
