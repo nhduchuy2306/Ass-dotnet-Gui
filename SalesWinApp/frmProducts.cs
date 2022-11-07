@@ -17,7 +17,10 @@ namespace SalesWinApp
     public partial class frmProducts : Form
     {
         private IProductRepository repo = null;
+
         BindingSource source = null;
+
+        Product product = null;
 
         public frmProducts()
         {
@@ -67,30 +70,19 @@ namespace SalesWinApp
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string productId = txtProductID.Text;
-            string categoryId = txtCategoryID.Text;
-            string productName = txtProductName.Text;
-            string weight = txtWeight.Text;
-            string unitPrice = txtUnitPrice.Text;
-            string unitInStock = txtUnitsInStock.Text;
-
-            ProductObject productObject = new ProductObject
+            if (product != null)
             {
-                ProductId = Convert.ToInt32(productId),
-                CategoryId = Convert.ToInt32(categoryId),
-                ProductName = productName,
-                Weight = weight,
-                UnitPrice = Convert.ToDecimal(unitPrice),
-                UnitsInStock = Convert.ToInt32(unitInStock)
-            };
+                frmProductDetails frmProductDetails = new frmProductDetails(product, true);
 
-            Product product = AutoMapperConfiguration.ToProduct(productObject);
-
-            bool check = repo.Update(product);
-
-            if (check)
+                if (frmProductDetails.ShowDialog() == DialogResult.OK)
+                {
+                    List<Product> list = repo.GetAll();
+                    LoadProduct(list);
+                }
+            }
+            else
             {
-                MessageBox.Show("Update product successfully");
+                MessageBox.Show("You must choose 1 row");
             }
         }
 
@@ -108,7 +100,7 @@ namespace SalesWinApp
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            frmProductDetails frmProductDetails = new frmProductDetails();
+            frmProductDetails frmProductDetails = new frmProductDetails(false);
             
             if(frmProductDetails.ShowDialog() == DialogResult.OK)
             {
@@ -135,6 +127,18 @@ namespace SalesWinApp
                     LoadProduct(pro);
                 }
                 else MessageBox.Show($"Not cantain {productName}");
+            }
+        }
+
+        private void dgvProductList_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            List<Product> listAllProduct = repo.GetAll();
+
+            if (e.RowIndex >= 0 && e.ColumnIndex < listAllProduct.Count)
+            {
+                string id = dgvProductList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+
+                product = repo.GetById(Convert.ToInt32(id));
             }
         }
 
@@ -180,6 +184,5 @@ namespace SalesWinApp
             toolStripStatusLabel1.Text = "";
         }
 
-        
     }
 }
