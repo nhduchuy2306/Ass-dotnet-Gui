@@ -64,6 +64,7 @@
             this.dgvProductList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductList.Size = new System.Drawing.Size(560, 296);
             this.dgvProductList.TabIndex = 0;
+            this.dgvProductList.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProductList_CellMouseClick);
             // 
             // lbProductList
             // 
