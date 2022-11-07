@@ -3645,19 +3645,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Acer\\.nuget\\packages\\": {}
+    "C:\\Users\\Lenovo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FALL 2022\\prn211\\Workspace\\learnSth\\Ass02Solution\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "D:\\University\\Sem5\\PRN211\\Workspace\\Ass-dotnet-Gui\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "D:\\FALL 2022\\prn211\\Workspace\\learnSth\\Ass02Solution\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "D:\\FALL 2022\\prn211\\Workspace\\learnSth\\Ass02Solution\\DataAccess\\obj\\",
+      "projectPath": "D:\\University\\Sem5\\PRN211\\Workspace\\Ass-dotnet-Gui\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+      "outputPath": "D:\\University\\Sem5\\PRN211\\Workspace\\Ass-dotnet-Gui\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3671,8 +3676,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\FALL 2022\\prn211\\Workspace\\learnSth\\Ass02Solution\\BussinessObject\\BussinessObject.csproj": {
-              "projectPath": "D:\\FALL 2022\\prn211\\Workspace\\learnSth\\Ass02Solution\\BussinessObject\\BussinessObject.csproj"
+            "D:\\University\\Sem5\\PRN211\\Workspace\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj": {
+              "projectPath": "D:\\University\\Sem5\\PRN211\\Workspace\\Ass-dotnet-Gui\\BussinessObject\\BussinessObject.csproj"
             }
           }
         }
@@ -3732,7 +3737,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
