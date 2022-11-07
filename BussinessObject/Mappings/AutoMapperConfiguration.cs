@@ -21,4 +21,44 @@ public class AutoMapperConfiguration
 
         return product;
     }
+
+
+    public static Order ToOrder(OrderObject orderObject)
+    {
+        var config = new MapperConfiguration(cfg =>
+            cfg.CreateMap<OrderObject, Order>()
+        );
+
+        var mapper = new Mapper(config);
+        var order = mapper.Map<Order>(orderObject);
+
+        return order;
+    }
+
+    public static OrderObject ToOrderObject(Order order)
+    {
+        var config = new MapperConfiguration(cfg =>
+            cfg.CreateMap<Order, OrderObject>()
+        );
+
+        var mapper = new Mapper(config);
+        var orderobject = mapper.Map<OrderObject>(order);
+
+        return orderobject;
+    }
+
+    public static OrderDetail ToOrderDetail(OrderDetailObject orderdetailObject)
+    {
+        var config = new MapperConfiguration(cfg =>
+            cfg.CreateMap<OrderDetailObject, OrderDetail>()
+        );
+
+        var mapper = new Mapper(config);
+        var orderdetail = mapper.Map<OrderDetail>(orderdetailObject);
+
+        return orderdetail;
+    }
+
+
+
 }

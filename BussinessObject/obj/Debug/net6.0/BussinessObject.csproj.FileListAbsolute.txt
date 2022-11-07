@@ -26,3 +26,17 @@ C:\Users\ownhi\Documents\HK5\PRN211\Ass-dotnet-Gui\BussinessObject\obj\Debug\net
 C:\Users\ownhi\Documents\HK5\PRN211\Ass-dotnet-Gui\BussinessObject\obj\Debug\net6.0\BussinessObject.pdb
 C:\Users\ownhi\Documents\HK5\PRN211\Ass-dotnet-Gui\BussinessObject\obj\Debug\net6.0\BussinessObject.genruntimeconfig.cache
 C:\Users\ownhi\Documents\HK5\PRN211\Ass-dotnet-Gui\BussinessObject\obj\Debug\net6.0\ref\BussinessObject.dll
+C:\VMinh\Studying\FPT_Studying\Fall22\PRN211\WorkSpace\ASM\Ass-dotnet-Gui\BussinessObject\bin\Debug\net6.0\BussinessObject.deps.json
+C:\VMinh\Studying\FPT_Studying\Fall22\PRN211\WorkSpace\ASM\Ass-dotnet-Gui\BussinessObject\bin\Debug\net6.0\BussinessObject.runtimeconfig.json
+C:\VMinh\Studying\FPT_Studying\Fall22\PRN211\WorkSpace\ASM\Ass-dotnet-Gui\BussinessObject\bin\Debug\net6.0\BussinessObject.dll
+C:\VMinh\Studying\FPT_Studying\Fall22\PRN211\WorkSpace\ASM\Ass-dotnet-Gui\BussinessObject\bin\Debug\net6.0\BussinessObject.pdb
+C:\VMinh\Studying\FPT_Studying\Fall22\PRN211\WorkSpace\ASM\Ass-dotnet-Gui\BussinessObject\obj\Debug\net6.0\BussinessObject.csproj.AssemblyReference.cache
+C:\VMinh\Studying\FPT_Studying\Fall22\PRN211\WorkSpace\ASM\Ass-dotnet-Gui\BussinessObject\obj\Debug\net6.0\BussinessObject.GeneratedMSBuildEditorConfig.editorconfig
+C:\VMinh\Studying\FPT_Studying\Fall22\PRN211\WorkSpace\ASM\Ass-dotnet-Gui\BussinessObject\obj\Debug\net6.0\BussinessObject.AssemblyInfoInputs.cache
+C:\VMinh\Studying\FPT_Studying\Fall22\PRN211\WorkSpace\ASM\Ass-dotnet-Gui\BussinessObject\obj\Debug\net6.0\BussinessObject.AssemblyInfo.cs
+C:\VMinh\Studying\FPT_Studying\Fall22\PRN211\WorkSpace\ASM\Ass-dotnet-Gui\BussinessObject\obj\Debug\net6.0\BussinessObject.csproj.CoreCompileInputs.cache
+C:\VMinh\Studying\FPT_Studying\Fall22\PRN211\WorkSpace\ASM\Ass-dotnet-Gui\BussinessObject\obj\Debug\net6.0\BussinessObject.dll
+C:\VMinh\Studying\FPT_Studying\Fall22\PRN211\WorkSpace\ASM\Ass-dotnet-Gui\BussinessObject\obj\Debug\net6.0\refint\BussinessObject.dll
+C:\VMinh\Studying\FPT_Studying\Fall22\PRN211\WorkSpace\ASM\Ass-dotnet-Gui\BussinessObject\obj\Debug\net6.0\BussinessObject.pdb
+C:\VMinh\Studying\FPT_Studying\Fall22\PRN211\WorkSpace\ASM\Ass-dotnet-Gui\BussinessObject\obj\Debug\net6.0\BussinessObject.genruntimeconfig.cache
+C:\VMinh\Studying\FPT_Studying\Fall22\PRN211\WorkSpace\ASM\Ass-dotnet-Gui\BussinessObject\obj\Debug\net6.0\ref\BussinessObject.dll
