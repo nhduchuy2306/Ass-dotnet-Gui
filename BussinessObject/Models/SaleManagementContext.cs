@@ -127,5 +127,25 @@ namespace BussinessObject.Models
             var strConn = config["ConnectionStrings:SaleManagement"];
             return strConn;
         }
+        public string GetEmailAdmin()
+        {
+            IConfiguration config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", true, true)
+                .Build();
+            var admin = config.GetSection("AccountAdmin");
+            var email = admin["email"];
+            return email;
+        }
+        public string GetPassAdmin()
+        {
+            IConfiguration config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", true, true)
+                .Build();
+            var admin = config.GetSection("AccountAdmin");
+            var password = admin["password"];
+            return password;
+        }
     }
 }

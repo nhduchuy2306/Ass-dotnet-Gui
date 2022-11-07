@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbLogin = new System.Windows.Forms.Label();
             this.lbCategoryID = new System.Windows.Forms.Label();
             this.lbProductName = new System.Windows.Forms.Label();
             this.lbWeight = new System.Windows.Forms.Label();
@@ -44,15 +43,6 @@
             this.lbProductID = new System.Windows.Forms.Label();
             this.txtProductID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // lbLogin
-            // 
-            this.lbLogin.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbLogin.Location = new System.Drawing.Point(125, 25);
-            this.lbLogin.Name = "lbLogin";
-            this.lbLogin.Size = new System.Drawing.Size(164, 39);
-            this.lbLogin.TabIndex = 8;
-            this.lbLogin.Text = "NEW PRODUCT";
             // 
             // lbCategoryID
             // 
@@ -206,7 +196,6 @@
             this.Controls.Add(this.lbWeight);
             this.Controls.Add(this.lbProductName);
             this.Controls.Add(this.lbCategoryID);
-            this.Controls.Add(this.lbLogin);
             this.Name = "frmProductDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New/Update Product";
@@ -217,8 +206,6 @@
         }
 
         #endregion
-
-        private Label lbLogin;
         private Label lbCategoryID;
         private Label lbProductName;
         private Label lbWeight;
