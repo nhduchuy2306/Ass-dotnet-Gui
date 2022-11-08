@@ -16,13 +16,16 @@ namespace SalesWinApp
 {
     public partial class frmOrder : Form
     {
+        private IOrderRepository repo;
+        int oId = 0;
+        BindingSource source = null;
         public frmOrder()
         {
             InitializeComponent();
             btnUpdate.Enabled = false;
             repo = new OrderRepository();
         }
-        public frmOder(int id)
+        public frmOrder(int id)
         {
             InitializeComponent();
             btnSave.Enabled = false;

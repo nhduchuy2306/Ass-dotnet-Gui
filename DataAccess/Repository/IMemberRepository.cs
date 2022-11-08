@@ -15,4 +15,6 @@ public interface IMemberRepository
     bool Add(Member member);
     bool Update(Member member);
     bool Delete(int id);
+    string GetEmailAdmin();
+    string GetPasswordAdmin();
 }
