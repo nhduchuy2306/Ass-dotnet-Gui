@@ -36,7 +36,8 @@ public class OrderRepository : IOrderRepository
 
     public List<Order> GetAll()
     {
-        var o = from order in _context.Orders
+        using var c = new SaleManagementContext();
+        var o = from order in c.Orders
                 select order;
         return o.ToList();
     }

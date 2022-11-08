@@ -34,32 +34,18 @@ namespace SalesWinApp
             oId = id;
         }
 
-        private void LoadOrder(Order order)
-        {
-            source = new BindingSource();
-            OrderObject obj = AutoMapperConfiguration.ToOrderObject(order);
-            source.DataSource = obj;
-
-            txtOrderID.DataBindings.Clear();
-            txtMemberID.DataBindings.Clear();
-            txtOrderDate.DataBindings.Clear();
-            txtRequiredDate.DataBindings.Clear();
-            txtShippedDate.DataBindings.Clear();
-            txtFreight.DataBindings.Clear();
-
-            txtOrderID.DataBindings.Add("Text", source, "OrderId");
-            txtMemberID.DataBindings.Add("Text", source, "MemberID");
-            txtOrderDate.DataBindings.Add("Text", source, "OrderDate");
-            txtRequiredDate.DataBindings.Add("Text", source, "RequiredDate");
-            txtShippedDate.DataBindings.Add("Text", source, "ShippedDate");
-            txtFreight.DataBindings.Add("Text", source, "Freight");
-        }
-
         private void frmOder_Load(object sender, EventArgs e)
         {
             if(oId != 0)
             {
-                LoadOrder(repo.GetById(oId));
+                OrderObject obj = AutoMapperConfiguration.ToOrderObject(repo.GetById(oId));
+                txtOrderID.Text = oId.ToString();
+                txtMemberID.Text = obj.MemberId.ToString();
+                txtOrderDate.Text = obj.OrderDate.ToString();
+                txtRequiredDate.Text = obj.RequiredDate.ToString();
+                txtShippedDate.Text = obj.ShippedDate.ToString();
+                txtFreight.Text = obj.Freight.ToString();
+
             }
         }
 
@@ -139,6 +125,7 @@ namespace SalesWinApp
             else
             {
                 repo.Update(AutoMapperConfiguration.ToOrder(orderObject));
+                MessageBox.Show("Update successfully!!!");
             }
         }
     }
