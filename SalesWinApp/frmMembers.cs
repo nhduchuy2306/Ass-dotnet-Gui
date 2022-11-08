@@ -91,6 +91,7 @@ namespace SalesWinApp
             {
                 List<Member> list = repo.GetAll();
                 LoadMemberList(list);
+                //src.Position = src.Count - 1;
                 MessageBox.Show("Update member info completed");
             }
         }
@@ -102,11 +103,7 @@ namespace SalesWinApp
             string title = "Delete a member";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result = MessageBox.Show(alert, title, buttons, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-            if (result == DialogResult.No)
-            {
-                this.Close();
-            }
-            else
+            if (result == DialogResult.Yes)
             {
                 string memId = txtMemID.Text;
                 bool completed = repo.Delete(Convert.ToInt32(memId));
@@ -115,9 +112,10 @@ namespace SalesWinApp
                 {
                     List<Member> list = repo.GetAll();
                     LoadMemberList(list);
-                    MessageBox.Show("Delete member completed");
+                    MessageBox.Show($"Delete member id [ {memId} ] completed");
                 }
             }
+
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -128,6 +126,8 @@ namespace SalesWinApp
             {
                 List<Member> list = repo.GetAll();
                 LoadMemberList(list);
+                src.Position = src.Count - 1;
+                MessageBox.Show("Create new member completed");
             }
         }
 
@@ -143,7 +143,7 @@ namespace SalesWinApp
             else
             {
                 List<Member> mem = repo.GetByEmail(search);
-                if (mem != null)
+                if (mem.Count > 0)
                 {
                     LoadMemberList(mem);
                 }
@@ -158,7 +158,6 @@ namespace SalesWinApp
                         mem.Add(m);
                         LoadMemberList(mem);
                     }
-                    else MessageBox.Show("Not found!!!");
                 }
             }
         }

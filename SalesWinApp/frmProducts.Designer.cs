@@ -1,4 +1,4 @@
-﻿namespace SalesWinApp
+namespace SalesWinApp
 {
     partial class frmProducts
     {
@@ -339,6 +339,60 @@
             this.btnSearchUnitsInStock.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSearchUnitsInStock.Name = "btnSearchUnitsInStock";
             this.btnSearchUnitsInStock.Size = new System.Drawing.Size(80, 36);
+            this.btnSearchUnitsInStock.TabIndex = 27;
+            this.btnSearchUnitsInStock.Text = "Search";
+            this.btnSearchUnitsInStock.UseVisualStyleBackColor = true;
+            // 
+            // txtSearchProductName
+            // 
+            this.txtSearchProductName.Location = new System.Drawing.Point(23, 103);
+            this.txtSearchProductName.Name = "txtSearchProductName";
+            this.txtSearchProductName.PlaceholderText = "Search by product name";
+            this.txtSearchProductName.Size = new System.Drawing.Size(171, 23);
+            this.txtSearchProductName.TabIndex = 22;
+            // 
+            // txtSearchUnitPrice
+            // 
+            this.txtSearchUnitPrice.Location = new System.Drawing.Point(344, 69);
+            this.txtSearchUnitPrice.Name = "txtSearchUnitPrice";
+            this.txtSearchUnitPrice.PlaceholderText = "Search by unit price";
+            this.txtSearchUnitPrice.Size = new System.Drawing.Size(171, 23);
+            this.txtSearchUnitPrice.TabIndex = 23;
+            // 
+            // txtSearchUnitsInStock
+            // 
+            this.txtSearchUnitsInStock.Location = new System.Drawing.Point(344, 107);
+            this.txtSearchUnitsInStock.Name = "txtSearchUnitsInStock";
+            this.txtSearchUnitsInStock.PlaceholderText = "Search by units in stock";
+            this.txtSearchUnitsInStock.Size = new System.Drawing.Size(171, 23);
+            this.txtSearchUnitsInStock.TabIndex = 24;
+            // 
+            // btnSearchProductName
+            // 
+            this.btnSearchProductName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSearchProductName.Location = new System.Drawing.Point(210, 103);
+            this.btnSearchProductName.Name = "btnSearchProductName";
+            this.btnSearchProductName.Size = new System.Drawing.Size(96, 27);
+            this.btnSearchProductName.TabIndex = 25;
+            this.btnSearchProductName.Text = "Search";
+            this.btnSearchProductName.UseVisualStyleBackColor = true;
+            // 
+            // btnSearchUnitPrice
+            // 
+            this.btnSearchUnitPrice.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSearchUnitPrice.Location = new System.Drawing.Point(530, 68);
+            this.btnSearchUnitPrice.Name = "btnSearchUnitPrice";
+            this.btnSearchUnitPrice.Size = new System.Drawing.Size(96, 27);
+            this.btnSearchUnitPrice.TabIndex = 26;
+            this.btnSearchUnitPrice.Text = "Search";
+            this.btnSearchUnitPrice.UseVisualStyleBackColor = true;
+            // 
+            // btnSearchUnitsInStock
+            // 
+            this.btnSearchUnitsInStock.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSearchUnitsInStock.Location = new System.Drawing.Point(530, 103);
+            this.btnSearchUnitsInStock.Name = "btnSearchUnitsInStock";
+            this.btnSearchUnitsInStock.Size = new System.Drawing.Size(96, 27);
             this.btnSearchUnitsInStock.TabIndex = 27;
             this.btnSearchUnitsInStock.Text = "Search";
             this.btnSearchUnitsInStock.UseVisualStyleBackColor = true;
