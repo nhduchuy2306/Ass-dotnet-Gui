@@ -18,6 +18,8 @@ namespace SalesWinApp
     {
         private IMemberRepository repo = null;
         BindingSource src = null;
+
+        MemberObject member = null;
         public frmMembers()
         {
             InitializeComponent();
@@ -91,7 +93,10 @@ namespace SalesWinApp
             {
                 List<Member> list = repo.GetAll();
                 LoadMemberList(list);
-                //src.Position = src.Count - 1;
+                //if (member != null)
+                //{
+                //    dgvMember.DataSource = member;
+                //}
                 MessageBox.Show("Update member info completed");
             }
         }
@@ -163,6 +168,20 @@ namespace SalesWinApp
         }
 
         // return frmMain
-        private void btnBack_Click(object sender, EventArgs e) => Close();
+        private void btnBack_Click(object sender, EventArgs e) => LoadMemberList(repo.GetAll());
+
+        private void dgvMember_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //var row = dgvMember.Rows[e.RowIndex];
+            //member = new MemberObject
+            //{
+            //    MemberId = Convert.ToInt32(row.Cells[0].Value),
+            //    Email = row.Cells[1].Value.ToString(),
+            //    CompanyName = row.Cells[2].Value.ToString(),
+            //    Country = row.Cells[3].Value.ToString(),
+            //    City = row.Cells[4].Value.ToString(),
+            //    Password = row.Cells[5].Value.ToString(),
+            //};
+        }
     }
 }
