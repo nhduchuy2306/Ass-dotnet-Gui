@@ -63,6 +63,7 @@
             this.dgvMember.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMember.Size = new System.Drawing.Size(799, 465);
             this.dgvMember.TabIndex = 0;
+            this.dgvMember.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMember_CellClick);
             // 
             // txtSearch
             // 
