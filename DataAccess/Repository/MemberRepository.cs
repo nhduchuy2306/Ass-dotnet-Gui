@@ -68,4 +68,9 @@ public class MemberRepository : IMemberRepository
         }
         return false;
     }
+
+    public string GetEmailAdmin() => _context.GetEmailAdmin();
+
+
+    public string GetPasswordAdmin() => _context.GetPassAdmin();
 }

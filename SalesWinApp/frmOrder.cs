@@ -16,7 +16,7 @@ namespace SalesWinApp
 {
     public partial class frmOrder : Form
     {
-        IOrderRepository repo;
+        private IOrderRepository repo;
         int oId = 0;
         BindingSource source = null;
 

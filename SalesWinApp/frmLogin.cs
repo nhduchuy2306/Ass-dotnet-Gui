@@ -17,7 +17,7 @@ namespace SalesWinApp
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string email = this._memberRepository.GetEmailAdmin();
-            string pass = this._memberRepository.GetPassAdmin();
+            string pass = this._memberRepository.GetPasswordAdmin();
             if(txtEmail.Text == "")
             {
                 MessageBox.Show("Please input Email");
@@ -34,7 +34,7 @@ namespace SalesWinApp
             }
             else
             {
-                var member = this._memberRepository.GetMembers().Where(m => m.Email == txtEmail.Text && m.Password == txtPassword.Text).FirstOrDefault();
+                var member = this._memberRepository.GetAll().Where(m => m.Email == txtEmail.Text && m.Password == txtPassword.Text).FirstOrDefault();
                 if(member != null)
                 {
                     frmMain main = new frmMain();
