@@ -19,6 +19,7 @@ namespace SalesWinApp
         private IOrderRepository repo;
         int oId = 0;
         BindingSource source = null;
+
         public frmOrder()
         {
             InitializeComponent();

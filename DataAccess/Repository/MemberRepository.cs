@@ -31,7 +31,7 @@ public class MemberRepository : IMemberRepository
 
     public List<Member> GetAll()
     {
-        var mem = (from m in _context.Members select m);
+        var mem = from m in _context.Members select m;
         return mem.ToList();
     }
 
