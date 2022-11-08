@@ -63,7 +63,7 @@ namespace SalesWinApp
             // dgvProductList
             // 
             this.dgvProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductList.Location = new System.Drawing.Point(18, 156);
+            this.dgvProductList.Location = new System.Drawing.Point(23, 169);
             this.dgvProductList.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvProductList.Name = "dgvProductList";
             this.dgvProductList.ReadOnly = true;
@@ -213,7 +213,7 @@ namespace SalesWinApp
             // btnSearchProductID
             // 
             this.btnSearchProductID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearchProductID.Location = new System.Drawing.Point(247, 55);
+            this.btnSearchProductID.Location = new System.Drawing.Point(240, 63);
             this.btnSearchProductID.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSearchProductID.Name = "btnSearchProductID";
             this.btnSearchProductID.Size = new System.Drawing.Size(80, 36);
@@ -226,11 +226,11 @@ namespace SalesWinApp
             // 
             // btnNew
             // 
-            this.btnNew.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnNew.Location = new System.Drawing.Point(220, 541);
+            this.btnNew.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnNew.Location = new System.Drawing.Point(228, 547);
             this.btnNew.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(174, 44);
+            this.btnNew.Size = new System.Drawing.Size(174, 40);
             this.btnNew.TabIndex = 17;
             this.btnNew.Text = "New Product";
             this.btnNew.UseVisualStyleBackColor = true;
@@ -240,8 +240,8 @@ namespace SalesWinApp
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdate.Location = new System.Drawing.Point(811, 525);
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdate.Location = new System.Drawing.Point(818, 541);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(162, 44);
@@ -254,11 +254,11 @@ namespace SalesWinApp
             // 
             // btnDelete
             // 
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDelete.Location = new System.Drawing.Point(995, 525);
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDelete.Location = new System.Drawing.Point(995, 541);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(157, 44);
+            this.btnDelete.Size = new System.Drawing.Size(146, 42);
             this.btnDelete.TabIndex = 20;
             this.btnDelete.Text = "Delete Product";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -271,7 +271,7 @@ namespace SalesWinApp
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 659);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 590);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
             this.statusStrip1.Size = new System.Drawing.Size(1232, 22);
@@ -285,7 +285,7 @@ namespace SalesWinApp
             // 
             // txtSearchProductName
             // 
-            this.txtSearchProductName.Location = new System.Drawing.Point(34, 119);
+            this.txtSearchProductName.Location = new System.Drawing.Point(34, 118);
             this.txtSearchProductName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtSearchProductName.Name = "txtSearchProductName";
             this.txtSearchProductName.PlaceholderText = "Search by product name";
@@ -294,26 +294,26 @@ namespace SalesWinApp
             // 
             // txtSearchUnitPrice
             // 
-            this.txtSearchUnitPrice.Location = new System.Drawing.Point(360, 62);
+            this.txtSearchUnitPrice.Location = new System.Drawing.Point(344, 70);
             this.txtSearchUnitPrice.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtSearchUnitPrice.Name = "txtSearchUnitPrice";
             this.txtSearchUnitPrice.PlaceholderText = "Search by unit price";
-            this.txtSearchUnitPrice.Size = new System.Drawing.Size(186, 27);
+            this.txtSearchUnitPrice.Size = new System.Drawing.Size(208, 27);
             this.txtSearchUnitPrice.TabIndex = 23;
             // 
             // txtSearchUnitsInStock
             // 
-            this.txtSearchUnitsInStock.Location = new System.Drawing.Point(360, 119);
+            this.txtSearchUnitsInStock.Location = new System.Drawing.Point(344, 118);
             this.txtSearchUnitsInStock.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtSearchUnitsInStock.Name = "txtSearchUnitsInStock";
             this.txtSearchUnitsInStock.PlaceholderText = "Search by units in stock";
-            this.txtSearchUnitsInStock.Size = new System.Drawing.Size(186, 27);
+            this.txtSearchUnitsInStock.Size = new System.Drawing.Size(208, 27);
             this.txtSearchUnitsInStock.TabIndex = 24;
             // 
             // btnSearchProductName
             // 
             this.btnSearchProductName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearchProductName.Location = new System.Drawing.Point(247, 110);
+            this.btnSearchProductName.Location = new System.Drawing.Point(240, 111);
             this.btnSearchProductName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSearchProductName.Name = "btnSearchProductName";
             this.btnSearchProductName.Size = new System.Drawing.Size(80, 36);
@@ -324,7 +324,7 @@ namespace SalesWinApp
             // btnSearchUnitPrice
             // 
             this.btnSearchUnitPrice.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearchUnitPrice.Location = new System.Drawing.Point(566, 55);
+            this.btnSearchUnitPrice.Location = new System.Drawing.Point(573, 63);
             this.btnSearchUnitPrice.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSearchUnitPrice.Name = "btnSearchUnitPrice";
             this.btnSearchUnitPrice.Size = new System.Drawing.Size(80, 36);
@@ -335,64 +335,10 @@ namespace SalesWinApp
             // btnSearchUnitsInStock
             // 
             this.btnSearchUnitsInStock.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearchUnitsInStock.Location = new System.Drawing.Point(566, 112);
+            this.btnSearchUnitsInStock.Location = new System.Drawing.Point(573, 111);
             this.btnSearchUnitsInStock.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSearchUnitsInStock.Name = "btnSearchUnitsInStock";
             this.btnSearchUnitsInStock.Size = new System.Drawing.Size(80, 36);
-            this.btnSearchUnitsInStock.TabIndex = 27;
-            this.btnSearchUnitsInStock.Text = "Search";
-            this.btnSearchUnitsInStock.UseVisualStyleBackColor = true;
-            // 
-            // txtSearchProductName
-            // 
-            this.txtSearchProductName.Location = new System.Drawing.Point(23, 103);
-            this.txtSearchProductName.Name = "txtSearchProductName";
-            this.txtSearchProductName.PlaceholderText = "Search by product name";
-            this.txtSearchProductName.Size = new System.Drawing.Size(171, 23);
-            this.txtSearchProductName.TabIndex = 22;
-            // 
-            // txtSearchUnitPrice
-            // 
-            this.txtSearchUnitPrice.Location = new System.Drawing.Point(344, 69);
-            this.txtSearchUnitPrice.Name = "txtSearchUnitPrice";
-            this.txtSearchUnitPrice.PlaceholderText = "Search by unit price";
-            this.txtSearchUnitPrice.Size = new System.Drawing.Size(171, 23);
-            this.txtSearchUnitPrice.TabIndex = 23;
-            // 
-            // txtSearchUnitsInStock
-            // 
-            this.txtSearchUnitsInStock.Location = new System.Drawing.Point(344, 107);
-            this.txtSearchUnitsInStock.Name = "txtSearchUnitsInStock";
-            this.txtSearchUnitsInStock.PlaceholderText = "Search by units in stock";
-            this.txtSearchUnitsInStock.Size = new System.Drawing.Size(171, 23);
-            this.txtSearchUnitsInStock.TabIndex = 24;
-            // 
-            // btnSearchProductName
-            // 
-            this.btnSearchProductName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearchProductName.Location = new System.Drawing.Point(210, 103);
-            this.btnSearchProductName.Name = "btnSearchProductName";
-            this.btnSearchProductName.Size = new System.Drawing.Size(96, 27);
-            this.btnSearchProductName.TabIndex = 25;
-            this.btnSearchProductName.Text = "Search";
-            this.btnSearchProductName.UseVisualStyleBackColor = true;
-            // 
-            // btnSearchUnitPrice
-            // 
-            this.btnSearchUnitPrice.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearchUnitPrice.Location = new System.Drawing.Point(530, 68);
-            this.btnSearchUnitPrice.Name = "btnSearchUnitPrice";
-            this.btnSearchUnitPrice.Size = new System.Drawing.Size(96, 27);
-            this.btnSearchUnitPrice.TabIndex = 26;
-            this.btnSearchUnitPrice.Text = "Search";
-            this.btnSearchUnitPrice.UseVisualStyleBackColor = true;
-            // 
-            // btnSearchUnitsInStock
-            // 
-            this.btnSearchUnitsInStock.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearchUnitsInStock.Location = new System.Drawing.Point(530, 103);
-            this.btnSearchUnitsInStock.Name = "btnSearchUnitsInStock";
-            this.btnSearchUnitsInStock.Size = new System.Drawing.Size(96, 27);
             this.btnSearchUnitsInStock.TabIndex = 27;
             this.btnSearchUnitsInStock.Text = "Search";
             this.btnSearchUnitsInStock.UseVisualStyleBackColor = true;
@@ -401,7 +347,7 @@ namespace SalesWinApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1232, 681);
+            this.ClientSize = new System.Drawing.Size(1232, 612);
             this.Controls.Add(this.btnSearchUnitsInStock);
             this.Controls.Add(this.btnSearchUnitPrice);
             this.Controls.Add(this.btnSearchProductName);
