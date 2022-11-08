@@ -31,7 +31,7 @@ public class MemberRepository : IMemberRepository
 
     public List<Member> GetAll()
     {
-        var mem = (from m in _context.Members select m);
+        var mem = from m in _context.Members select m;
         return mem.ToList();
     }
 
@@ -68,4 +68,9 @@ public class MemberRepository : IMemberRepository
         }
         return false;
     }
+
+    public string GetEmailAdmin() => _context.GetEmailAdmin();
+
+
+    public string GetPasswordAdmin() => _context.GetPassAdmin();
 }

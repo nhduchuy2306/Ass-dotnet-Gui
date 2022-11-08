@@ -1,4 +1,6 @@
-using AutoMapper;
+
+﻿using AutoMapper;
+
 using BussinessObject.Models;
 using System;
 using System.Collections.Generic;
@@ -10,6 +12,7 @@ namespace BussinessObject.Mappings;
 
 public class AutoMapperConfiguration
 {
+    // product
     public static Product ToProduct(ProductObject productObject)
     {
         var config = new MapperConfiguration(cfg =>
@@ -34,6 +37,7 @@ public class AutoMapperConfiguration
         return productObject;
     }
 
+    // member
     public static Member ToMember(MemberObject memberObject)
     {
         var config = new MapperConfiguration(c =>
@@ -44,4 +48,43 @@ public class AutoMapperConfiguration
 
         return member;
     }
+
+    public static Order ToOrder(OrderObject orderObject)
+    {
+        var config = new MapperConfiguration(cfg =>
+            cfg.CreateMap<OrderObject, Order>()
+        );
+
+        var mapper = new Mapper(config);
+        var order = mapper.Map<Order>(orderObject);
+
+        return order;
+    }
+
+    public static OrderObject ToOrderObject(Order order)
+    {
+        var config = new MapperConfiguration(cfg =>
+            cfg.CreateMap<Order, OrderObject>()
+        );
+
+        var mapper = new Mapper(config);
+        var orderobject = mapper.Map<OrderObject>(order);
+
+        return orderobject;
+    }
+
+    public static OrderDetail ToOrderDetail(OrderDetailObject orderdetailObject)
+    {
+        var config = new MapperConfiguration(cfg =>
+            cfg.CreateMap<OrderDetailObject, OrderDetail>()
+        );
+
+        var mapper = new Mapper(config);
+        var orderdetail = mapper.Map<OrderDetail>(orderdetailObject);
+
+        return orderdetail;
+    }
+
+
+
 }

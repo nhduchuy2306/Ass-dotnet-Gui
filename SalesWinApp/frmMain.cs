@@ -18,12 +18,19 @@ namespace SalesWinApp
             InitializeComponent();
         }
 
+        private void closeform() {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
+        }
         private void productManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            closeform();
             bool IsOpen = false;
             foreach (Form f in Application.OpenForms)
             {
-                if (f.Text == "frmProducts")
+                if (f.Text == "Products")
                 {
                     IsOpen = true;
                     f.Focus();
@@ -36,6 +43,131 @@ namespace SalesWinApp
                 frmProduct.MdiParent = this;
                 frmProduct.Show();
             }
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            frmLogin frmLogin = new frmLogin();
+            if (frmLogin.isAdmin)
+            {
+                menuStrip2.Hide();
+                closeform();
+                bool IsOpen = false;
+                foreach (Form f in Application.OpenForms)
+                {
+                    if (f.Text == "Profile")
+                    {
+                        IsOpen = true;
+                        f.Focus();
+                        break;
+                    }
+                }
+                if (IsOpen == false)
+                {
+                    frmMembers frmMember = new frmMembers();
+                    frmMember.MdiParent = this;
+                    frmMember.Show();
+                }
+            }
+            else
+            {
+                menuStrip1.Hide();
+            }
+        }
+
+        private void memberManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeform();
+            bool IsOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Members")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (IsOpen == false)
+            {
+                frmMembers frmMember = new frmMembers();
+                frmMember.MdiParent = this;
+                frmMember.Show();
+            }
+
+        }
+
+        private void orderManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeform();
+            bool IsOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Orders")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (IsOpen == false)
+            {
+                frmOrders frmOrder = new frmOrders();
+                frmOrder.MdiParent = this;
+                frmOrder.Show();
+            }
+        }
+
+        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void profileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeform();
+            bool IsOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Profile")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (IsOpen == false)
+            {
+                frmProfile frmPro = new frmProfile();
+                frmPro.MdiParent = this;
+                frmPro.Show();
+            }
+        }
+
+        private void memberManagementToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            closeform();
+            bool IsOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Profile")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (IsOpen == false)
+            {
+                frmMembers frmMember = new frmMembers();
+                frmMember.MdiParent = this;
+                frmMember.Show();
+            }
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

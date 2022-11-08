@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BussinessObject.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,4 +9,14 @@ namespace DataAccess.Repository;
 
 public interface IOrderRepository
 {
+    List<Order> GetAll();
+
+    bool Add(Order order);
+
+    bool Update(Order order);
+
+    Order GetById(int id);
+
+    bool Delete(int id);
+
 }
