@@ -14,7 +14,9 @@ public interface IMemberRepository
     List<Member> GetByEmail(string email);
     bool Add(Member member);
     bool Update(Member member);
+    bool UpdateProfile(Member member);
     bool Delete(int id);
     string GetEmailAdmin();
     string GetPasswordAdmin();
+
 }

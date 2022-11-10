@@ -197,5 +197,9 @@ namespace SalesWinApp
             toolStripStatusLabel1.Text = "";
         }
 
+        private void btnSearchProductName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
