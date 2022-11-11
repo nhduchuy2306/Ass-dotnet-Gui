@@ -132,7 +132,6 @@
             // 
             this.txtOrderID.Location = new System.Drawing.Point(181, 34);
             this.txtOrderID.Name = "txtOrderID";
-            this.txtOrderID.ReadOnly = true;
             this.txtOrderID.Size = new System.Drawing.Size(162, 23);
             this.txtOrderID.TabIndex = 43;
             // 
@@ -164,7 +163,6 @@
             this.txtOrderDate.Location = new System.Drawing.Point(181, 126);
             this.txtOrderDate.Name = "txtOrderDate";
             this.txtOrderDate.PlaceholderText = "dd/mm/yyy";
-            this.txtOrderDate.ReadOnly = true;
             this.txtOrderDate.Size = new System.Drawing.Size(162, 23);
             this.txtOrderDate.TabIndex = 47;
             // 
@@ -187,7 +185,7 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // frmOder
+            // frmOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -207,7 +205,7 @@
             this.Controls.Add(this.lbOrderDate);
             this.Controls.Add(this.lbMemberID);
             this.Controls.Add(this.lbOrderID);
-            this.Name = "frmOder";
+            this.Name = "frmOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmOder";
             this.Load += new System.EventHandler(this.frmOder_Load);

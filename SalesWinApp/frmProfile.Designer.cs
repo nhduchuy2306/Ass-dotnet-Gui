@@ -165,6 +165,7 @@
             this.btnUpdate.TabIndex = 38;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // frmProfile
             // 
@@ -186,6 +187,7 @@
             this.Controls.Add(this.lbProfile);
             this.Controls.Add(this.lbMemberID);
             this.Name = "frmProfile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Profile";
             this.Load += new System.EventHandler(this.frmProfile_Load);
             this.ResumeLayout(false);

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AutoMapper.Execution;
+using DataAccess.Repository;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -47,7 +49,6 @@ namespace SalesWinApp
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            frmLogin frmLogin = new frmLogin();
             if (frmLogin.isAdmin)
             {
                 menuStrip2.Hide();
@@ -72,6 +73,26 @@ namespace SalesWinApp
             else
             {
                 menuStrip1.Hide();
+                closeform();
+                bool IsOpen = false;
+                foreach (Form f in Application.OpenForms)
+                {
+                    if (f.Text == "Profile")
+                    {
+                        IsOpen = true;
+                        f.Focus();
+                        break;
+                    }
+                }
+                if (IsOpen == false)
+                {
+                    frmProfile frmPro = new frmProfile
+                    {
+                        Member = frmLogin.Member
+                    };
+                    frmPro.MdiParent = this;
+                    frmPro.Show();
+                }
             }
         }
 
@@ -138,7 +159,10 @@ namespace SalesWinApp
             }
             if (IsOpen == false)
             {
-                frmProfile frmPro = new frmProfile();
+                frmProfile frmPro = new frmProfile
+                {
+                    Member = frmLogin.Member
+                };
                 frmPro.MdiParent = this;
                 frmPro.Show();
             }
@@ -168,6 +192,30 @@ namespace SalesWinApp
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void historyOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeform();
+            bool IsOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "History Order")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (IsOpen == false)
+            {
+                frmHistoryOrder frmHis = new frmHistoryOrder
+                {
+                    Member = frmLogin.Member
+                };
+                frmHis.MdiParent = this;
+                frmHis.Show();
+            }
         }
     }
 }
