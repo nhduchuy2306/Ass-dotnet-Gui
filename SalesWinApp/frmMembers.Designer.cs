@@ -63,7 +63,6 @@
             this.dgvMember.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMember.Size = new System.Drawing.Size(799, 465);
             this.dgvMember.TabIndex = 0;
-            this.dgvMember.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMember_CellClick);
             // 
             // txtSearch
             // 
@@ -225,6 +224,7 @@
             this.txtPwd.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPwd.Location = new System.Drawing.Point(1093, 550);
             this.txtPwd.Name = "txtPwd";
+            this.txtPwd.ReadOnly = true;
             this.txtPwd.Size = new System.Drawing.Size(293, 37);
             this.txtPwd.TabIndex = 19;
             // 
@@ -251,9 +251,9 @@
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBack.Location = new System.Drawing.Point(12, 12);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(79, 42);
+            this.btnBack.Size = new System.Drawing.Size(110, 42);
             this.btnBack.TabIndex = 22;
-            this.btnBack.Text = "Back";
+            this.btnBack.Text = "Re-Load";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 

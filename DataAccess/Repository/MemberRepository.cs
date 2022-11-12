@@ -62,7 +62,7 @@ public class MemberRepository : IMemberRepository
             newMem.CompanyName = member.CompanyName;
             newMem.Country = member.Country;
             newMem.City = member.City;
-            newMem.Password = newMem.Password;
+            //newMem.Password = newMem.Password;
 
             return _context.SaveChanges() > 0;
         }

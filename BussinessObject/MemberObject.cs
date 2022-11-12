@@ -21,11 +21,17 @@ public class MemberObject
 
     public MemberObject(int memberId, string email, string companyName, string city, string country, string password)
     {
+        //string? pwd = null;
+        //for (int i = 0; i < password.Length; i++)
+        //{
+        //    pwd += "*";
+        //}
+
         MemberId = memberId;
         Email = email;
         CompanyName = companyName;
         City = city;
         Country = country;
-        Password = password;
+        Password = "******";
     }
 }

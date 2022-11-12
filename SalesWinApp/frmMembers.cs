@@ -40,8 +40,11 @@ namespace SalesWinApp
         // Load members 
         private void LoadMemberList(List<Member> list)
         {
+            List<MemberObject> listOb = new List<MemberObject>();
+            list.ForEach(l => listOb.Add(AutoMapperConfiguration.ToMemberObject(l)));
+
             src = new BindingSource();
-            src.DataSource = list;
+            src.DataSource = listOb;
 
             txtMemID.DataBindings.Clear();
             txtEmail.DataBindings.Clear();
@@ -68,12 +71,14 @@ namespace SalesWinApp
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            int row = dgvMember.CurrentRow.Index;
+
             string memId = txtMemID.Text;
             string email = txtEmail.Text;
             string company = txtCompany.Text;
             string country = txtCountry.Text;
             string city = txtCity.Text;
-            string pwd = txtPwd.Text;
+            //string pwd = txtPwd.Text;
 
             MemberObject memberObject = new MemberObject
             {
@@ -82,7 +87,7 @@ namespace SalesWinApp
                 CompanyName = company,
                 Country = country,
                 City = city,
-                Password = pwd
+                //Password = pwd;
             };
 
             Member mem = AutoMapperConfiguration.ToMember(memberObject);
@@ -93,10 +98,7 @@ namespace SalesWinApp
             {
                 List<Member> list = repo.GetAll();
                 LoadMemberList(list);
-                //if (member != null)
-                //{
-                //    dgvMember.DataSource = member;
-                //}
+                src.Position = row;
                 MessageBox.Show("Update member info completed");
             }
         }
@@ -170,18 +172,5 @@ namespace SalesWinApp
         // return frmMain
         private void btnBack_Click(object sender, EventArgs e) => LoadMemberList(repo.GetAll());
 
-        private void dgvMember_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //var row = dgvMember.Rows[e.RowIndex];
-            //member = new MemberObject
-            //{
-            //    MemberId = Convert.ToInt32(row.Cells[0].Value),
-            //    Email = row.Cells[1].Value.ToString(),
-            //    CompanyName = row.Cells[2].Value.ToString(),
-            //    Country = row.Cells[3].Value.ToString(),
-            //    City = row.Cells[4].Value.ToString(),
-            //    Password = row.Cells[5].Value.ToString(),
-            //};
-        }
     }
 }

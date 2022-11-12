@@ -49,6 +49,16 @@ public class AutoMapperConfiguration
         return member;
     }
 
+    public static MemberObject ToMemberObject(Member member)
+    {
+        var config = new MapperConfiguration(c =>
+        c.CreateMap<Member, MemberObject>());
+
+        var mapper = new Mapper(config);
+        var memberObject = mapper.Map<MemberObject>(member);
+
+        return memberObject;
+    }
     public static Order ToOrder(OrderObject orderObject)
     {
         var config = new MapperConfiguration(cfg =>
