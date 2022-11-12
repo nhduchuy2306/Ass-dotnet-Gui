@@ -36,6 +36,12 @@ namespace SalesWinApp
 
         private void frmOder_Load(object sender, EventArgs e)
         {
+            IMemberRepository memRepo = new MemberRepository();
+            List<Member> members = memRepo.GetAll();
+            foreach (Member member in members)
+            {
+                txtMemberID.Items.Add(member.MemberId);
+            }
             if(oId != 0)
             {
                 OrderObject obj = AutoMapperConfiguration.ToOrderObject(repo.GetById(oId));

@@ -17,7 +17,8 @@ namespace SalesWinApp
     public partial class frmOrderDetails : Form
     {
         private IOrderDetailRepository repo;
-        
+
+
         BindingSource source;
         int oId;
 
@@ -30,8 +31,14 @@ namespace SalesWinApp
 
         private void frmOrderDetails_Load(object sender, EventArgs e)
         {
+            IProductRepository proRepo = new ProductRepository();
+            List<Product> products = proRepo.GetAll();
             txtOrderID.Text = oId.ToString();
-            txtProductID.TextChanged += new EventHandler(txtUnitPrice_TextChanged);
+            foreach (Product product in products)
+            {
+                txtProductId.Items.Add(product.ProductId);
+            }
+            txtProductId.TextChanged += new EventHandler(txtUnitPrice_TextChanged);
             txtQuantity.TextChanged += new EventHandler(txtUnitPrice_TextChanged);
             txtDiscount.TextChanged += new EventHandler(txtUnitPrice_TextChanged);
         }
@@ -57,7 +64,7 @@ namespace SalesWinApp
                 quantity = Convert.ToInt32(txtQuantity.Text);
                 discount = Convert.ToDouble(txtDiscount.Text);
                 unitPrice = Convert.ToDecimal(txtUnitPrice.Text);
-                pId = Convert.ToInt32(txtProductID.Text);
+                pId = Convert.ToInt32(txtProductId.Text);
             }
             catch
             {
@@ -66,11 +73,13 @@ namespace SalesWinApp
             }
             IProductRepository productRepo = new ProductRepository();
             Product product = productRepo.GetById(pId);
-            if(product == null)
+            if (product == null)
             {
                 MessageBox.Show("Product not exist!!!");
-                return ;
-            }else if (quantity <= 0) {
+                return;
+            }
+            else if (quantity <= 0)
+            {
                 MessageBox.Show("Quantity must > 0!!!");
                 return;
             }
@@ -83,7 +92,7 @@ namespace SalesWinApp
                 }
                 else { MessageBox.Show("Add Fail!!! Detail may be duplicated!!!"); }
             }
-            
+
 
         }
 
@@ -93,7 +102,7 @@ namespace SalesWinApp
             {
                 int quantity = Convert.ToInt32(txtQuantity.Text);
                 int discount = Convert.ToInt32(txtDiscount.Text);
-                int pId = Convert.ToInt32(txtProductID.Text);
+                int pId = Convert.ToInt32(txtProductId.Text);
                 IProductRepository productRepo = new ProductRepository();
                 Product product = productRepo.GetById(pId);
                 int price = Convert.ToInt32(product.UnitPrice);
@@ -103,7 +112,7 @@ namespace SalesWinApp
             {
                 Console.WriteLine("Invalid Input!!");
             }
-            
+
         }
     }
 }
