@@ -71,6 +71,7 @@ namespace SalesWinApp
                 if (check)
                 {
                     MessageBox.Show("Update product successfully");
+                    DialogResult = DialogResult.OK;
                 }
             }
             else
@@ -88,7 +89,7 @@ namespace SalesWinApp
                     CategoryId = Convert.ToInt32(categoryId),
                     ProductName = productName,
                     Weight = weight,
-                    UnitPrice = Convert.ToDecimal(unitPrice),
+                    UnitPrice = Decimal.Parse(unitPrice),
                     UnitsInStock = Convert.ToInt32(unitInStock)
                 };
 

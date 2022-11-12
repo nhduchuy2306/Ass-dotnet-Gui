@@ -73,4 +73,22 @@ public class MemberRepository : IMemberRepository
 
 
     public string GetPasswordAdmin() => _context.GetPassAdmin();
+
+    public bool UpdateProfile(Member member)
+    {
+        Member newMem = GetById(member.MemberId);
+
+        if (newMem != null)
+        {
+            newMem.MemberId = member.MemberId;
+            newMem.Email = member.Email;
+            newMem.CompanyName = member.CompanyName;
+            newMem.Country = member.Country;
+            newMem.City = member.City;
+            newMem.Password = member.Password;
+
+            return _context.SaveChanges() > 0;
+        }
+        return false;
+    }
 }

@@ -65,7 +65,7 @@ namespace SalesWinApp
         private void frmProducts_Load(object sender, EventArgs e)
         {
             List<ProductObject> listP = new List<ProductObject>();
-            List<Product> list = repo.GetAll();
+            List<Product> list = this.repo.GetAll();
             list.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
             LoadProduct(listP);
         }
@@ -78,10 +78,11 @@ namespace SalesWinApp
 
                 if (frmProductDetails.ShowDialog() == DialogResult.OK)
                 {
-                    List<ProductObject> listP = new List<ProductObject>();
+                    /*List<ProductObject> listP = new List<ProductObject>();
                     List<Product> list = repo.GetAll();
                     list.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
-                    LoadProduct(listP);
+                    LoadProduct(listP);*/
+                    frmProducts_Load(sender, e);
                 }
             }
             else
@@ -117,9 +118,37 @@ namespace SalesWinApp
             }
         }
 
-        private void btnSearchProduct_Click(object sender, EventArgs e)
+        private void btnSearchProductID_Click(object sender, EventArgs e)
         {
-            string productName = txtSearchProductID.Text;
+            string productID = txtSearchProductID.Text;
+
+            if (productID.Equals(""))
+            {
+                List<ProductObject> listP = new List<ProductObject>();
+                List<Product> list = repo.GetAll();
+                list.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
+                LoadProduct(listP);
+            }
+            else
+            {
+                Product pro = repo.GetById(Convert.ToInt32(productID));
+                ProductObject productObject = AutoMapperConfiguration.ToProductObject(pro);
+
+                List<ProductObject> listP = new List<ProductObject>();
+                listP.Add(productObject);
+
+                if (pro != null)
+                {
+                    txtSearchProductID.Clear();
+                    LoadProduct(listP);
+                }
+                else MessageBox.Show($"Not contain {productID}");
+            }
+        }
+
+        private void btnSearchProductName_Click(object sender, EventArgs e)
+        {
+            string productName = txtSearchProductName.Text;
 
             if (productName.Equals(""))
             {
@@ -133,26 +162,88 @@ namespace SalesWinApp
                 List<Product> pro = repo.GetByName(productName);
                 List<ProductObject> listP = new List<ProductObject>();
                 pro.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
-                
+
                 if (pro != null)
                 {
+                    txtSearchProductName.Clear();
                     LoadProduct(listP);
                 }
-                else MessageBox.Show($"Not cantain {productName}");
+                else MessageBox.Show($"Not contain {productName}");
             }
         }
 
-        private void dgvProductList_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void btnSearchUnitPrice_Click(object sender, EventArgs e)
+        {
+            string unitPrice = txtSearchUnitPrice.Text;
+
+            if (unitPrice.Equals(""))
+            {
+                List<ProductObject> listP = new List<ProductObject>();
+                List<Product> list = repo.GetAll();
+                list.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
+                LoadProduct(listP);
+            }
+            else
+            {
+                List<Product> pro = repo.GetByUnitPrice(Convert.ToInt32(unitPrice));
+                List<ProductObject> listP = new List<ProductObject>();
+                pro.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
+
+                if (pro != null)
+                {
+                    txtSearchUnitPrice.Clear();
+                    LoadProduct(listP);
+                }
+                else MessageBox.Show($"Not contain {unitPrice}");
+            }
+        }
+
+        private void btnSearchUnitsInStock_Click(object sender, EventArgs e)
+        {
+            string unitsInStock = txtSearchUnitsInStock.Text;
+
+            if (unitsInStock.Equals(""))
+            {
+                List<ProductObject> listP = new List<ProductObject>();
+                List<Product> list = repo.GetAll();
+                list.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
+                LoadProduct(listP);
+            }
+            else
+            {
+                List<Product> pro = repo.GetByUnitsInStock(Convert.ToInt32(unitsInStock));
+                List<ProductObject> listP = new List<ProductObject>();
+                pro.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
+
+                if (pro != null)
+                {
+                    txtSearchUnitsInStock.Clear();
+                    LoadProduct(listP);
+                }
+                else MessageBox.Show($"Not contain {unitsInStock}");
+            }
+
+        }
+
+        private void dgvProductList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             List<Product> listAllProduct = repo.GetAll();
 
-            if (e.RowIndex >= 0 && e.ColumnIndex < listAllProduct.Count)
+            if (e.RowIndex >= 0 && e.RowIndex < listAllProduct.Count)
             {
-                string id = dgvProductList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-
-                Product product = repo.GetById(Convert.ToInt32(id));
-                productObject = AutoMapperConfiguration.ToProductObject(product);
+                var row = this.dgvProductList.Rows[e.RowIndex];
+                productObject = new ProductObject
+                {
+                    ProductId = Convert.ToInt32(row.Cells["ProductId"].Value),
+                    CategoryId = Convert.ToInt32(row.Cells["CategoryId"].Value),
+                    ProductName = row.Cells["ProductName"].Value.ToString(),
+                    UnitPrice = Convert.ToInt32(row.Cells["UnitPrice"].Value),
+                    UnitsInStock = Convert.ToInt32(row.Cells["UnitsInStock"].Value),
+                    Weight = row.Cells["Weight"].Value.ToString()
+                };
             }
+            
+
         }
 
         //dưới này là statusstrip
@@ -196,6 +287,5 @@ namespace SalesWinApp
         {
             toolStripStatusLabel1.Text = "";
         }
-
     }
 }

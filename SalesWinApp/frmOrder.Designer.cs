@@ -39,19 +39,19 @@
             this.txtOrderID = new System.Windows.Forms.TextBox();
             this.txtRequiredDate = new System.Windows.Forms.TextBox();
             this.txtShippedDate = new System.Windows.Forms.TextBox();
-            this.txtMemberID = new System.Windows.Forms.TextBox();
             this.txtOrderDate = new System.Windows.Forms.TextBox();
             this.txtFreight = new System.Windows.Forms.MaskedTextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.txtMemberID = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lbOrderID
             // 
             this.lbOrderID.AutoSize = true;
             this.lbOrderID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbOrderID.Location = new System.Drawing.Point(70, 33);
+            this.lbOrderID.Location = new System.Drawing.Point(72, 44);
             this.lbOrderID.Name = "lbOrderID";
-            this.lbOrderID.Size = new System.Drawing.Size(66, 20);
+            this.lbOrderID.Size = new System.Drawing.Size(84, 25);
             this.lbOrderID.TabIndex = 23;
             this.lbOrderID.Text = "&Order ID";
             // 
@@ -59,9 +59,9 @@
             // 
             this.lbMemberID.AutoSize = true;
             this.lbMemberID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbMemberID.Location = new System.Drawing.Point(70, 83);
+            this.lbMemberID.Location = new System.Drawing.Point(72, 111);
             this.lbMemberID.Name = "lbMemberID";
-            this.lbMemberID.Size = new System.Drawing.Size(84, 20);
+            this.lbMemberID.Size = new System.Drawing.Size(106, 25);
             this.lbMemberID.TabIndex = 24;
             this.lbMemberID.Text = "&Member ID";
             // 
@@ -69,9 +69,9 @@
             // 
             this.lbOrderDate.AutoSize = true;
             this.lbOrderDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbOrderDate.Location = new System.Drawing.Point(70, 125);
+            this.lbOrderDate.Location = new System.Drawing.Point(72, 167);
             this.lbOrderDate.Name = "lbOrderDate";
-            this.lbOrderDate.Size = new System.Drawing.Size(83, 20);
+            this.lbOrderDate.Size = new System.Drawing.Size(105, 25);
             this.lbOrderDate.TabIndex = 35;
             this.lbOrderDate.Text = "&Order Date";
             // 
@@ -79,9 +79,9 @@
             // 
             this.lbRequiredDate.AutoSize = true;
             this.lbRequiredDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbRequiredDate.Location = new System.Drawing.Point(70, 173);
+            this.lbRequiredDate.Location = new System.Drawing.Point(72, 231);
             this.lbRequiredDate.Name = "lbRequiredDate";
-            this.lbRequiredDate.Size = new System.Drawing.Size(105, 20);
+            this.lbRequiredDate.Size = new System.Drawing.Size(131, 25);
             this.lbRequiredDate.TabIndex = 36;
             this.lbRequiredDate.Text = "&Required Date";
             // 
@@ -89,9 +89,9 @@
             // 
             this.lbShippedDate.AutoSize = true;
             this.lbShippedDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbShippedDate.Location = new System.Drawing.Point(70, 216);
+            this.lbShippedDate.Location = new System.Drawing.Point(72, 288);
             this.lbShippedDate.Name = "lbShippedDate";
-            this.lbShippedDate.Size = new System.Drawing.Size(100, 20);
+            this.lbShippedDate.Size = new System.Drawing.Size(125, 25);
             this.lbShippedDate.TabIndex = 37;
             this.lbShippedDate.Text = "&Shipped Date";
             // 
@@ -99,9 +99,9 @@
             // 
             this.lbFreight.AutoSize = true;
             this.lbFreight.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbFreight.Location = new System.Drawing.Point(70, 258);
+            this.lbFreight.Location = new System.Drawing.Point(72, 344);
             this.lbFreight.Name = "lbFreight";
-            this.lbFreight.Size = new System.Drawing.Size(55, 20);
+            this.lbFreight.Size = new System.Drawing.Size(71, 25);
             this.lbFreight.TabIndex = 38;
             this.lbFreight.Text = "&Freight";
             // 
@@ -109,9 +109,10 @@
             // 
             this.btnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSave.Location = new System.Drawing.Point(53, 299);
+            this.btnSave.Location = new System.Drawing.Point(61, 399);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(83, 33);
+            this.btnSave.Size = new System.Drawing.Size(95, 44);
             this.btnSave.TabIndex = 39;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -121,81 +122,89 @@
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCancel.Location = new System.Drawing.Point(276, 299);
+            this.btnCancel.Location = new System.Drawing.Point(315, 399);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(83, 33);
+            this.btnCancel.Size = new System.Drawing.Size(95, 44);
             this.btnCancel.TabIndex = 40;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // txtOrderID
             // 
-            this.txtOrderID.Location = new System.Drawing.Point(181, 34);
+            this.txtOrderID.Location = new System.Drawing.Point(207, 45);
+            this.txtOrderID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOrderID.Name = "txtOrderID";
             this.txtOrderID.ReadOnly = true;
-            this.txtOrderID.Size = new System.Drawing.Size(162, 23);
+            this.txtOrderID.Size = new System.Drawing.Size(185, 27);
             this.txtOrderID.TabIndex = 43;
             // 
             // txtRequiredDate
             // 
-            this.txtRequiredDate.Location = new System.Drawing.Point(181, 170);
+            this.txtRequiredDate.Location = new System.Drawing.Point(207, 227);
+            this.txtRequiredDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRequiredDate.Name = "txtRequiredDate";
             this.txtRequiredDate.PlaceholderText = "dd/mm/yyy";
-            this.txtRequiredDate.Size = new System.Drawing.Size(162, 23);
+            this.txtRequiredDate.Size = new System.Drawing.Size(185, 27);
             this.txtRequiredDate.TabIndex = 43;
             // 
             // txtShippedDate
             // 
-            this.txtShippedDate.Location = new System.Drawing.Point(181, 217);
+            this.txtShippedDate.Location = new System.Drawing.Point(207, 289);
+            this.txtShippedDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtShippedDate.Name = "txtShippedDate";
             this.txtShippedDate.PlaceholderText = "dd/mm/yyy";
-            this.txtShippedDate.Size = new System.Drawing.Size(162, 23);
+            this.txtShippedDate.Size = new System.Drawing.Size(185, 27);
             this.txtShippedDate.TabIndex = 44;
-            // 
-            // txtMemberID
-            // 
-            this.txtMemberID.Location = new System.Drawing.Point(181, 83);
-            this.txtMemberID.Name = "txtMemberID";
-            this.txtMemberID.Size = new System.Drawing.Size(162, 23);
-            this.txtMemberID.TabIndex = 46;
             // 
             // txtOrderDate
             // 
-            this.txtOrderDate.Location = new System.Drawing.Point(181, 126);
+            this.txtOrderDate.Location = new System.Drawing.Point(207, 168);
+            this.txtOrderDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOrderDate.Name = "txtOrderDate";
             this.txtOrderDate.PlaceholderText = "dd/mm/yyy";
             this.txtOrderDate.ReadOnly = true;
-            this.txtOrderDate.Size = new System.Drawing.Size(162, 23);
+            this.txtOrderDate.Size = new System.Drawing.Size(185, 27);
             this.txtOrderDate.TabIndex = 47;
             // 
             // txtFreight
             // 
-            this.txtFreight.Location = new System.Drawing.Point(181, 259);
+            this.txtFreight.Location = new System.Drawing.Point(207, 345);
+            this.txtFreight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFreight.Name = "txtFreight";
-            this.txtFreight.Size = new System.Drawing.Size(162, 23);
+            this.txtFreight.Size = new System.Drawing.Size(185, 27);
             this.txtFreight.TabIndex = 48;
             // 
             // btnUpdate
             // 
             this.btnUpdate.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdate.Location = new System.Drawing.Point(167, 298);
+            this.btnUpdate.Location = new System.Drawing.Point(191, 397);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(83, 33);
+            this.btnUpdate.Size = new System.Drawing.Size(95, 44);
             this.btnUpdate.TabIndex = 49;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // frmOder
+            // txtMemberID
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.txtMemberID.FormattingEnabled = true;
+            this.txtMemberID.Location = new System.Drawing.Point(207, 108);
+            this.txtMemberID.Name = "txtMemberID";
+            this.txtMemberID.Size = new System.Drawing.Size(79, 28);
+            this.txtMemberID.TabIndex = 50;
+            // 
+            // frmOrder
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 343);
+            this.ClientSize = new System.Drawing.Size(475, 457);
+            this.Controls.Add(this.txtMemberID);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtFreight);
             this.Controls.Add(this.txtOrderDate);
-            this.Controls.Add(this.txtMemberID);
             this.Controls.Add(this.txtShippedDate);
             this.Controls.Add(this.txtRequiredDate);
             this.Controls.Add(this.txtOrderID);
@@ -207,7 +216,8 @@
             this.Controls.Add(this.lbOrderDate);
             this.Controls.Add(this.lbMemberID);
             this.Controls.Add(this.lbOrderID);
-            this.Name = "frmOder";
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "frmOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmOder";
             this.Load += new System.EventHandler(this.frmOder_Load);
@@ -229,9 +239,9 @@
         private TextBox txtOrderID;
         private TextBox txtRequiredDate;
         private TextBox txtShippedDate;
-        private TextBox txtMemberID;
         private TextBox txtOrderDate;
         private MaskedTextBox txtFreight;
         private Button btnUpdate;
+        private ComboBox txtMemberID;
     }
 }

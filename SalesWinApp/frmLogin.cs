@@ -8,6 +8,7 @@ namespace SalesWinApp
     {
         private IMemberRepository _memberRepository;
         public static bool isAdmin = false;
+        public static Member Member;
         public frmLogin()
         {
             InitializeComponent();
@@ -34,8 +35,8 @@ namespace SalesWinApp
             }
             else
             {
-                var member = this._memberRepository.GetAll().Where(m => m.Email == txtEmail.Text && m.Password == txtPassword.Text).FirstOrDefault();
-                if(member != null)
+                 Member = this._memberRepository.GetAll().Where(m => m.Email == txtEmail.Text && m.Password == txtPassword.Text).FirstOrDefault();
+                if(Member != null)
                 {
                     frmMain main = new frmMain();
                     isAdmin = false;

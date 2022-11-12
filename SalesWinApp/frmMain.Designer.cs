@@ -100,6 +100,7 @@
             this.historyOrderToolStripMenuItem.Name = "historyOrderToolStripMenuItem";
             this.historyOrderToolStripMenuItem.Size = new System.Drawing.Size(136, 29);
             this.historyOrderToolStripMenuItem.Text = "History Order";
+            this.historyOrderToolStripMenuItem.Click += new System.EventHandler(this.historyOrderToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -114,6 +115,7 @@
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
