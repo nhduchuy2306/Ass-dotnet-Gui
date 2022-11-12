@@ -287,7 +287,5 @@ namespace SalesWinApp
         {
             toolStripStatusLabel1.Text = "";
         }
-
-
     }
 }
