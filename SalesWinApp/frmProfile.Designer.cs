@@ -47,10 +47,10 @@
             // lbMemberID
             // 
             this.lbMemberID.AutoSize = true;
-            this.lbMemberID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbMemberID.Location = new System.Drawing.Point(94, 78);
+            this.lbMemberID.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbMemberID.Location = new System.Drawing.Point(79, 77);
             this.lbMemberID.Name = "lbMemberID";
-            this.lbMemberID.Size = new System.Drawing.Size(84, 20);
+            this.lbMemberID.Size = new System.Drawing.Size(102, 25);
             this.lbMemberID.TabIndex = 23;
             this.lbMemberID.Text = "&Member ID";
             // 
@@ -66,100 +66,106 @@
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbEmail.Location = new System.Drawing.Point(94, 130);
+            this.lbEmail.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbEmail.Location = new System.Drawing.Point(79, 130);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(46, 20);
+            this.lbEmail.Size = new System.Drawing.Size(54, 25);
             this.lbEmail.TabIndex = 25;
             this.lbEmail.Text = "&Email";
             // 
             // txtMemberID
             // 
-            this.txtMemberID.Location = new System.Drawing.Point(240, 75);
+            this.txtMemberID.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtMemberID.Location = new System.Drawing.Point(257, 74);
             this.txtMemberID.Name = "txtMemberID";
             this.txtMemberID.ReadOnly = true;
-            this.txtMemberID.Size = new System.Drawing.Size(172, 23);
+            this.txtMemberID.Size = new System.Drawing.Size(200, 31);
             this.txtMemberID.TabIndex = 28;
             // 
             // lbCompanyName
             // 
             this.lbCompanyName.AutoSize = true;
-            this.lbCompanyName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbCompanyName.Location = new System.Drawing.Point(94, 188);
+            this.lbCompanyName.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbCompanyName.Location = new System.Drawing.Point(79, 188);
             this.lbCompanyName.Name = "lbCompanyName";
-            this.lbCompanyName.Size = new System.Drawing.Size(116, 20);
+            this.lbCompanyName.Size = new System.Drawing.Size(141, 25);
             this.lbCompanyName.TabIndex = 29;
             this.lbCompanyName.Text = "&Company Name";
             // 
             // lbCity
             // 
             this.lbCity.AutoSize = true;
-            this.lbCity.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbCity.Location = new System.Drawing.Point(94, 249);
+            this.lbCity.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbCity.Location = new System.Drawing.Point(79, 249);
             this.lbCity.Name = "lbCity";
-            this.lbCity.Size = new System.Drawing.Size(34, 20);
+            this.lbCity.Size = new System.Drawing.Size(42, 25);
             this.lbCity.TabIndex = 30;
             this.lbCity.Text = "&City";
             // 
             // lbCountry
             // 
             this.lbCountry.AutoSize = true;
-            this.lbCountry.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbCountry.Location = new System.Drawing.Point(94, 303);
+            this.lbCountry.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbCountry.Location = new System.Drawing.Point(79, 303);
             this.lbCountry.Name = "lbCountry";
-            this.lbCountry.Size = new System.Drawing.Size(60, 20);
+            this.lbCountry.Size = new System.Drawing.Size(75, 25);
             this.lbCountry.TabIndex = 31;
             this.lbCountry.Text = "&Country";
             // 
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
-            this.lbPassword.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbPassword.Location = new System.Drawing.Point(94, 353);
+            this.lbPassword.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbPassword.Location = new System.Drawing.Point(79, 353);
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(70, 20);
+            this.lbPassword.Size = new System.Drawing.Size(87, 25);
             this.lbPassword.TabIndex = 32;
             this.lbPassword.Text = "&Password";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(240, 131);
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtEmail.Location = new System.Drawing.Point(257, 130);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(172, 23);
+            this.txtEmail.Size = new System.Drawing.Size(200, 31);
             this.txtEmail.TabIndex = 33;
             // 
             // txtCompanyName
             // 
-            this.txtCompanyName.Location = new System.Drawing.Point(240, 189);
+            this.txtCompanyName.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCompanyName.Location = new System.Drawing.Point(257, 188);
             this.txtCompanyName.Name = "txtCompanyName";
-            this.txtCompanyName.Size = new System.Drawing.Size(172, 23);
+            this.txtCompanyName.Size = new System.Drawing.Size(200, 31);
             this.txtCompanyName.TabIndex = 34;
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(240, 250);
+            this.txtCity.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCity.Location = new System.Drawing.Point(257, 249);
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(172, 23);
+            this.txtCity.Size = new System.Drawing.Size(200, 31);
             this.txtCity.TabIndex = 35;
             // 
             // txtCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(240, 304);
+            this.txtCountry.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCountry.Location = new System.Drawing.Point(257, 303);
             this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(172, 23);
+            this.txtCountry.Size = new System.Drawing.Size(200, 31);
             this.txtCountry.TabIndex = 36;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(240, 354);
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPassword.Location = new System.Drawing.Point(257, 353);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(172, 23);
+            this.txtPassword.Size = new System.Drawing.Size(200, 31);
             this.txtPassword.TabIndex = 37;
             // 
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdate.Location = new System.Drawing.Point(181, 398);
+            this.btnUpdate.Location = new System.Drawing.Point(180, 433);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(140, 33);
             this.btnUpdate.TabIndex = 38;
@@ -171,7 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 456);
+            this.ClientSize = new System.Drawing.Size(528, 478);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtCountry);

@@ -56,7 +56,7 @@ namespace SalesWinApp
                 bool IsOpen = false;
                 foreach (Form f in Application.OpenForms)
                 {
-                    if (f.Text == "Profile")
+                    if (f.Text == "Member")
                     {
                         IsOpen = true;
                         f.Focus();
@@ -66,6 +66,7 @@ namespace SalesWinApp
                 if (IsOpen == false)
                 {
                     frmMembers frmMember = new frmMembers();
+                    memberManagementToolStripMenuItem.BackColor = Color.LightBlue;
                     frmMember.MdiParent = this;
                     frmMember.Show();
                 }
@@ -90,6 +91,7 @@ namespace SalesWinApp
                     {
                         Member = frmLogin.Member
                     };
+                    profileToolStripMenuItem.BackColor = Color.LightBlue;
                     frmPro.MdiParent = this;
                     frmPro.Show();
                 }
@@ -139,10 +141,7 @@ namespace SalesWinApp
             }
         }
 
-        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
 
-        }
 
         private void profileToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -168,26 +167,6 @@ namespace SalesWinApp
             }
         }
 
-        private void memberManagementToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            closeform();
-            bool IsOpen = false;
-            foreach (Form f in Application.OpenForms)
-            {
-                if (f.Text == "Profile")
-                {
-                    IsOpen = true;
-                    f.Focus();
-                    break;
-                }
-            }
-            if (IsOpen == false)
-            {
-                frmMembers frmMember = new frmMembers();
-                frmMember.MdiParent = this;
-                frmMember.Show();
-            }
-        }
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -215,6 +194,28 @@ namespace SalesWinApp
                 };
                 frmHis.MdiParent = this;
                 frmHis.Show();
+            }
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            foreach (ToolStripMenuItem item in ((ToolStrip)sender).Items)
+            {
+                if (item != e.ClickedItem)
+                    item.BackColor = Color.White;
+                else
+                    item.BackColor = Color.LightBlue;
+            }
+        }
+
+        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            foreach (ToolStripMenuItem item in ((ToolStrip)sender).Items)
+            {
+                if (item != e.ClickedItem)
+                    item.BackColor = Color.White;
+                else
+                    item.BackColor = Color.LightBlue;
             }
         }
     }
