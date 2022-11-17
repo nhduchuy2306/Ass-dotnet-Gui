@@ -11,6 +11,7 @@ public interface IOrderRepository
 {
     List<Order> GetAll();
 
+    List<Order> GetAllbyMemId(Order order);
     bool Add(Order order);
 
     bool Update(Order order);

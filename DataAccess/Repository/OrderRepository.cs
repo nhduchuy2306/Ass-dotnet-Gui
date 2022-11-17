@@ -42,6 +42,22 @@ public class OrderRepository : IOrderRepository
         return o.ToList();
     }
 
+    public List<Order> GetAllbyMemId(Order or)
+    {
+        using var c = new SaleManagementContext();
+        var o = from order in c.Orders
+                where order.MemberId == or.MemberId
+                select new Order
+                {
+                    OrderId = order.OrderId,
+                    OrderDate = order.OrderDate,
+                    RequiredDate = order.RequiredDate,
+                    ShippedDate = order.ShippedDate,
+                    Freight = order.Freight,
+                } ;
+        return o.ToList();
+    }
+
     public Order GetById(int id)
     {
         return _context.Orders.Find(id);
