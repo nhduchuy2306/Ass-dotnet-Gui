@@ -98,6 +98,7 @@
             this.dgvMember.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMember.Size = new System.Drawing.Size(574, 282);
             this.dgvMember.TabIndex = 0;
+            this.dgvMember.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMember_CellClick);
             // 
             // txtSearch
             // 
@@ -105,7 +106,8 @@
             this.txtSearch.Location = new System.Drawing.Point(120, 68);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(322, 29);
+            this.txtSearch.PlaceholderText = "Input ID or Email";
+            this.txtSearch.Size = new System.Drawing.Size(458, 39);
             this.txtSearch.TabIndex = 1;
             // 
             // btnSearch
@@ -277,6 +279,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(206, 27);
             this.txtEmail.TabIndex = 16;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtCompany
             // 
@@ -286,6 +289,7 @@
             this.txtCompany.Name = "txtCompany";
             this.txtCompany.Size = new System.Drawing.Size(206, 27);
             this.txtCompany.TabIndex = 17;
+            this.txtCompany.TextChanged += new System.EventHandler(this.txtCompany_TextChanged);
             // 
             // txtCountry
             // 
@@ -295,6 +299,7 @@
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(206, 27);
             this.txtCountry.TabIndex = 18;
+            this.txtCountry.TextChanged += new System.EventHandler(this.txtCountry_TextChanged);
             // 
             // txtPwd
             // 
@@ -314,6 +319,7 @@
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(206, 27);
             this.txtCity.TabIndex = 21;
+            this.txtCity.TextChanged += new System.EventHandler(this.txtCity_TextChanged);
             // 
             // lbCity
             // 
