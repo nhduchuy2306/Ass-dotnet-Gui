@@ -67,6 +67,7 @@ namespace SalesWinApp
         {
             List<Member> list = repo.GetAll();
             LoadMemberList(list);
+            btnUpdate.Enabled = false;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -99,6 +100,7 @@ namespace SalesWinApp
                 List<Member> list = repo.GetAll();
                 LoadMemberList(list);
                 src.Position = row;
+                btnUpdate.Enabled = false;
                 MessageBox.Show("Update member info completed");
             }
         }
@@ -156,13 +158,18 @@ namespace SalesWinApp
                 }
                 else
                 {
-                    int id = 0;
-                    if (Convert.ToInt32(search) != null)
+                    try
                     {
+                        int id = 0;
                         id = Convert.ToInt32(search);
                         Member m = repo.GetById(id);
                         mem = new List<Member>();
                         mem.Add(m);
+                        LoadMemberList(mem);
+                    }
+                    catch (Exception)
+                    {
+                        mem = new List<Member>();
                         LoadMemberList(mem);
                     }
                 }
@@ -170,7 +177,68 @@ namespace SalesWinApp
         }
 
         // return frmMain
-        private void btnBack_Click(object sender, EventArgs e) => LoadMemberList(repo.GetAll());
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            int row = 0;
+            if (dgvMember.SelectedCells.Count > 0)
+            {
+                row = dgvMember.CurrentCell.RowIndex;
+            }
+            LoadMemberList(repo.GetAll());
 
+            src.Position = row;
+
+            btnUpdate.Enabled = false;
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            if (dgvMember.SelectedCells.Count > 0)
+            {
+                string email = dgvMember.SelectedRows[0].Cells[1].Value.ToString();
+                if (!txtEmail.Text.Equals(email))
+                {
+                    btnUpdate.Enabled = true;
+                }
+            }
+        }
+
+        private void txtCompany_TextChanged(object sender, EventArgs e)
+        {
+            if (dgvMember.SelectedCells.Count > 0)
+            {
+                string company = dgvMember.SelectedRows[0].Cells[2].Value.ToString();
+                if (!txtCompany.Text.Equals(company))
+                {
+                    btnUpdate.Enabled = true;
+                }
+            }
+        }
+
+        private void txtCountry_TextChanged(object sender, EventArgs e)
+        {
+            if (dgvMember.SelectedCells.Count > 0)
+            {
+                string country = dgvMember.SelectedRows[0].Cells[4].Value.ToString();
+                if (!txtCountry.Text.Equals(country))
+                {
+                    btnUpdate.Enabled = true;
+                }
+            }
+        }
+
+        private void txtCity_TextChanged(object sender, EventArgs e)
+        {
+            if (dgvMember.SelectedCells.Count > 0)
+            {
+                string city = dgvMember.SelectedRows[0].Cells[3].Value.ToString();
+                if (!txtCity.Text.Equals(city))
+                {
+                    btnUpdate.Enabled = true;
+                }
+            }
+        }
+
+        private void dgvMember_CellClick(object sender, DataGridViewCellEventArgs e) => btnBack_Click(sender, e);
     }
 }
