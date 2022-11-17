@@ -229,8 +229,15 @@ namespace SalesWinApp
                 Member member = repo.GetById(Convert.ToInt32(id));
                 if (!txtEmail.Text.Equals(member.Email))
                 {
-                    flag1 = false;
-                    btnUpdate.Enabled = true;
+                    if (txtEmail.Text.Equals(""))
+                    {
+                        flag1 = true;
+                    }
+                    else
+                    {
+                        flag1 = false;
+                        btnUpdate.Enabled = true;
+                    }                    
                 }
                 else
                 {
@@ -277,8 +284,15 @@ namespace SalesWinApp
                 Member member = repo.GetById(Convert.ToInt32(id));
                 if (!txtCompany.Text.Equals(member.CompanyName))
                 {
-                    flag2 = false;
-                    btnUpdate.Enabled = true;
+                    if (txtCompany.Text.Equals(""))
+                    {
+                        flag2 = true;
+                    }
+                    else
+                    {
+                        flag2 = false;
+                        btnUpdate.Enabled = true;
+                    }
                 }
                 else
                 {
@@ -300,8 +314,15 @@ namespace SalesWinApp
                 Member member = repo.GetById(Convert.ToInt32(id));
                 if (!txtCity.Text.Equals(member.City))
                 {
-                    flag3 = false;
-                    btnUpdate.Enabled = true;
+                    if (txtCity.Text.Equals(""))
+                    {
+                        flag3 = true;
+                    }
+                    else
+                    {
+                        flag3 = false;
+                        btnUpdate.Enabled = true;
+                    }
                 }
                 else
                 {
@@ -322,8 +343,15 @@ namespace SalesWinApp
                 Member member = repo.GetById(Convert.ToInt32(id));
                 if (!txtCountry.Text.Equals(member.Country))
                 {
-                    flag4 = false;
-                    btnUpdate.Enabled = true;
+                    if (txtCountry.Text.Equals(""))
+                    {
+                        flag4 = true;
+                    }
+                    else
+                    {
+                        flag4 = false;
+                        btnUpdate.Enabled = true;
+                    }
                 }
                 else
                 {
