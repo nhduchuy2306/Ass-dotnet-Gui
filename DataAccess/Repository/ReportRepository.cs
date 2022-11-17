@@ -23,6 +23,7 @@ public class ReportRepository : IReportRepository
         List<ReportObjects> reports = new List<ReportObjects>();
         var listOrder = (from order in _context.Orders
                         where order.OrderDate >= start && order.OrderDate <= end
+                        orderby order.OrderDate descending
                         select order).ToList();
 
         foreach (var order in listOrder)
