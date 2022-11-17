@@ -52,8 +52,7 @@
             this.txtCity = new System.Windows.Forms.TextBox();
             this.lbCity = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnOrder = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -347,27 +346,23 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // statusStrip1
+            // btnOrder
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 484);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1070, 22);
-            this.statusStrip1.TabIndex = 23;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            this.btnOrder.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnOrder.Location = new System.Drawing.Point(1347, 113);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(150, 42);
+            this.btnOrder.TabIndex = 23;
+            this.btnOrder.Text = "View Order(s)";
+            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // frmMembers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 506);
-            this.Controls.Add(this.statusStrip1);
+            this.ClientSize = new System.Drawing.Size(1577, 827);
+            this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.txtCity);
             this.Controls.Add(this.lbCity);
@@ -426,7 +421,6 @@
         private TextBox txtCity;
         private Label lbCity;
         private Button btnBack;
-        private StatusStrip statusStrip1;
-        private ToolStripStatusLabel toolStripStatusLabel1;
+        private Button btnOrder;
     }
 }

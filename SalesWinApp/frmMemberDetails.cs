@@ -18,7 +18,7 @@ namespace SalesWinApp
     public partial class frmMemberDetails : Form
     {
 
-        bool flag1, flag2, flag3, flag4, flag5 = false;
+        bool flag1 = false, flag2 = false, flag3 = false, flag4 = false, flag5 = false;
 
         private IMemberRepository repo = null;
         public frmMemberDetails()
