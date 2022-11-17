@@ -25,7 +25,6 @@ namespace SalesWinApp
         }
         private void LoadProduct()
         {
-            txtMemberID.Text = Member.MemberId.ToString();
             txtEmail.Text = Member.Email.ToString();
             txtCompanyName.Text = Member.CompanyName.ToString();
             txtCountry.Text = Member.Country.ToString();
