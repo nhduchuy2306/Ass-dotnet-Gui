@@ -25,16 +25,6 @@ namespace SalesWinApp
             repo = new OrderRepository();
         }
 
-        private void Clear()
-        {
-            txtOrderID.Text = string.Empty;
-            txtMemberID.Text = string.Empty;
-            txtOrderDate.Text = string.Empty;
-            txtRequiredDate.Text = string.Empty;
-            txtShippedDate.Text = string.Empty;
-            txtFreight.Text = string.Empty;
-        }
-
         private void LoadOrder(List<Order> list)
         {
             source = new BindingSource();
@@ -98,6 +88,12 @@ namespace SalesWinApp
             {
                 LoadOrder(repo.GetAll());
             }
+        }
+
+        private void btnStatistic_Click(object sender, EventArgs e)
+        {
+            frmReport form = new frmReport();
+            form.ShowDialog();
         }
 
         //dưới này là statusstrip

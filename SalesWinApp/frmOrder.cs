@@ -58,7 +58,7 @@ namespace SalesWinApp
         private void btnSave_Click(object sender, EventArgs e)
         {
             int memberId=0;
-            DateTime orderDate = DateTime.Now;
+            DateTime orderDate = DateTime.Now.Date;
             DateTime? requiredDate = null;
             DateTime? shippedDate = null;
             decimal? freight = null;
@@ -67,11 +67,11 @@ namespace SalesWinApp
                 memberId = Convert.ToInt32(txtMemberID.Text);
                 if (txtRequiredDate.Text != "")
                 {
-                    requiredDate = DateTime.Parse(txtRequiredDate.Text);
+                    requiredDate = DateTime.Parse(txtRequiredDate.Text).Date;
                 }
                 if (txtShippedDate.Text != "")
                 {
-                    shippedDate = DateTime.Parse(txtShippedDate.Text);
+                    shippedDate = DateTime.Parse(txtShippedDate.Text).Date;
                 }
                 if (txtFreight.Text != "")
                 {
@@ -98,7 +98,7 @@ namespace SalesWinApp
         {
             int orderId = Convert.ToInt32(txtOrderID.Text);
             int memberId = 0;
-            DateTime orderDate = DateTime.Parse(txtOrderDate.Text);
+            DateTime orderDate = DateTime.Parse(txtOrderDate.Text).Date;
             DateTime? requiredDate = null;
             DateTime? shippedDate = null;
             decimal? freight = null;
@@ -107,11 +107,11 @@ namespace SalesWinApp
                 memberId = Convert.ToInt32(txtMemberID.Text);
                 if (txtRequiredDate.Text != "")
                 {
-                    requiredDate = DateTime.Parse(txtRequiredDate.Text);
+                    requiredDate = DateTime.Parse(txtRequiredDate.Text).Date;
                 }
                 if (txtShippedDate.Text != "")
                 {
-                    shippedDate = DateTime.Parse(txtShippedDate.Text);
+                    shippedDate = DateTime.Parse(txtShippedDate.Text).Date;
                 }
                 if (txtFreight.Text != "")
                 {

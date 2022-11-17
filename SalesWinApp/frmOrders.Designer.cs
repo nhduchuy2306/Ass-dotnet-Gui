@@ -50,6 +50,7 @@
             this.txtOrderDate = new System.Windows.Forms.TextBox();
             this.txtRequiredDate = new System.Windows.Forms.TextBox();
             this.txtShippedDate = new System.Windows.Forms.TextBox();
+            this.btnStatistic = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -268,11 +269,22 @@
             this.txtShippedDate.Size = new System.Drawing.Size(204, 23);
             this.txtShippedDate.TabIndex = 42;
             // 
+            // btnStatistic
+            // 
+            this.btnStatistic.Location = new System.Drawing.Point(7, 9);
+            this.btnStatistic.Name = "btnStatistic";
+            this.btnStatistic.Size = new System.Drawing.Size(87, 43);
+            this.btnStatistic.TabIndex = 43;
+            this.btnStatistic.Text = "Statistics";
+            this.btnStatistic.UseVisualStyleBackColor = true;
+            this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
+            // 
             // frmOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 484);
+            this.Controls.Add(this.btnStatistic);
             this.Controls.Add(this.txtShippedDate);
             this.Controls.Add(this.txtRequiredDate);
             this.Controls.Add(this.txtOrderDate);
@@ -330,5 +342,6 @@
         private TextBox txtOrderDate;
         private TextBox txtRequiredDate;
         private TextBox txtShippedDate;
+        private Button btnStatistic;
     }
 }
