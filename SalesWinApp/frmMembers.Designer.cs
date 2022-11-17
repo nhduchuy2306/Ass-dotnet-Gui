@@ -49,6 +49,7 @@
             this.txtCity = new System.Windows.Forms.TextBox();
             this.lbCity = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnOrder = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).BeginInit();
             this.SuspendLayout();
             // 
@@ -263,11 +264,23 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // btnOrder
+            // 
+            this.btnOrder.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnOrder.Location = new System.Drawing.Point(1347, 113);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(150, 42);
+            this.btnOrder.TabIndex = 23;
+            this.btnOrder.Text = "View Order(s)";
+            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            // 
             // frmMembers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1577, 827);
+            this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.txtCity);
             this.Controls.Add(this.lbCity);
@@ -322,5 +335,6 @@
         private TextBox txtCity;
         private Label lbCity;
         private Button btnBack;
+        private Button btnOrder;
     }
 }

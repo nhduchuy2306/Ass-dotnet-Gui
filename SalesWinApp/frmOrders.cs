@@ -19,6 +19,8 @@ namespace SalesWinApp
 
         private IOrderRepository repo;
         BindingSource source = null;
+
+        public int MemID { get; set; }  
         public frmOrders()
         {
             InitializeComponent();
@@ -63,7 +65,15 @@ namespace SalesWinApp
 
         private void frmOrders_Load(object sender, EventArgs e)
         {
-            LoadOrder(repo.GetAll());
+            
+            if (MemID > 0)
+            {
+                LoadOrder(repo.GetByMemberID(MemID));
+            }
+            else
+            {
+                LoadOrder(repo.GetAll());
+            }
         }
 
         private void btnNew_Click(object sender, EventArgs e)

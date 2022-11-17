@@ -42,6 +42,15 @@ public class OrderRepository : IOrderRepository
         return o.ToList();
     }
 
+    public List<Order> GetByMemberID(int id)
+    {
+        using var con = new SaleManagementContext();
+        var o = from order in con.Orders
+                where order.MemberId == id
+                select order;
+        return (List<Order>)o.ToList(); 
+    }
+
     public Order GetById(int id)
     {
         return _context.Orders.Find(id);

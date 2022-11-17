@@ -17,6 +17,8 @@ public interface IOrderRepository
 
     Order GetById(int id);
 
+    List<Order> GetByMemberID(int id);
+
     bool Delete(int id);
 
 }
