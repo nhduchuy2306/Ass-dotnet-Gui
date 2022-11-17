@@ -42,6 +42,7 @@ namespace SalesWinApp
             {
                 txtMemberID.Items.Add(member.MemberId);
             }
+            txtMemberID.SelectedIndex = 0;
             if(oId != 0)
             {
                 OrderObject obj = AutoMapperConfiguration.ToOrderObject(repo.GetById(oId));

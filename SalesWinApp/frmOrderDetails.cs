@@ -38,6 +38,7 @@ namespace SalesWinApp
             {
                 txtProductId.Items.Add(product.ProductId);
             }
+            txtProductId.SelectedIndex = 0;
             txtProductId.TextChanged += new EventHandler(txtUnitPrice_TextChanged);
             txtQuantity.TextChanged += new EventHandler(txtUnitPrice_TextChanged);
             txtDiscount.TextChanged += new EventHandler(txtUnitPrice_TextChanged);
