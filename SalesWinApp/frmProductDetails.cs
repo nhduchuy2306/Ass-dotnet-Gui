@@ -54,6 +54,8 @@ namespace SalesWinApp
                 string unitPrice = txtUnitPrice.Text;
                 string unitInStock = txtUnitsInStock.Text;
 
+
+
                 ProductObject productObject = new ProductObject
                 {
                     ProductId = Convert.ToInt32(productId),
