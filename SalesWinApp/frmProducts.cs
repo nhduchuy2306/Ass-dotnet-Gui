@@ -68,6 +68,10 @@ namespace SalesWinApp
             List<Product> list = this.repo.GetAll();
             list.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
             LoadProduct(listP);
+
+            List<string> typeList = new List<string>() { "Product Name", "Product Id", "Unit Price", "Unit In Stock"};
+            cboSearchType.DataSource = typeList;
+            cboSearchType.SelectedIndex = 0;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -118,9 +122,31 @@ namespace SalesWinApp
             }
         }
 
-        private void btnSearchProductID_Click(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
-            string productID = txtSearchProductID.Text;
+            string typeSearch = cboSearchType.Text;
+
+            if (typeSearch.Equals("Product Id"))
+            {
+                SearchProductID(sender, e);
+            }
+            else if (typeSearch.Equals("Product Name"))
+            {
+                SearchProductName(sender, e);
+            }
+            else if(typeSearch.Equals("Unit Price"))
+            {
+                SearchUnitPrice(sender, e);
+            }
+            else
+            {
+                SearchUnitsInStock(sender, e);
+            }
+        }
+
+        private void SearchProductID(object sender, EventArgs e)
+        {
+            string productID = txtSearch.Text;
 
             if (productID.Equals(""))
             {
@@ -139,18 +165,19 @@ namespace SalesWinApp
 
                 if (pro != null)
                 {
-                    txtSearchProductID.Clear();
+                    txtSearch.Clear();
                     LoadProduct(listP);
                 }
                 else MessageBox.Show($"Not contain {productID}");
             }
         }
 
-        private void btnSearchProductName_Click(object sender, EventArgs e)
-        {
-            string productName = txtSearchProductName.Text;
 
-            if (productName.Equals(""))
+        private void SearchProductName(object sender, EventArgs e)
+        {
+            string txt = txtSearch.Text;
+
+            if (txt.Equals(""))
             {
                 List<ProductObject> listP = new List<ProductObject>();
                 List<Product> list = repo.GetAll();
@@ -159,24 +186,24 @@ namespace SalesWinApp
             }
             else
             {
-                List<Product> pro = repo.GetByName(productName);
+                List<Product> pro = repo.GetByName(txt);
                 List<ProductObject> listP = new List<ProductObject>();
                 pro.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
 
                 if (pro != null)
                 {
-                    txtSearchProductName.Clear();
+                    txtSearch.Clear();
                     LoadProduct(listP);
                 }
-                else MessageBox.Show($"Not contain {productName}");
+                else MessageBox.Show($"Not contain {txt}");
             }
         }
 
-        private void btnSearchUnitPrice_Click(object sender, EventArgs e)
+        private void SearchUnitPrice(object sender, EventArgs e)
         {
-            string unitPrice = txtSearchUnitPrice.Text;
+            string txt = txtSearch.Text;
 
-            if (unitPrice.Equals(""))
+            if (txt.Equals(""))
             {
                 List<ProductObject> listP = new List<ProductObject>();
                 List<Product> list = repo.GetAll();
@@ -185,24 +212,24 @@ namespace SalesWinApp
             }
             else
             {
-                List<Product> pro = repo.GetByUnitPrice(Convert.ToInt32(unitPrice));
+                List<Product> pro = repo.GetByUnitPrice(Convert.ToInt32(txt));
                 List<ProductObject> listP = new List<ProductObject>();
                 pro.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
 
                 if (pro != null)
                 {
-                    txtSearchUnitPrice.Clear();
+                    txtSearch.Clear();
                     LoadProduct(listP);
                 }
-                else MessageBox.Show($"Not contain {unitPrice}");
+                else MessageBox.Show($"Not contain {txt}");
             }
         }
 
-        private void btnSearchUnitsInStock_Click(object sender, EventArgs e)
+        private void SearchUnitsInStock(object sender, EventArgs e)
         {
-            string unitsInStock = txtSearchUnitsInStock.Text;
+            string txt = txtSearch.Text;
 
-            if (unitsInStock.Equals(""))
+            if (txt.Equals(""))
             {
                 List<ProductObject> listP = new List<ProductObject>();
                 List<Product> list = repo.GetAll();
@@ -211,16 +238,16 @@ namespace SalesWinApp
             }
             else
             {
-                List<Product> pro = repo.GetByUnitsInStock(Convert.ToInt32(unitsInStock));
+                List<Product> pro = repo.GetByUnitsInStock(Convert.ToInt32(txt));
                 List<ProductObject> listP = new List<ProductObject>();
                 pro.ForEach(p => listP.Add(AutoMapperConfiguration.ToProductObject(p)));
 
                 if (pro != null)
                 {
-                    txtSearchUnitsInStock.Clear();
+                    txtSearch.Clear();
                     LoadProduct(listP);
                 }
-                else MessageBox.Show($"Not contain {unitsInStock}");
+                else MessageBox.Show($"Not contain {txt}");
             }
 
         }
