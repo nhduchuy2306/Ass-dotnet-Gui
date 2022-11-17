@@ -135,7 +135,7 @@ namespace SalesWinApp
             }
             if (IsOpen == false)
             {
-                frmOrders frmOrder = new frmOrders();
+                frmOrders frmOrder = new frmOrders { MemID = -1 };
                 frmOrder.MdiParent = this;
                 frmOrder.Show();
             }

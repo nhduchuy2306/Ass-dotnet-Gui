@@ -52,6 +52,7 @@
             this.txtCity = new System.Windows.Forms.TextBox();
             this.lbCity = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnOrder = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).BeginInit();
@@ -98,23 +99,25 @@
             this.dgvMember.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMember.Size = new System.Drawing.Size(574, 282);
             this.dgvMember.TabIndex = 0;
+            this.dgvMember.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMember_CellClick);
             // 
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSearch.Location = new System.Drawing.Point(120, 68);
+            this.txtSearch.Location = new System.Drawing.Point(70, 68);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(322, 29);
+            this.txtSearch.PlaceholderText = "Input ID or Email";
+            this.txtSearch.Size = new System.Drawing.Size(370, 29);
             this.txtSearch.TabIndex = 1;
             // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.FlatAppearance.BorderSize = 2;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(454, 68);
+            this.btnSearch.Location = new System.Drawing.Point(466, 68);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(84, 29);
@@ -126,11 +129,11 @@
             // btnNew
             // 
             this.btnNew.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnNew.FlatAppearance.BorderSize = 0;
-            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.FlatAppearance.BorderSize = 2;
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNew.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnNew.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnNew.Location = new System.Drawing.Point(252, 415);
+            this.btnNew.Location = new System.Drawing.Point(118, 415);
             this.btnNew.Margin = new System.Windows.Forms.Padding(2);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(152, 30);
@@ -168,7 +171,7 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatAppearance.BorderSize = 2;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnUpdate.Location = new System.Drawing.Point(724, 415);
@@ -185,8 +188,8 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.FlatAppearance.BorderSize = 2;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.Location = new System.Drawing.Point(888, 415);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
@@ -277,6 +280,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(206, 27);
             this.txtEmail.TabIndex = 16;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtCompany
             // 
@@ -286,6 +290,7 @@
             this.txtCompany.Name = "txtCompany";
             this.txtCompany.Size = new System.Drawing.Size(206, 27);
             this.txtCompany.TabIndex = 17;
+            this.txtCompany.TextChanged += new System.EventHandler(this.txtCompany_TextChanged);
             // 
             // txtCountry
             // 
@@ -295,6 +300,7 @@
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(206, 27);
             this.txtCountry.TabIndex = 18;
+            this.txtCountry.TextChanged += new System.EventHandler(this.txtCountry_TextChanged);
             // 
             // txtPwd
             // 
@@ -314,6 +320,7 @@
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(206, 27);
             this.txtCity.TabIndex = 21;
+            this.txtCity.TextChanged += new System.EventHandler(this.txtCity_TextChanged);
             // 
             // lbCity
             // 
@@ -329,24 +336,39 @@
             // 
             // btnBack
             // 
-            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBack.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnBack.Location = new System.Drawing.Point(8, 7);
             this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(77, 25);
             this.btnBack.TabIndex = 22;
             this.btnBack.Text = "Re-Load";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnOrder
+            // 
+            this.btnOrder.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOrder.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnOrder.Location = new System.Drawing.Point(363, 415);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(152, 30);
+            this.btnOrder.TabIndex = 23;
+            this.btnOrder.Text = "View Order(s)";
+            this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 484);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 805);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1070, 22);
-            this.statusStrip1.TabIndex = 23;
+            this.statusStrip1.Size = new System.Drawing.Size(1577, 22);
+            this.statusStrip1.TabIndex = 24;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
@@ -358,8 +380,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 506);
+            this.ClientSize = new System.Drawing.Size(1577, 827);
             this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.txtCity);
             this.Controls.Add(this.lbCity);
@@ -418,6 +441,7 @@
         private TextBox txtCity;
         private Label lbCity;
         private Button btnBack;
+        private Button btnOrder;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
     }

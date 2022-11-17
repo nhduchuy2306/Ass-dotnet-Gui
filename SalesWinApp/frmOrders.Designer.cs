@@ -205,7 +205,7 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnUpdate.Location = new System.Drawing.Point(795, 412);
             this.btnUpdate.Name = "btnUpdate";
@@ -221,7 +221,7 @@
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.Location = new System.Drawing.Point(925, 412);
             this.btnDelete.Name = "btnDelete";
@@ -237,7 +237,7 @@
             // 
             this.btnNew.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnNew.FlatAppearance.BorderSize = 0;
-            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNew.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnNew.Location = new System.Drawing.Point(650, 412);
             this.btnNew.Name = "btnNew";
@@ -278,7 +278,7 @@
             // 
             this.btnAddDetail.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAddDetail.FlatAppearance.BorderSize = 0;
-            this.btnAddDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddDetail.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddDetail.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAddDetail.Location = new System.Drawing.Point(209, 412);
             this.btnAddDetail.Name = "btnAddDetail";

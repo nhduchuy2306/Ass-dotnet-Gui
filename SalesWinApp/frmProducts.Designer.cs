@@ -192,6 +192,7 @@ namespace SalesWinApp
             // 
             this.txtCategoryID.Location = new System.Drawing.Point(827, 117);
             this.txtCategoryID.Name = "txtCategoryID";
+            this.txtCategoryID.ReadOnly = true;
             this.txtCategoryID.Size = new System.Drawing.Size(172, 23);
             this.txtCategoryID.TabIndex = 10;
             // 
@@ -199,6 +200,7 @@ namespace SalesWinApp
             // 
             this.txtProductName.Location = new System.Drawing.Point(827, 175);
             this.txtProductName.Name = "txtProductName";
+            this.txtProductName.ReadOnly = true;
             this.txtProductName.Size = new System.Drawing.Size(172, 23);
             this.txtProductName.TabIndex = 11;
             // 
@@ -206,6 +208,7 @@ namespace SalesWinApp
             // 
             this.txtWeight.Location = new System.Drawing.Point(827, 234);
             this.txtWeight.Name = "txtWeight";
+            this.txtWeight.ReadOnly = true;
             this.txtWeight.Size = new System.Drawing.Size(172, 23);
             this.txtWeight.TabIndex = 12;
             // 
@@ -213,6 +216,7 @@ namespace SalesWinApp
             // 
             this.txtUnitPrice.Location = new System.Drawing.Point(827, 298);
             this.txtUnitPrice.Name = "txtUnitPrice";
+            this.txtUnitPrice.ReadOnly = true;
             this.txtUnitPrice.Size = new System.Drawing.Size(172, 23);
             this.txtUnitPrice.TabIndex = 13;
             // 
@@ -220,6 +224,7 @@ namespace SalesWinApp
             // 
             this.txtUnitsInStock.Location = new System.Drawing.Point(827, 361);
             this.txtUnitsInStock.Name = "txtUnitsInStock";
+            this.txtUnitsInStock.ReadOnly = true;
             this.txtUnitsInStock.Size = new System.Drawing.Size(172, 23);
             this.txtUnitsInStock.TabIndex = 14;
             // 
@@ -253,7 +258,7 @@ namespace SalesWinApp
             // 
             this.btnNew.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnNew.FlatAppearance.BorderSize = 0;
-            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNew.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnNew.Location = new System.Drawing.Point(224, 424);
             this.btnNew.Margin = new System.Windows.Forms.Padding(2);
@@ -270,7 +275,7 @@ namespace SalesWinApp
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnUpdate.Location = new System.Drawing.Point(702, 424);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
@@ -287,7 +292,7 @@ namespace SalesWinApp
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.Location = new System.Drawing.Point(871, 424);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);

@@ -54,8 +54,16 @@ public class OrderRepository : IOrderRepository
                     RequiredDate = order.RequiredDate,
                     ShippedDate = order.ShippedDate,
                     Freight = order.Freight,
-                } ;
+                };
         return o.ToList();
+    }
+    public List<Order> GetByMemberID(int id)
+    {
+        using var con = new SaleManagementContext();
+        var o = from order in con.Orders
+                where order.MemberId == id
+                select order;
+        return (List<Order>)o.ToList(); 
     }
 
     public Order GetById(int id)

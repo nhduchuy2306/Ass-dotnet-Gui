@@ -18,6 +18,7 @@ namespace SalesWinApp
     {
         private IMemberRepository repo = null;
         BindingSource src = null;
+        bool flag1 = true, flag2 = true, flag3 = true, flag4 = true;
 
         MemberObject member = null;
         public frmMembers()
@@ -67,6 +68,9 @@ namespace SalesWinApp
         {
             List<Member> list = repo.GetAll();
             LoadMemberList(list);
+            btnUpdate.Enabled = false;
+            btnDelete.Enabled = true;
+            btnOrder.Enabled = true;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -99,6 +103,7 @@ namespace SalesWinApp
                 List<Member> list = repo.GetAll();
                 LoadMemberList(list);
                 src.Position = row;
+                btnUpdate.Enabled = false;
                 MessageBox.Show("Update member info completed");
             }
         }
@@ -146,6 +151,9 @@ namespace SalesWinApp
             if (search.Equals(""))
             {
                 LoadMemberList(list);
+                btnOrder.Enabled = true;
+                btnUpdate.Enabled = true;
+                btnDelete.Enabled = true;
             }
             else
             {
@@ -153,24 +161,87 @@ namespace SalesWinApp
                 if (mem.Count > 0)
                 {
                     LoadMemberList(mem);
+                    btnOrder.Enabled = true;
+                    btnUpdate.Enabled = true;
+                    btnDelete.Enabled = true;
                 }
                 else
                 {
-                    int id = 0;
-                    if (Convert.ToInt32(search) != null)
+                    try
                     {
+                        int id = 0;
                         id = Convert.ToInt32(search);
                         Member m = repo.GetById(id);
                         mem = new List<Member>();
                         mem.Add(m);
                         LoadMemberList(mem);
+                        btnOrder.Enabled = true;
+                        btnUpdate.Enabled = true;
+                        btnDelete.Enabled = true;
+                    }
+                    catch (Exception)
+                    {
+                        mem = new List<Member>();
+                        LoadMemberList(mem);
+
+                        txtMemID.Text = string.Empty;
+                        txtEmail.Text = string.Empty;
+                        txtCompany.Text = string.Empty;
+                        txtCountry.Text = string.Empty;
+                        txtCity.Text = string.Empty;
+                        txtPwd.Text = string.Empty;
+
+                        btnOrder.Enabled = false;
+                        btnUpdate.Enabled = false;
+                        btnDelete.Enabled = false;
                     }
                 }
             }
         }
 
         // return frmMain
-        private void btnBack_Click(object sender, EventArgs e) => LoadMemberList(repo.GetAll());
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            int row = 0;
+            if (dgvMember.SelectedCells.Count > 0)
+            {
+                row = dgvMember.CurrentCell.RowIndex;
+            }
+            LoadMemberList(repo.GetAll());
+            src.Position = row;
+
+            btnUpdate.Enabled = false;
+
+            btnDelete.Enabled = true;
+
+            btnOrder.Enabled = true;
+        }
+
+
+
+
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            if (dgvMember.SelectedCells.Count > 0)
+            {
+                string id = dgvMember.SelectedRows[0].Cells[0].Value.ToString();
+                Member member = repo.GetById(Convert.ToInt32(id));
+                if (!txtEmail.Text.Equals(member.Email))
+                {
+                    flag1 = false;
+                    btnUpdate.Enabled = true;
+                }
+                else
+                {
+                    flag1 = true;
+                }
+                if (flag1 && flag2 && flag3 && flag4)
+                {
+                    btnUpdate.Enabled = false;
+                }
+            }
+        }
 
 
         //status Strip
@@ -198,6 +269,86 @@ namespace SalesWinApp
         {
             toolStripStatusLabel1.Text = "";
         }
+        private void txtCompany_TextChanged(object sender, EventArgs e)
+        {
+            if (dgvMember.SelectedCells.Count > 0)
+            {
+                string id = dgvMember.SelectedRows[0].Cells[0].Value.ToString();
+                Member member = repo.GetById(Convert.ToInt32(id));
+                if (!txtCompany.Text.Equals(member.CompanyName))
+                {
+                    flag2 = false;
+                    btnUpdate.Enabled = true;
+                }
+                else
+                {
+                    flag2 = true;
+                }
 
+                if (flag1 && flag2 && flag3 && flag4)
+                {
+                    btnUpdate.Enabled = false;
+                }
+            }
+        }
+
+        private void txtCity_TextChanged(object sender, EventArgs e)
+        {
+            if (dgvMember.SelectedCells.Count > 0)
+            {
+                string id = dgvMember.SelectedRows[0].Cells[0].Value.ToString();
+                Member member = repo.GetById(Convert.ToInt32(id));
+                if (!txtCity.Text.Equals(member.City))
+                {
+                    flag3 = false;
+                    btnUpdate.Enabled = true;
+                }
+                else
+                {
+                    flag3 = true;
+                }
+                if (flag1 && flag2 && flag3 && flag4)
+                {
+                    btnUpdate.Enabled = false;
+                }
+            }
+        }
+
+        private void txtCountry_TextChanged(object sender, EventArgs e)
+        {
+            if (dgvMember.SelectedCells.Count > 0)
+            {
+                string id = dgvMember.SelectedRows[0].Cells[0].Value.ToString();
+                Member member = repo.GetById(Convert.ToInt32(id));
+                if (!txtCountry.Text.Equals(member.Country))
+                {
+                    flag4 = false;
+                    btnUpdate.Enabled = true;
+                }
+                else
+                {
+                    flag4 = true;
+                }
+                if (flag1 && flag2 && flag3 && flag4)
+                {
+                    btnUpdate.Enabled = false;
+                }
+            }
+        }
+
+
+
+
+
+        private void dgvMember_CellClick(object sender, DataGridViewCellEventArgs e) => btnBack_Click(sender, e);
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            int memberID = Convert.ToInt32(txtMemID.Text);
+            frmOrders frmOrders = new frmOrders
+            { MemID = memberID };
+            this.Hide();
+            frmOrders.Show();
+        }
     }
 }
