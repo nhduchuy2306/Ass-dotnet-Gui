@@ -75,6 +75,7 @@ namespace SalesWinApp
                     MessageBox.Show("Update product successfully");
                     DialogResult = DialogResult.OK;
                 }
+                
             }
             else
             {

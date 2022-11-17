@@ -98,13 +98,20 @@ namespace SalesWinApp
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string productId = txtProductID.Text;
-            bool check = repo.Delete(Convert.ToInt32(productId));
-            if (check)
+            string alert = "Do you want to delete this product?";
+            string title = "Delete a product";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(alert, title, buttons, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.Yes)
             {
-                List<Product> list = repo.GetAll();
-                LoadProduct(list);
-                MessageBox.Show("Delete product successfully");
+                string productId = txtProductID.Text;
+                bool check = repo.Delete(Convert.ToInt32(productId));
+                if (check)
+                {
+                    List<Product> list = repo.GetAll();
+                    LoadProduct(list);
+                    MessageBox.Show("Delete product successfully");
+                }
             }
         }
 

@@ -225,19 +225,11 @@ namespace SalesWinApp
             // 
             // txtSearch
             // 
-<<<<<<< Updated upstream
             this.txtSearch.Location = new System.Drawing.Point(224, 81);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PlaceholderText = "Search by.........";
             this.txtSearch.Size = new System.Drawing.Size(189, 23);
-=======
-            this.txtSearch.Location = new System.Drawing.Point(224, 80);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PlaceholderText = "Search by ..........";
-            this.txtSearch.Size = new System.Drawing.Size(206, 23);
->>>>>>> Stashed changes
             this.txtSearch.TabIndex = 15;
             // 
             // btnSearch
@@ -246,11 +238,7 @@ namespace SalesWinApp
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-<<<<<<< Updated upstream
             this.btnSearch.Location = new System.Drawing.Point(446, 81);
-=======
-            this.btnSearch.Location = new System.Drawing.Point(451, 76);
->>>>>>> Stashed changes
             this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(70, 27);
@@ -331,15 +319,9 @@ namespace SalesWinApp
             // cboSearchType
             // 
             this.cboSearchType.FormattingEnabled = true;
-<<<<<<< Updated upstream
             this.cboSearchType.Location = new System.Drawing.Point(56, 81);
             this.cboSearchType.Name = "cboSearchType";
             this.cboSearchType.Size = new System.Drawing.Size(151, 23);
-=======
-            this.cboSearchType.Location = new System.Drawing.Point(34, 80);
-            this.cboSearchType.Name = "cboSearchType";
-            this.cboSearchType.Size = new System.Drawing.Size(167, 23);
->>>>>>> Stashed changes
             this.cboSearchType.TabIndex = 22;
             // 
             // frmProducts

@@ -77,8 +77,15 @@ namespace SalesWinApp
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            repo.Delete(Convert.ToInt32(txtOrderID.Text));
-            LoadOrder(repo.GetAll());
+            string alert = "Do you want to delete this order?";
+            string title = "Delete a order";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(alert, title, buttons, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.Yes)
+            {
+                repo.Delete(Convert.ToInt32(txtOrderID.Text));
+                LoadOrder(repo.GetAll());
+            }
         }
 
         private void btnAddDetail_Click(object sender, EventArgs e)
