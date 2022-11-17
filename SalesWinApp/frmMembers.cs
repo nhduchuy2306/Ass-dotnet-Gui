@@ -185,6 +185,22 @@ namespace SalesWinApp
                 row = dgvMember.CurrentCell.RowIndex;
             }
             LoadMemberList(repo.GetAll());
+            src.Position = row;
+
+            btnUpdate.Enabled = false;
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            if (dgvMember.SelectedCells.Count > 0)
+            {
+                string email = dgvMember.SelectedRows[0].Cells[1].Value.ToString();
+                if (!txtEmail.Text.Equals(email))
+                {
+                    btnUpdate.Enabled = true;
+                }
+            }
+        }
 
 
         //status Strip
@@ -212,24 +228,6 @@ namespace SalesWinApp
         {
             toolStripStatusLabel1.Text = "";
         }
-
-            src.Position = row;
-
-            btnUpdate.Enabled = false;
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-            if (dgvMember.SelectedCells.Count > 0)
-            {
-                string email = dgvMember.SelectedRows[0].Cells[1].Value.ToString();
-                if (!txtEmail.Text.Equals(email))
-                {
-                    btnUpdate.Enabled = true;
-                }
-            }
-        }
-
         private void txtCompany_TextChanged(object sender, EventArgs e)
         {
             if (dgvMember.SelectedCells.Count > 0)

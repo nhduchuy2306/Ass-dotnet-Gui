@@ -241,7 +241,7 @@ namespace SalesWinApp
             // 
             this.btnSearchProductID.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSearchProductID.FlatAppearance.BorderSize = 0;
-            this.btnSearchProductID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchProductID.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearchProductID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSearchProductID.Location = new System.Drawing.Point(210, 47);
             this.btnSearchProductID.Margin = new System.Windows.Forms.Padding(2);
@@ -250,7 +250,6 @@ namespace SalesWinApp
             this.btnSearchProductID.TabIndex = 16;
             this.btnSearchProductID.Text = "Search";
             this.btnSearchProductID.UseVisualStyleBackColor = false;
-            this.btnSearchProductID.Click += new System.EventHandler(this.btnSearchProductID_Click);
             this.btnSearchProductID.MouseLeave += new System.EventHandler(this.btnSearchProduct_MouseLeave);
             this.btnSearchProductID.MouseHover += new System.EventHandler(this.btnSearchProduct_MouseHover);
             // 
@@ -258,7 +257,7 @@ namespace SalesWinApp
             // 
             this.btnNew.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnNew.FlatAppearance.BorderSize = 0;
-            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNew.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnNew.Location = new System.Drawing.Point(224, 424);
             this.btnNew.Margin = new System.Windows.Forms.Padding(2);
@@ -275,7 +274,7 @@ namespace SalesWinApp
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnUpdate.Location = new System.Drawing.Point(702, 424);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
@@ -292,7 +291,7 @@ namespace SalesWinApp
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.Location = new System.Drawing.Point(871, 424);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
@@ -352,7 +351,7 @@ namespace SalesWinApp
             // 
             this.btnSearchProductName.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSearchProductName.FlatAppearance.BorderSize = 0;
-            this.btnSearchProductName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchProductName.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearchProductName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSearchProductName.Location = new System.Drawing.Point(210, 83);
             this.btnSearchProductName.Margin = new System.Windows.Forms.Padding(2);
@@ -361,13 +360,12 @@ namespace SalesWinApp
             this.btnSearchProductName.TabIndex = 25;
             this.btnSearchProductName.Text = "Search";
             this.btnSearchProductName.UseVisualStyleBackColor = false;
-            this.btnSearchProductName.Click += new System.EventHandler(this.btnSearchProductName_Click);
             // 
             // btnSearchUnitPrice
             // 
             this.btnSearchUnitPrice.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSearchUnitPrice.FlatAppearance.BorderSize = 0;
-            this.btnSearchUnitPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchUnitPrice.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearchUnitPrice.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSearchUnitPrice.Location = new System.Drawing.Point(501, 47);
             this.btnSearchUnitPrice.Margin = new System.Windows.Forms.Padding(2);
@@ -376,13 +374,12 @@ namespace SalesWinApp
             this.btnSearchUnitPrice.TabIndex = 26;
             this.btnSearchUnitPrice.Text = "Search";
             this.btnSearchUnitPrice.UseVisualStyleBackColor = false;
-            this.btnSearchUnitPrice.Click += new System.EventHandler(this.btnSearchUnitPrice_Click);
             // 
             // btnSearchUnitsInStock
             // 
             this.btnSearchUnitsInStock.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSearchUnitsInStock.FlatAppearance.BorderSize = 0;
-            this.btnSearchUnitsInStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchUnitsInStock.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearchUnitsInStock.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSearchUnitsInStock.Location = new System.Drawing.Point(501, 83);
             this.btnSearchUnitsInStock.Margin = new System.Windows.Forms.Padding(2);
@@ -391,7 +388,6 @@ namespace SalesWinApp
             this.btnSearchUnitsInStock.TabIndex = 27;
             this.btnSearchUnitsInStock.Text = "Search";
             this.btnSearchUnitsInStock.UseVisualStyleBackColor = false;
-            this.btnSearchUnitsInStock.Click += new System.EventHandler(this.btnSearchUnitsInStock_Click);
             // 
             // frmProducts
             // 
