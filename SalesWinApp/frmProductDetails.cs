@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace SalesWinApp
 {
@@ -57,7 +58,9 @@ namespace SalesWinApp
                 string unitInStock = txtUnitsInStock.Text;
 
                 
-                if (productName.Equals("") || productId.Equals("") || categoryId.Equals("") || weight.Equals("") || unitInStock.Equals("") || unitPrice.Equals(""))
+                if (productName.Equals("") || productId.Equals("") || categoryId.Equals("") || weight.Equals("") 
+                    || unitInStock.Equals("") || unitPrice.Equals("") || !Regex.IsMatch(categoryId, @"^\d+$") || 
+                    !Regex.IsMatch(weight, @"^\d+$") || !Regex.IsMatch(unitPrice, @"^\d+$") || !Regex.IsMatch(unitInStock, @"^\d+$"))
                 {
                     MessageBox.Show("Invalid data");
                 }
