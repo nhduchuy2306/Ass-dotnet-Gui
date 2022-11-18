@@ -113,6 +113,12 @@ namespace SalesWinApp
             form.ShowDialog();
         }
 
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            frmReport form = new frmReport();
+            form.ShowDialog();
+        }
+
         //dưới này là statusstrip
 
         private void btnNew_MouseHover(object sender, EventArgs e)
