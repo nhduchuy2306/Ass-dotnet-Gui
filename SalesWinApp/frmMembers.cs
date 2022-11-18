@@ -413,7 +413,9 @@ namespace SalesWinApp
             frmOrders frmOrders = new frmOrders
             { MemID = memberID };
             this.Hide();
+            frmOrders.FormBorderStyle = FormBorderStyle.Sizable;
             frmOrders.Show();
+
         }
     }
 }
