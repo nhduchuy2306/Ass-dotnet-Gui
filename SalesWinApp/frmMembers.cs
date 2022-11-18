@@ -412,7 +412,6 @@ namespace SalesWinApp
             int memberID = Convert.ToInt32(txtMemID.Text);
             frmOrders frmOrders = new frmOrders
             { MemID = memberID };
-            this.Hide();
             frmOrders.FormBorderStyle = FormBorderStyle.Sizable;
             frmOrders.Show();
 
