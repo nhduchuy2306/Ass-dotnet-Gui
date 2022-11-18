@@ -97,22 +97,31 @@ namespace SalesWinApp
                 string unitPrice = txtUnitPrice.Text;
                 string unitInStock = txtUnitsInStock.Text;
 
-                ProductObject productObject = new ProductObject
+                if (productName.Equals("") || categoryId.Equals("") || weight.Equals("")
+                    || unitInStock.Equals("") || unitPrice.Equals("") || !Regex.IsMatch(categoryId, @"^\d+$") ||
+                    !Regex.IsMatch(weight, @"^\d+$") || !Regex.IsMatch(unitPrice, @"^\d+$") || !Regex.IsMatch(unitInStock, @"^\d+$"))
                 {
-                    CategoryId = Convert.ToInt32(categoryId),
-                    ProductName = productName,
-                    Weight = weight,
-                    UnitPrice = Decimal.Parse(unitPrice),
-                    UnitsInStock = Convert.ToInt32(unitInStock)
-                };
-
-                Product product = AutoMapperConfiguration.ToProduct(productObject);
-
-                bool check = repo.Add(product);
-
-                if (check)
+                    MessageBox.Show("Invalid data");
+                }
+                else
                 {
-                    MessageBox.Show("Add product successfully");
+                    ProductObject productObject = new ProductObject
+                    {
+                        CategoryId = Convert.ToInt32(categoryId),
+                        ProductName = productName,
+                        Weight = weight,
+                        UnitPrice = Decimal.Parse(unitPrice),
+                        UnitsInStock = Convert.ToInt32(unitInStock)
+                    };
+
+                    Product product = AutoMapperConfiguration.ToProduct(productObject);
+
+                    bool check = repo.Add(product);
+
+                    if (check)
+                    {
+                        MessageBox.Show("Add product successfully");
+                    }
                 }
             }
         }
