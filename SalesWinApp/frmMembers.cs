@@ -223,30 +223,40 @@ namespace SalesWinApp
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
-            if (dgvMember.SelectedCells.Count > 0)
+            if (dgvMember.SelectedRows.Count > 0)
             {
-                string id = dgvMember.SelectedRows[0].Cells[0].Value.ToString();
-                Member member = repo.GetById(Convert.ToInt32(id));
-                if (!txtEmail.Text.Equals(member.Email))
+                if (dgvMember.SelectedRows[0].Cells[0].Value != null)
                 {
-                    if (txtEmail.Text.Equals(""))
+                    string id = dgvMember.SelectedRows[0].Cells[0].Value.ToString();
+                    Member member = repo.GetById(Convert.ToInt32(id));
+
+                    if (member != null)
                     {
-                        flag1 = true;
+                        if (!txtEmail.Text.Equals(member.Email))
+                        {
+                            flag1 = false;
+
+                            if (txtEmail.Text.Equals(""))
+                            {
+                                flag1 = true;
+                            }
+                            else
+                            {
+                                flag1 = false;
+                                btnUpdate.Enabled = true;
+                            }
+                        }
+                        else
+                        {
+                            flag1 = true;
+                        }
+                        if (flag1 && flag2 && flag3 && flag4)
+                        {
+                            btnUpdate.Enabled = false;
+                        }
                     }
-                    else
-                    {
-                        flag1 = false;
-                        btnUpdate.Enabled = true;
-                    }                    
                 }
-                else
-                {
-                    flag1 = true;
-                }
-                if (flag1 && flag2 && flag3 && flag4)
-                {
-                    btnUpdate.Enabled = false;
-                }
+
             }
         }
 
@@ -278,88 +288,115 @@ namespace SalesWinApp
         }
         private void txtCompany_TextChanged(object sender, EventArgs e)
         {
-            if (dgvMember.SelectedCells.Count > 0)
+            if (dgvMember.SelectedRows.Count > 0)
             {
-                string id = dgvMember.SelectedRows[0].Cells[0].Value.ToString();
-                Member member = repo.GetById(Convert.ToInt32(id));
-                if (!txtCompany.Text.Equals(member.CompanyName))
+                if (dgvMember.SelectedRows[0].Cells[0].Value != null)
                 {
-                    if (txtCompany.Text.Equals(""))
-                    {
-                        flag2 = true;
-                    }
-                    else
-                    {
-                        flag2 = false;
-                        btnUpdate.Enabled = true;
-                    }
-                }
-                else
-                {
-                    flag2 = true;
-                }
+                    string id = dgvMember.SelectedRows[0].Cells[0].Value.ToString();
+                    Member member = repo.GetById(Convert.ToInt32(id));
 
-                if (flag1 && flag2 && flag3 && flag4)
-                {
-                    btnUpdate.Enabled = false;
+                    if (member != null)
+                    {
+                        if (!txtCompany.Text.Equals(member.CompanyName))
+                        {
+                            flag2 = false;
+
+                            if (txtCompany.Text.Equals(""))
+                            {
+                                flag2 = true;
+                            }
+                            else
+                            {
+                                flag2 = false;
+                                btnUpdate.Enabled = true;
+                            }
+                        }
+                        else
+                        {
+                            flag2 = true;
+                        }
+
+                        if (flag1 && flag2 && flag3 && flag4)
+                        {
+                            btnUpdate.Enabled = false;
+                        }
+                    }
                 }
             }
         }
 
         private void txtCity_TextChanged(object sender, EventArgs e)
         {
-            if (dgvMember.SelectedCells.Count > 0)
+            if (dgvMember.SelectedRows.Count > 0)
             {
-                string id = dgvMember.SelectedRows[0].Cells[0].Value.ToString();
-                Member member = repo.GetById(Convert.ToInt32(id));
-                if (!txtCity.Text.Equals(member.City))
+                if (dgvMember.SelectedRows[0].Cells[0].Value != null)
                 {
-                    if (txtCity.Text.Equals(""))
+                    string id = dgvMember.SelectedRows[0].Cells[0].Value.ToString();
+                    Member member = repo.GetById(Convert.ToInt32(id));
+
+                    if (member != null)
                     {
-                        flag3 = true;
+                        if (!txtCity.Text.Equals(member.City))
+                        {
+                            flag3 = false;
+
+                            if (txtCity.Text.Equals(""))
+                            {
+                                flag3 = true;
+                            }
+                            else
+                            {
+                                flag3 = false;
+                                btnUpdate.Enabled = true;
+                            }
+                        }
+                        else
+                        {
+                            flag3 = true;
+                        }
+                        if (flag1 && flag2 && flag3 && flag4)
+                        {
+                            btnUpdate.Enabled = false;
+                        }
                     }
-                    else
-                    {
-                        flag3 = false;
-                        btnUpdate.Enabled = true;
-                    }
-                }
-                else
-                {
-                    flag3 = true;
-                }
-                if (flag1 && flag2 && flag3 && flag4)
-                {
-                    btnUpdate.Enabled = false;
                 }
             }
         }
 
         private void txtCountry_TextChanged(object sender, EventArgs e)
         {
-            if (dgvMember.SelectedCells.Count > 0)
+            if (dgvMember.SelectedRows.Count > 0)
             {
-                string id = dgvMember.SelectedRows[0].Cells[0].Value.ToString();
-                Member member = repo.GetById(Convert.ToInt32(id));
-                if (!txtCountry.Text.Equals(member.Country))
+                if (dgvMember.SelectedRows[0].Cells[0].Value != null)
                 {
-                    if (txtCountry.Text.Equals(""))
+                    string id = dgvMember.SelectedRows[0].Cells[0].Value.ToString();
+                    Member member = repo.GetById(Convert.ToInt32(id));
+
+                    if (member != null)
                     {
-                        flag4 = true;
+                        if (!txtCountry.Text.Equals(member.Country))
+                        {
+                            flag4 = false;
+                           
+                            if (txtCountry.Text.Equals(""))
+                            {
+                                flag4 = true;
+                            }
+                            else
+                            {
+                                flag4 = false;
+                                btnUpdate.Enabled = true;
+                            }
+                        }
+                        else
+                        {
+                            flag4 = true;
+                        }
+                        if (flag1 && flag2 && flag3 && flag4)
+                        {
+                            btnUpdate.Enabled = false;
+                        }
                     }
-                    else
-                    {
-                        flag4 = false;
-                        btnUpdate.Enabled = true;
-                    }
-                }
-                else
-                {
-                    flag4 = true;
-                }
-                if (flag1 && flag2 && flag3 && flag4)
-                {
-                    btnUpdate.Enabled = false;
                 }
             }
         }
@@ -368,7 +405,7 @@ namespace SalesWinApp
 
 
 
-        private void dgvMember_CellClick(object sender, DataGridViewCellEventArgs e) => btnBack_Click(sender, e);
+        private void dgvMember_CellClick(object sender, DataGridViewCellEventArgs e) { }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
