@@ -31,7 +31,8 @@ public class ProductRepository : IProductRepository
 
     public List<Product> GetAll()
     {
-        var p = from c in _saleManagementContext.Products
+        using var pr = new SaleManagementContext();
+        var p = from c in pr.Products
                 select c;
         return p.ToList();
     }
@@ -62,6 +63,7 @@ public class ProductRepository : IProductRepository
 
     public List<Product> GetByUnitsInStock(int unitInStock)
     {
+
         var product = from p in _saleManagementContext.Products
                       where p.UnitsInStock == unitInStock
                       select p;
@@ -70,6 +72,7 @@ public class ProductRepository : IProductRepository
 
     public bool Update(Product product)
     {
+
         Product productTmp = GetById(product.ProductId);
 
         if (productTmp != null)

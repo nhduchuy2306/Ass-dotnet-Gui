@@ -95,5 +95,10 @@ namespace SalesWinApp
         }
 
         private void btnExit_Click(object sender, EventArgs e) => Close();
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

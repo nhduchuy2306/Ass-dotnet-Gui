@@ -28,9 +28,9 @@ namespace SalesWinApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvProductList = new System.Windows.Forms.DataGridView();
             this.lbProductList = new System.Windows.Forms.Label();
             this.lbManageProduct = new System.Windows.Forms.Label();
@@ -46,19 +46,14 @@ namespace SalesWinApp
             this.txtWeight = new System.Windows.Forms.TextBox();
             this.txtUnitPrice = new System.Windows.Forms.TextBox();
             this.txtUnitsInStock = new System.Windows.Forms.TextBox();
-            this.txtSearchProductID = new System.Windows.Forms.TextBox();
-            this.btnSearchProductID = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.txtSearchProductName = new System.Windows.Forms.TextBox();
-            this.txtSearchUnitPrice = new System.Windows.Forms.TextBox();
-            this.txtSearchUnitsInStock = new System.Windows.Forms.TextBox();
-            this.btnSearchProductName = new System.Windows.Forms.Button();
-            this.btnSearchUnitPrice = new System.Windows.Forms.Button();
-            this.btnSearchUnitsInStock = new System.Windows.Forms.Button();
+            this.cboSearchType = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -68,36 +63,36 @@ namespace SalesWinApp
             this.dgvProductList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProductList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProductList.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProductList.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvProductList.EnableHeadersVisualStyles = false;
             this.dgvProductList.Location = new System.Drawing.Point(20, 127);
             this.dgvProductList.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProductList.Name = "dgvProductList";
             this.dgvProductList.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProductList.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvProductList.RowHeadersWidth = 62;
             this.dgvProductList.RowTemplate.Height = 25;
             this.dgvProductList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -233,30 +228,31 @@ namespace SalesWinApp
             this.txtUnitsInStock.Size = new System.Drawing.Size(172, 23);
             this.txtUnitsInStock.TabIndex = 14;
             // 
-            // txtSearchProductID
+            // txtSearch
             // 
-            this.txtSearchProductID.Location = new System.Drawing.Point(30, 46);
-            this.txtSearchProductID.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSearchProductID.Name = "txtSearchProductID";
-            this.txtSearchProductID.PlaceholderText = "Search by product ID";
-            this.txtSearchProductID.Size = new System.Drawing.Size(162, 23);
-            this.txtSearchProductID.TabIndex = 15;
+            this.txtSearch.Location = new System.Drawing.Point(224, 81);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PlaceholderText = "Search by.........";
+            this.txtSearch.Size = new System.Drawing.Size(189, 23);
+            this.txtSearch.TabIndex = 15;
             // 
-            // btnSearchProductID
+            // btnSearch
             // 
-            this.btnSearchProductID.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSearchProductID.FlatAppearance.BorderSize = 0;
-            this.btnSearchProductID.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearchProductID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearchProductID.Location = new System.Drawing.Point(210, 47);
-            this.btnSearchProductID.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSearchProductID.Name = "btnSearchProductID";
-            this.btnSearchProductID.Size = new System.Drawing.Size(70, 27);
-            this.btnSearchProductID.TabIndex = 16;
-            this.btnSearchProductID.Text = "Search";
-            this.btnSearchProductID.UseVisualStyleBackColor = false;
-            this.btnSearchProductID.MouseLeave += new System.EventHandler(this.btnSearchProduct_MouseLeave);
-            this.btnSearchProductID.MouseHover += new System.EventHandler(this.btnSearchProduct_MouseHover);
+            this.btnSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSearch.Location = new System.Drawing.Point(446, 81);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(70, 27);
+            this.btnSearch.TabIndex = 16;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnSearch.MouseLeave += new System.EventHandler(this.btnSearchProduct_MouseLeave);
+            this.btnSearch.MouseHover += new System.EventHandler(this.btnSearchProduct_MouseHover);
             // 
             // btnNew
             // 
@@ -325,92 +321,26 @@ namespace SalesWinApp
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             // 
-            // txtSearchProductName
+            // cboSearchType
             // 
-            this.txtSearchProductName.Location = new System.Drawing.Point(30, 88);
-            this.txtSearchProductName.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSearchProductName.Name = "txtSearchProductName";
-            this.txtSearchProductName.PlaceholderText = "Search by product name";
-            this.txtSearchProductName.Size = new System.Drawing.Size(162, 23);
-            this.txtSearchProductName.TabIndex = 22;
-            // 
-            // txtSearchUnitPrice
-            // 
-            this.txtSearchUnitPrice.Location = new System.Drawing.Point(301, 47);
-            this.txtSearchUnitPrice.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSearchUnitPrice.Name = "txtSearchUnitPrice";
-            this.txtSearchUnitPrice.PlaceholderText = "Search by unit price";
-            this.txtSearchUnitPrice.Size = new System.Drawing.Size(182, 23);
-            this.txtSearchUnitPrice.TabIndex = 23;
-            // 
-            // txtSearchUnitsInStock
-            // 
-            this.txtSearchUnitsInStock.Location = new System.Drawing.Point(301, 88);
-            this.txtSearchUnitsInStock.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSearchUnitsInStock.Name = "txtSearchUnitsInStock";
-            this.txtSearchUnitsInStock.PlaceholderText = "Search by units in stock";
-            this.txtSearchUnitsInStock.Size = new System.Drawing.Size(182, 23);
-            this.txtSearchUnitsInStock.TabIndex = 24;
-            // 
-            // btnSearchProductName
-            // 
-            this.btnSearchProductName.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSearchProductName.FlatAppearance.BorderSize = 0;
-            this.btnSearchProductName.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearchProductName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearchProductName.Location = new System.Drawing.Point(210, 83);
-            this.btnSearchProductName.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSearchProductName.Name = "btnSearchProductName";
-            this.btnSearchProductName.Size = new System.Drawing.Size(70, 27);
-            this.btnSearchProductName.TabIndex = 25;
-            this.btnSearchProductName.Text = "Search";
-            this.btnSearchProductName.UseVisualStyleBackColor = false;
-            // 
-            // btnSearchUnitPrice
-            // 
-            this.btnSearchUnitPrice.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSearchUnitPrice.FlatAppearance.BorderSize = 0;
-            this.btnSearchUnitPrice.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearchUnitPrice.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearchUnitPrice.Location = new System.Drawing.Point(501, 47);
-            this.btnSearchUnitPrice.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSearchUnitPrice.Name = "btnSearchUnitPrice";
-            this.btnSearchUnitPrice.Size = new System.Drawing.Size(70, 27);
-            this.btnSearchUnitPrice.TabIndex = 26;
-            this.btnSearchUnitPrice.Text = "Search";
-            this.btnSearchUnitPrice.UseVisualStyleBackColor = false;
-            // 
-            // btnSearchUnitsInStock
-            // 
-            this.btnSearchUnitsInStock.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSearchUnitsInStock.FlatAppearance.BorderSize = 0;
-            this.btnSearchUnitsInStock.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearchUnitsInStock.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearchUnitsInStock.Location = new System.Drawing.Point(501, 83);
-            this.btnSearchUnitsInStock.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSearchUnitsInStock.Name = "btnSearchUnitsInStock";
-            this.btnSearchUnitsInStock.Size = new System.Drawing.Size(70, 27);
-            this.btnSearchUnitsInStock.TabIndex = 27;
-            this.btnSearchUnitsInStock.Text = "Search";
-            this.btnSearchUnitsInStock.UseVisualStyleBackColor = false;
+            this.cboSearchType.FormattingEnabled = true;
+            this.cboSearchType.Location = new System.Drawing.Point(56, 81);
+            this.cboSearchType.Name = "cboSearchType";
+            this.cboSearchType.Size = new System.Drawing.Size(151, 23);
+            this.cboSearchType.TabIndex = 22;
             // 
             // frmProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1070, 496);
-            this.Controls.Add(this.btnSearchUnitsInStock);
-            this.Controls.Add(this.btnSearchUnitPrice);
-            this.Controls.Add(this.btnSearchProductName);
-            this.Controls.Add(this.txtSearchUnitsInStock);
-            this.Controls.Add(this.txtSearchUnitPrice);
-            this.Controls.Add(this.txtSearchProductName);
+            this.Controls.Add(this.cboSearchType);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnNew);
-            this.Controls.Add(this.btnSearchProductID);
-            this.Controls.Add(this.txtSearchProductID);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.txtUnitsInStock);
             this.Controls.Add(this.txtUnitPrice);
             this.Controls.Add(this.txtWeight);
@@ -456,18 +386,13 @@ namespace SalesWinApp
         private TextBox txtWeight;
         private TextBox txtUnitPrice;
         private TextBox txtUnitsInStock;
-        private TextBox txtSearchProductID;
-        private Button btnSearchProductID;
+        private TextBox txtSearch;
+        private Button btnSearch;
         private Button btnNew;
         private Button btnUpdate;
         private Button btnDelete;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
-        private TextBox txtSearchProductName;
-        private TextBox txtSearchUnitPrice;
-        private TextBox txtSearchUnitsInStock;
-        private Button btnSearchProductName;
-        private Button btnSearchUnitPrice;
-        private Button btnSearchUnitsInStock;
+        private ComboBox cboSearchType;
     }
 }

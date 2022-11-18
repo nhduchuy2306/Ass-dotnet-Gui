@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace SalesWinApp
 {
@@ -45,6 +46,8 @@ namespace SalesWinApp
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            bool isValid = true;
+
             if (UpdateOrCreate == true)
             {
                 string productId = txtProductID.Text;
@@ -54,24 +57,34 @@ namespace SalesWinApp
                 string unitPrice = txtUnitPrice.Text;
                 string unitInStock = txtUnitsInStock.Text;
 
-                ProductObject productObject = new ProductObject
+                
+                if (productName.Equals("") || productId.Equals("") || categoryId.Equals("") || weight.Equals("") 
+                    || unitInStock.Equals("") || unitPrice.Equals("") || !Regex.IsMatch(categoryId, @"^\d+$") || 
+                    !Regex.IsMatch(weight, @"^\d+$") || !Regex.IsMatch(unitPrice, @"^\d+$") || !Regex.IsMatch(unitInStock, @"^\d+$"))
                 {
-                    ProductId = Convert.ToInt32(productId),
-                    CategoryId = Convert.ToInt32(categoryId),
-                    ProductName = productName,
-                    Weight = weight,
-                    UnitPrice = Convert.ToDecimal(unitPrice),
-                    UnitsInStock = Convert.ToInt32(unitInStock)
-                };
-
-                Product product = AutoMapperConfiguration.ToProduct(productObject);
-
-                bool check = repo.Update(product);
-
-                if (check)
+                    MessageBox.Show("Invalid data");
+                }
+                else 
                 {
-                    MessageBox.Show("Update product successfully");
-                    DialogResult = DialogResult.OK;
+                    ProductObject productObject = new ProductObject
+                    {
+                        ProductId = Convert.ToInt32(productId),
+                        CategoryId = Convert.ToInt32(categoryId),
+                        ProductName = productName,
+                        Weight = weight,
+                        UnitPrice = Convert.ToDecimal(unitPrice),
+                        UnitsInStock = Convert.ToInt32(unitInStock)
+                    };
+
+                    Product product = AutoMapperConfiguration.ToProduct(productObject);
+
+                    bool check = repo.Update(product);
+
+                    if (check)
+                    {
+                        MessageBox.Show("Update product successfully");
+                        DialogResult = DialogResult.OK;
+                    }
                 }
             }
             else
@@ -84,22 +97,31 @@ namespace SalesWinApp
                 string unitPrice = txtUnitPrice.Text;
                 string unitInStock = txtUnitsInStock.Text;
 
-                ProductObject productObject = new ProductObject
+                if (productName.Equals("") || categoryId.Equals("") || weight.Equals("")
+                    || unitInStock.Equals("") || unitPrice.Equals("") || !Regex.IsMatch(categoryId, @"^\d+$") ||
+                    !Regex.IsMatch(weight, @"^\d+$") || !Regex.IsMatch(unitPrice, @"^\d+$") || !Regex.IsMatch(unitInStock, @"^\d+$"))
                 {
-                    CategoryId = Convert.ToInt32(categoryId),
-                    ProductName = productName,
-                    Weight = weight,
-                    UnitPrice = Decimal.Parse(unitPrice),
-                    UnitsInStock = Convert.ToInt32(unitInStock)
-                };
-
-                Product product = AutoMapperConfiguration.ToProduct(productObject);
-
-                bool check = repo.Add(product);
-
-                if (check)
+                    MessageBox.Show("Invalid data");
+                }
+                else
                 {
-                    MessageBox.Show("Add product successfully");
+                    ProductObject productObject = new ProductObject
+                    {
+                        CategoryId = Convert.ToInt32(categoryId),
+                        ProductName = productName,
+                        Weight = weight,
+                        UnitPrice = Decimal.Parse(unitPrice),
+                        UnitsInStock = Convert.ToInt32(unitInStock)
+                    };
+
+                    Product product = AutoMapperConfiguration.ToProduct(productObject);
+
+                    bool check = repo.Add(product);
+
+                    if (check)
+                    {
+                        MessageBox.Show("Add product successfully");
+                    }
                 }
             }
         }

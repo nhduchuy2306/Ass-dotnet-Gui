@@ -218,5 +218,19 @@ namespace SalesWinApp
                     item.BackColor = Color.LightBlue;
             }
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
+        }
+
+        private void logoutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
+        }
     }
 }
