@@ -48,9 +48,9 @@
             // 
             this.lbCategoryID.AutoSize = true;
             this.lbCategoryID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbCategoryID.Location = new System.Drawing.Point(71, 119);
+            this.lbCategoryID.Location = new System.Drawing.Point(81, 159);
             this.lbCategoryID.Name = "lbCategoryID";
-            this.lbCategoryID.Size = new System.Drawing.Size(88, 20);
+            this.lbCategoryID.Size = new System.Drawing.Size(111, 25);
             this.lbCategoryID.TabIndex = 10;
             this.lbCategoryID.Text = "&Category ID";
             // 
@@ -58,9 +58,9 @@
             // 
             this.lbProductName.AutoSize = true;
             this.lbProductName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbProductName.Location = new System.Drawing.Point(71, 159);
+            this.lbProductName.Location = new System.Drawing.Point(81, 212);
             this.lbProductName.Name = "lbProductName";
-            this.lbProductName.Size = new System.Drawing.Size(104, 20);
+            this.lbProductName.Size = new System.Drawing.Size(133, 25);
             this.lbProductName.TabIndex = 11;
             this.lbProductName.Text = "&Product Name";
             // 
@@ -68,9 +68,9 @@
             // 
             this.lbWeight.AutoSize = true;
             this.lbWeight.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbWeight.Location = new System.Drawing.Point(71, 204);
+            this.lbWeight.Location = new System.Drawing.Point(81, 272);
             this.lbWeight.Name = "lbWeight";
-            this.lbWeight.Size = new System.Drawing.Size(56, 20);
+            this.lbWeight.Size = new System.Drawing.Size(72, 25);
             this.lbWeight.TabIndex = 12;
             this.lbWeight.Text = "&Weight";
             // 
@@ -78,9 +78,9 @@
             // 
             this.lbUnitPrice.AutoSize = true;
             this.lbUnitPrice.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbUnitPrice.Location = new System.Drawing.Point(71, 247);
+            this.lbUnitPrice.Location = new System.Drawing.Point(81, 329);
             this.lbUnitPrice.Name = "lbUnitPrice";
-            this.lbUnitPrice.Size = new System.Drawing.Size(72, 20);
+            this.lbUnitPrice.Size = new System.Drawing.Size(94, 25);
             this.lbUnitPrice.TabIndex = 13;
             this.lbUnitPrice.Text = "&Unit Price";
             // 
@@ -88,50 +88,55 @@
             // 
             this.lbUnitsInStock.AutoSize = true;
             this.lbUnitsInStock.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbUnitsInStock.Location = new System.Drawing.Point(71, 288);
+            this.lbUnitsInStock.Location = new System.Drawing.Point(81, 384);
             this.lbUnitsInStock.Name = "lbUnitsInStock";
-            this.lbUnitsInStock.Size = new System.Drawing.Size(98, 20);
+            this.lbUnitsInStock.Size = new System.Drawing.Size(125, 25);
             this.lbUnitsInStock.TabIndex = 14;
             this.lbUnitsInStock.Text = "&Units In Stock";
             // 
             // txtCategoryID
             // 
-            this.txtCategoryID.Location = new System.Drawing.Point(196, 120);
+            this.txtCategoryID.Location = new System.Drawing.Point(224, 160);
+            this.txtCategoryID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCategoryID.Name = "txtCategoryID";
-            this.txtCategoryID.Size = new System.Drawing.Size(149, 23);
+            this.txtCategoryID.Size = new System.Drawing.Size(170, 27);
             this.txtCategoryID.TabIndex = 16;
             // 
             // txtProductName
             // 
-            this.txtProductName.Location = new System.Drawing.Point(196, 160);
+            this.txtProductName.Location = new System.Drawing.Point(224, 213);
+            this.txtProductName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(149, 23);
+            this.txtProductName.Size = new System.Drawing.Size(170, 27);
             this.txtProductName.TabIndex = 17;
             // 
             // txtWeight
             // 
-            this.txtWeight.Location = new System.Drawing.Point(196, 205);
+            this.txtWeight.Location = new System.Drawing.Point(224, 273);
+            this.txtWeight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtWeight.Mask = "000000";
             this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(149, 23);
+            this.txtWeight.Size = new System.Drawing.Size(170, 27);
             this.txtWeight.TabIndex = 18;
             this.txtWeight.Text = "0";
             // 
             // txtUnitPrice
             // 
-            this.txtUnitPrice.Location = new System.Drawing.Point(196, 248);
+            this.txtUnitPrice.Location = new System.Drawing.Point(224, 331);
+            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUnitPrice.Mask = "00000000";
             this.txtUnitPrice.Name = "txtUnitPrice";
-            this.txtUnitPrice.Size = new System.Drawing.Size(149, 23);
+            this.txtUnitPrice.Size = new System.Drawing.Size(170, 27);
             this.txtUnitPrice.TabIndex = 19;
             this.txtUnitPrice.Text = "0";
             // 
             // txtUnitsInStock
             // 
-            this.txtUnitsInStock.Location = new System.Drawing.Point(196, 289);
+            this.txtUnitsInStock.Location = new System.Drawing.Point(224, 385);
+            this.txtUnitsInStock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUnitsInStock.Mask = "000000";
             this.txtUnitsInStock.Name = "txtUnitsInStock";
-            this.txtUnitsInStock.Size = new System.Drawing.Size(149, 23);
+            this.txtUnitsInStock.Size = new System.Drawing.Size(170, 27);
             this.txtUnitsInStock.TabIndex = 20;
             this.txtUnitsInStock.Text = "0";
             // 
@@ -139,9 +144,10 @@
             // 
             this.btnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSave.Location = new System.Drawing.Point(92, 329);
+            this.btnSave.Location = new System.Drawing.Point(105, 439);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(83, 33);
+            this.btnSave.Size = new System.Drawing.Size(95, 44);
             this.btnSave.TabIndex = 21;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -151,9 +157,10 @@
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCancel.Location = new System.Drawing.Point(223, 329);
+            this.btnCancel.Location = new System.Drawing.Point(255, 439);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(83, 33);
+            this.btnCancel.Size = new System.Drawing.Size(95, 44);
             this.btnCancel.TabIndex = 22;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -163,25 +170,26 @@
             // 
             this.lbProductID.AutoSize = true;
             this.lbProductID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbProductID.Location = new System.Drawing.Point(71, 76);
+            this.lbProductID.Location = new System.Drawing.Point(81, 101);
             this.lbProductID.Name = "lbProductID";
-            this.lbProductID.Size = new System.Drawing.Size(79, 20);
+            this.lbProductID.Size = new System.Drawing.Size(101, 25);
             this.lbProductID.TabIndex = 23;
             this.lbProductID.Text = "&Product ID";
             // 
             // txtProductID
             // 
-            this.txtProductID.Location = new System.Drawing.Point(196, 77);
+            this.txtProductID.Location = new System.Drawing.Point(224, 103);
+            this.txtProductID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProductID.Name = "txtProductID";
             this.txtProductID.ReadOnly = true;
-            this.txtProductID.Size = new System.Drawing.Size(149, 23);
+            this.txtProductID.Size = new System.Drawing.Size(170, 27);
             this.txtProductID.TabIndex = 24;
             // 
             // frmProductDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 380);
+            this.ClientSize = new System.Drawing.Size(475, 507);
             this.Controls.Add(this.txtProductID);
             this.Controls.Add(this.lbProductID);
             this.Controls.Add(this.btnCancel);
@@ -196,6 +204,7 @@
             this.Controls.Add(this.lbWeight);
             this.Controls.Add(this.lbProductName);
             this.Controls.Add(this.lbCategoryID);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmProductDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New/Update Product";

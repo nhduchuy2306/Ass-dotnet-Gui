@@ -409,10 +409,13 @@ namespace SalesWinApp
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
+            frmMain frmMain = new frmMain();
             int memberID = Convert.ToInt32(txtMemID.Text);
             frmOrders frmOrders = new frmOrders
             { MemID = memberID };
             this.Hide();
+            frmMain.Show();
+            frmOrders.MdiParent = frmMain;
             frmOrders.Show();
         }
     }
